@@ -3,6 +3,17 @@
 from model import db, User, Midwife, connect_to_db
 
 
+
+def create_user(email, password):
+    """Create and return a new user"""
+
+    user = User(email=email, password=password)
+
+    db.session.add(user)
+    db.session.commit()
+
+    return user
+
 def create_midwife(name, email, website, address, bio, counties, img):
     """Create and return a new movie"""
 
@@ -19,6 +30,10 @@ def create_midwife(name, email, website, address, bio, counties, img):
 
     return midwife
 
+def get_user_by_email(email):
+    """Return a user with given email, otherwise return None"""
+
+    return User.query.filter(User.email == email).first()
 
 if __name__ == '__main__':
     from server import app
