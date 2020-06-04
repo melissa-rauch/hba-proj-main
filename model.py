@@ -14,11 +14,10 @@ class User(db.Model):
     user_name = db.Column(db.String(50))
     user_email = db.Column(db.String(50), unique=True)
     user_password = db.Column(db.String(20))
-    user_city = db.Column(db.String(20))
-    user_state = db.Column(db.String(20))
+    user_address = db.Column(db.String)
     user_lat = db.Column(db.Integer)
     user_lng = db.Column(db.Integer)
-    user_bio = db.Column(db.String)
+    user_bio = db.Column(db.Text)
     user_img = db.Column(db.String)
     fav_id = db.Column(db.Integer, db.ForeignKey('favorites.fav_id'))
 
@@ -37,11 +36,10 @@ class Midwife(db.Model):
     mw_email = db.Column(db.String(50), unique=True)
     mw_password = db.Column(db.String(20))
     website = db.Column(db.String)
-    mw_city = db.Column(db.String(20))
-    mw_state = db.Column(db.String(20))
+    mw_address = db.Column(db.String(20))
     mw_lat = db.Column(db.Integer)
     mw_lng = db.Column(db.Integer)
-    mw_bio = db.Column(db.String)
+    mw_bio = db.Column(db.Text)
     mw_img = db.Column(db.String)
 
     def __repr__(self):
