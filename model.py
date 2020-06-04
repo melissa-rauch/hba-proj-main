@@ -1,4 +1,4 @@
-"""Models for the catch app."""
+"""Objects Relational Mapper"""
 
 from flask_sqlalchemy import SQLAlchemy
 
@@ -11,19 +11,19 @@ class User(db.Model):
     __tablename__ = 'users'
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    user_name = db.Column(db.String(50))
-    user_email = db.Column(db.String(50), unique=True)
-    user_password = db.Column(db.String(20))
-    user_address = db.Column(db.String)
-    user_lat = db.Column(db.Integer)
-    user_lng = db.Column(db.Integer)
-    user_bio = db.Column(db.Text)
-    user_img = db.Column(db.String)
+    name = db.Column(db.String(50))
+    email = db.Column(db.String(50), unique=True)
+    password = db.Column(db.String(20))
+    address = db.Column(db.String)
+    lat = db.Column(db.Integer)
+    lng = db.Column(db.Integer)
+    bio = db.Column(db.Text)
+    img = db.Column(db.String)
     fav_id = db.Column(db.Integer, db.ForeignKey('favorites.fav_id'))
 
     def __repr__(self):
 
-        return f'<User user_id={self.user_id} name={self.user_name} email={self.user_email}>'
+        return f'<User user_id={self.user_id} name={self.name} email={self.email}>'
 
 
 class Midwife(db.Model):
@@ -38,8 +38,8 @@ class Midwife(db.Model):
     website = db.Column(db.String)
     address = db.Column(db.String())
     counties = db.Column(db.String)
-    mw_lat = db.Column(db.Integer)
-    mw_lng = db.Column(db.Integer)
+    lat = db.Column(db.Integer)
+    lng = db.Column(db.Integer)
     bio = db.Column(db.Text)
     img = db.Column(db.String)
 
@@ -54,7 +54,6 @@ class Favorite(db.Model):
     fav_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     mw_id = db.Column(db.Integer, db.ForeignKey('midwives.mw_id'))
-
 
 
     def __repr__(self):
