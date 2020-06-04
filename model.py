@@ -32,18 +32,19 @@ class Midwife(db.Model):
     __tablename__ = 'midwives'
    
     mw_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    mw_name = db.Column(db.String(50))
-    mw_email = db.Column(db.String(50), unique=True)
-    mw_password = db.Column(db.String(20))
+    name = db.Column(db.String(50))
+    email = db.Column(db.String(100))
+    password = db.Column(db.String(20))
     website = db.Column(db.String)
-    mw_address = db.Column(db.String(20))
+    address = db.Column(db.String())
+    counties = db.Column(db.String)
     mw_lat = db.Column(db.Integer)
     mw_lng = db.Column(db.Integer)
-    mw_bio = db.Column(db.Text)
-    mw_img = db.Column(db.String)
+    bio = db.Column(db.Text)
+    img = db.Column(db.String)
 
     def __repr__(self):
-        return f'<Midwife mw_id={self.mw_id} name={self.mw_name} email={self.mw_email}>'
+        return f'<Midwife mw_id={self.mw_id} name={self.name} email={self.email}>'
 
 class Favorite(db.Model):
     """A Favorite"""
@@ -54,8 +55,7 @@ class Favorite(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
     mw_id = db.Column(db.Integer, db.ForeignKey('midwives.mw_id'))
 
-    user = db.relationship('User', backref='favorites')
-    midwife = db.relationship('Midwife', backref='favorites')
+
 
     def __repr__(self):
         return f'<Favorite fav_id={self.fav_id} mw_id={self.mw_id} user_id={self.user_id}>'
