@@ -65,11 +65,11 @@ def login_user():
         if user.email == email and user.password == password:
             session['user_id'] = user.user_id
             flash('Logged In!')
-    else:
+    # else:
     
-        flash('Invalid user and password combination')
+    #     flash('Invalid user and password combination')
 
-    return redirect('/') # if login correct, direct to /profile/<user_id>
+        return redirect('/home') # if login correct, direct to /profile/<user_id>
 
 
 if __name__ == '__main__':

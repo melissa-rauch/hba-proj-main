@@ -11,9 +11,8 @@ function Login() {
     return (
     
     <div>
-      <div>Hi I'm Melissa!</div>
-
-      <button onClick={goHome}>Login</button>
+{/*      <div>Have an account?</div>
+      <button onClick={goHome}>Login</button>*/}
 
       <div>View the Directory of Midwives!</div>
       <button onClick={goDir}>Click Here</button>
