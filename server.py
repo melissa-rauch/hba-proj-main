@@ -9,12 +9,31 @@ app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
 # INSERT STUB ROUTES HERE
+
+
 @app.route('/')
-def show_homepage():
-    """Show the homepage."""
+def show_login():
+    """Show login page"""
 
-    return render_template('index.html')
+    return render_template('login.html')
 
+@app.route('/home')
+def show_user_home():
+    """Show User homepage"""
+
+    return render_template('home.html')
+
+@app.route('/midwife')
+def show_midwife_profile():
+    """Show Midwife profile"""
+
+    return render_template('midwife.html')
+
+@app.route('/directory')
+def show_directory():
+    """Show directory of Midwives"""
+
+    return render_template('directory.html')
 
 @app.route('/register', methods=['POST'])
 def register_user():
@@ -29,7 +48,7 @@ def register_user():
         crud.create_user(email, password)
         flash('Account created! Please log in.')
 
-    return redirect('/')
+    return redirect('/') # if login correct, direct to /profile/<user_id>
 
 
 @app.route('/login', methods=['POST'])
@@ -47,7 +66,7 @@ def login_user():
     
         flash('Invalid user and password combination')
 
-    return redirect('/')
+    return redirect('/') # if login correct, direct to /profile/<user_id>
 
 
 if __name__ == '__main__':
