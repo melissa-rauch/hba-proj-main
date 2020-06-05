@@ -2,6 +2,7 @@
 
 from flask import (Flask, render_template, request, flash, session, redirect)
 from model import connect_to_db
+import crud
 from jinja2 import StrictUndefined
 
 app = Flask(__name__)
@@ -32,8 +33,10 @@ def show_midwife_profile():
 @app.route('/directory')
 def show_directory():
     """Show directory of Midwives"""
+    midwives = crud.get_midwives()
 
-    return render_template('directory.html')
+    return render_template('directory.html', midwives = midwives)
+
 
 @app.route('/register', methods=['POST'])
 def register_user():

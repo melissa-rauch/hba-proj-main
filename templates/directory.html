@@ -7,7 +7,31 @@
 {% endblock %}
 
 {% block body %}
+
+
+
+  <h1>Directory of Midwives</h1>
+
+  <ul>
+    {% for midwife in midwives %}
+      <li>
+        <a href="/directory/{{ midwife.mw_id }}"></a>
+        <img src="{{ midwife.img }}">
+        <p>
+        <h2>{{ midwife.name }}</h2>
+        </p>
+        <p>
+          {{ midwife.bio }}
+        </p> 
+        
+      </li>
+    {% endfor %}
+  </ul>
+
 <div id='directory'></div>
 
 {% endblock %}
+
+
+
 
