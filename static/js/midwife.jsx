@@ -11,4 +11,3 @@ function Midwife() {
   }
 
 
-ReactDOM.render(<Midwife />, document.querySelector('#midwife));

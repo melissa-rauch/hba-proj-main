@@ -22,32 +22,29 @@ def render_app():
     return render_template('index.html')
 
 
-
-# @app.route('/home')
-# def show_user_home():
-#     """Show User homepage"""
-
-#     return render_template('home.html')
-
-# @app.route('/midwife')
-# def show_midwife_profile():
-#     """Show Midwife profile"""
-
-#     return render_template('midwife.html')
-
 # @app.route('/demoapi')
 # def show_directory():
 #     """Show directory of Midwives"""
 
 #     return jsonify({"Dog":"Rumo"})
 
-# @app.route('/directory')
-# def show_directory():
-#     """Show directory of Midwives"""
-#     midwives = crud.get_midwives()
+@app.route('/directory')
+def show_directory():
+    """Show directory of Midwives"""
+    midwives = crud.get_midwives()
+    dict_mw = []
+    for midwife in midwives:
+        mw = {"mw_id": midwife.mw_id,
+            "name": midwife.name,
+            "email": midwife.email,
+            "password": midwife.password,
+            "website": midwife.website,
+            "address": midwife.address,
+            "counties": midwife.counties} 
+        dict_mw.append(mw)               
 
 
-#     return render_template("directory.html", midwives = midwives)
+    return jsonify([dict_mw])
 
 
 @app.route('/register', methods=['POST'])

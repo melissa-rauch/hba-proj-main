@@ -6,6 +6,7 @@ const Route =  window.ReactRouterDOM.Route;
 const Switch = window.ReactRouterDOM.Switch;
 // const Redirect = window.ReactRouterDOM.Redirect;
 
+const Directory = window.Directory;
 const Midwife = window.Midwife;
 const User = window.User;
 const Home = window.Home;
