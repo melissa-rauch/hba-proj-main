@@ -15,7 +15,7 @@ def create_user(email, password):
     return user
 
 def create_midwife(name, email, website, address, bio, counties, img):
-    """Create and return a new movie"""
+    """Create and return a new midwife"""
 
     midwife = Midwife(name = name, 
                     email = email, 

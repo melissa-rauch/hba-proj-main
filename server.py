@@ -1,9 +1,10 @@
 """Server side"""
 
-from flask import (Flask, render_template, request, flash, session, redirect)
+from flask import (Flask, render_template, request, flash, session, redirect, jsonify)
 from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
+import json
 
 app = Flask(__name__)
 app.secret_key = "dev"
@@ -11,31 +12,42 @@ app.jinja_env.undefined = StrictUndefined
 
 # INSERT STUB ROUTES HERE
 
-
-@app.route('/')
-def show_login():
-    """Show login page"""
-
-    return render_template('login.html')
-
-@app.route('/home')
-def show_user_home():
-    """Show User homepage"""
-
-    return render_template('home.html')
-
-@app.route('/midwife')
-def show_midwife_profile():
-    """Show Midwife profile"""
-
-    return render_template('midwife.html')
-
 @app.route('/directory')
-def show_directory():
-    """Show directory of Midwives"""
-    midwives = crud.get_midwives()
+@app.route('/midwife')
+@app.route('/user')
+@app.route('/')
+def render_app():
+    """Show App"""
 
-    return render_template('directory.html', midwives = midwives)
+    return render_template('index.html')
+
+
+
+# @app.route('/home')
+# def show_user_home():
+#     """Show User homepage"""
+
+#     return render_template('home.html')
+
+# @app.route('/midwife')
+# def show_midwife_profile():
+#     """Show Midwife profile"""
+
+#     return render_template('midwife.html')
+
+# @app.route('/demoapi')
+# def show_directory():
+#     """Show directory of Midwives"""
+
+#     return jsonify({"Dog":"Rumo"})
+
+# @app.route('/directory')
+# def show_directory():
+#     """Show directory of Midwives"""
+#     midwives = crud.get_midwives()
+
+
+#     return render_template("directory.html", midwives = midwives)
 
 
 @app.route('/register', methods=['POST'])
@@ -70,6 +82,7 @@ def login_user():
     #     flash('Invalid user and password combination')
 
         return redirect('/home') # if login correct, direct to /profile/<user_id>
+
 
 
 if __name__ == '__main__':
