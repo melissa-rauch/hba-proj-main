@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Camila Carvalho",
+        "email": "CamilaBCarvalho@test.com",
+        "password": "Melo",
+        "address": "4316 Essex St, Emeryville, CA, 94608",
+        "bio": "About me...",
+        "img": "/static/img/camila.jpg",
+        "lat":37.834175,
+        "lng":-122.277926
+    },
+    {
+        "name": "Eden Elias",
+        "email": "EdenElias@test.com",
+        "password": "Melo",
+        "address": "356 21st Ave, San Francisco, CA 94121",
+        "bio": "About me...",
+        "img": "/static/img/eden.jpg",
+        "lat":37.781163,
+        "lng":-122.480287
+    },
+    {
+        "name": "Minna Verdugo Olivo",
+        "email": "MinnaOlivo@test.com",
+        "password": "Melo",
+        "address": "925 Bridgeway, Sausalito, CA 94965",
+        "bio": "",
+        "img": "/static/img/minna.jpg",
+        "lat":37.858077,
+        "lng":-122.483057
+    },
+    {
+        "name": "Isabella Danielsen",
+        "email": "IsabellaDanielsen@test.com",
+        "password": "Melo",
+        "address": "15984 Gramercy Dr, San Leandro, CA 94578",
+        "bio": "About me...",
+        "img": "/static/img/isabella.jpg",
+        "lat":37.707484,
+        "lng":-122.110228
+    },
+    {
+        "name": "Emma Pearson",
+        "email": "EmmaPearson@test.com",
+        "password": "Melo",
+        "address": "1138 Rhode Island St, San Francisco, CA 94107",
+        "bio": "About me...",
+        "img": "/static/img/emma.jpg",
+        "lat":37.755367,
+        "lng":-122.401856
+    },
+    {
+        "name": "Nicoletta Zito",
+        "email": "NicolettaZito@test.com",
+        "password": "Melo",
+        "address": "926 The Alameda, Berkeley, CA 94707",
+        "bio": "About me...",
+        "img": "/static/img/nico.jpg",
+        "lat":37.890497,
+        "lng":-122.277189
+    }
+]

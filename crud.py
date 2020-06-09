@@ -4,26 +4,36 @@ from model import db, User, Midwife, connect_to_db
 
 
 
-def create_user(email, password):
+def create_user(name, email, password, address, bio, img, lat, lng):
     """Create and return a new user"""
 
-    user = User(email=email, password=password)
+    user = User(name=name,
+                email=email, 
+                password=password,
+                address=address,
+                bio=bio,
+                img=img,
+                lat=lat,
+                lng=lng)
 
     db.session.add(user)
     db.session.commit()
 
     return user
 
-def create_midwife(name, email, website, address, bio, counties, img):
+def create_midwife(name, email, password, website, address, bio, counties, img, lat, lng):
     """Create and return a new midwife"""
 
     midwife = Midwife(name = name, 
-                    email = email, 
+                    email = email,
+                    password = password, 
                     website = website, 
                     address = address,
                     bio = bio,
                     counties = counties,
-                    img = img)
+                    img = img,
+                    lat = lat,
+                    lng = lng)
 
     db.session.add(midwife)
     db.session.commit()

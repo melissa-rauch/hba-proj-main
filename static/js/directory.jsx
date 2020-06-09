@@ -9,6 +9,7 @@ class Directory extends React.Component {
       value : "?"
     }
   }
+  
   componentDidMount() {
     this.setState({value : "?"})
     fetch('/directory')
@@ -19,13 +20,17 @@ class Directory extends React.Component {
       })
     })
   }
+  
+
   render() {
+
     const midwives = this.state.value.data
   
   return (
   
     <div>
       <h1>Directory of Midwives</h1>
+      <img src="/static/img/engelbrecht.jpeg"></img>
       <p>{midwives}</p>
     </div>
 

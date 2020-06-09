@@ -2,217 +2,289 @@
     {
         "name": "Amanda Kessner LM CPM",
         "email": "amanda@eastbaymidwives.com",
+        "password": "1234",
         "website": "https://eastbaymidwives.com",
         "address": "902 Stannage Ave, Albany, CA 94706",
         "bio": "I have over a decade of experience working with mothers, newborns, and infants. I first started attending births as a volunteer at San Francisco General Hospital, and have been active with public health organizations including Homeless Prenatal Program and The Body Positive. I also have the privilege of serving on the advisory board of the Global Pediatric Alliance and Imeinu, a collective of Jewish birth professionals. I studied at the Midwives College of Utah, and completed the majority of my clinical training at the San Francisco Birth Center, under the supervision of the founding nurse midwives. I was born and raised in the Bay Area. I love to hike, pick wildflowers, and share a Shabbat meal with friends and family.",
         "counties":"Alameda, Contra Costa, San Francisco, Solano, Marin",
-        "img": "/static/img/kessner.jpg"
+        "img": "/static/img/kessner.jpg",
+        "lat" :37.8902021,
+        "lng" :-122.2993698
     },
     {
         "name": "Cynthia Banks RN MSN CNM",
         "email": "cynthia@lovingwaymidwifery.com",
+        "password": "1234",
         "website": "https://lovingwaymidwifery.com",
         "address": "5735 Shattuck Ave, Oakland, CA 94609",
         "bio": "Cynthia began catching babies in 1994 when she first developed a passion for home birth. In 1996, she earned her Master of Science in Nursing degree from Yale University,  launching a career that has included attending home births in Chicago, working as a full-time volunteer Senior Midwife at a birth center in Texas, and attending both home and hospital births in the Bay Area. A Registered Nurse and a Certified Nurse-Midwife, Cynthia offers a calm, reassuring presence that is a blessing to birthing families, while her expertise provides a safe container for the natural unfolding of the sacred rite of birth.  Cynthia serves as an important resource to her local community of midwives, offering classes in midwifery skills and providing direct supervision and mentoring to students and new midwives as they transition to independent practice. Areas of particular professional interest include perinatal psychology, the microbiome, and women's herbal medicine.",
         "counties":"Alameda, Contra Costa",
-        "img": "/static/img/banks.jpg"
+        "img": "/static/img/banks.jpg",
+        "lat" :37.8434437,
+        "lng" :-122.267339
     },
     {
         "name": "Diane Holzer LM CPM",
         "email": "midwife@laughingcrows.net",
+        "password": "1234",
         "website": "https://dianeholzer.com",
         "address": "Mill Valley,CA 94941",
         "bio": "Diane has been attending births for over thirty-five years and has loved every bit of it! Well over a thousand babies have been received with the help of Diane’s hands, each one truly magical. All the babies that she helps deliver are extremely cute! Diane weaves the skills of her herbal training, at Southwest School of Botanical Medicine, and holistic approach to life throughout her care with the families she serves. Diane’s goal is to blend the sacredness of birth with modern day evidence-based practice. Diane practices midwifery in the Bay Area of San Francisco including San Francisco, Marin, and Sonoma counties since 1993. In addition to being a midwife, Diane has served hundreds of families in the rural community of West Marin where she works as a Physician Assistant in Family Practice. Watching the kids grow and being involved in their lives after they are born is one of the greatest gifts she can imagine. Diane has also dedicated over 20 years of her life to serving the larger midwifery movement. She was a founding mother and co-creator of multiple midwifery organizations, on the board of the Midwives Alliance of North America for 20 years, and together with her midwifery co-conspirators during these decades created much of the infrastructure for education, certification and promotion of the art and profession of direct entry midwifery in the United States. Diane has a passion for teaching and spent almost 10 years on faculty of Maternidad La Luz, a well-known training program for midwives.  She has been involved with the training of hundreds of student midwives. She also has been involved in international maternal health projects for years and currently is midwife educator and clinical advisor for a program run by Pachamama in the Ecuadorian Amazon rain forest. Being a full-time midwife is a lot of work but in the spare moments you can find Diane in her garden weeding, tilling, planting and caring for the ecosystem. She has a passion for flowers and eats mostly homegrown vegetables and fruits.",
         "counties":"Marin, Napa, Sonoma, San Francisco",
-        "img": "static/img/holzer.jpg"
+        "img": "static/img/holzer.jpg",
+        "lat" :37.9066928,
+        "lng" :-122.5807783
     },
     {
         "name": "El Tarver LM CPM",
         "email": "midwife@emunahmidwifery.com",
+        "password": "1234",
         "website": "https://emunahmidwifery.com",
         "address": "1610 Prince St, Berkeley, CA 94703",
         "bio": "El’s calling to midwifery came through years of organizing and activism in reproductive justice, racial justice, and queer/trans liberation movements. She observed the ways that political change is intricately linked with personal and interpersonal growth and transformation and longed to put her ideals into practice as a healer. El’s favorite part of midwifery care is the depth of connection that develops in her relationships with clients. El has over a decade of healthcare experience. Prior to becoming a midwife, El worked as a midwife’s assistant for three years, first at a busy birth center in Brooklyn, NY and then in a homebirth practice across the five boroughs of New York City. During this time, she also served on the leadership of the Doula Project, an organization that provides free doula support in abortion clinics and to low-income people giving birth in all settings. Additionally, she spent two years working as a counselor at a family planning health center, and four years as a reproductive health educator with Project Prepare. El is a queer Jewish femme, and provides care that is queer/trans affirming, and invites you to bring your whole self to the relationship.",
         "counties":"Alameda, Contra Costa, San Francisco",
-        "img": "static/img/tarver.jpeg"
+        "img": "static/img/tarver.jpeg",
+        "lat" :37.8516508,
+        "lng" :-122.2781721
     },
     {
         "name":"Ellen Levitt LM CPM",
         "email": "wombservicemidwives@gmail.com",
+        "password": "1234",
         "website":"https://wombservicemidwifery.com",
         "address":"1114 Cowper St, Berkeley, CA 94702",
         "bio":"Ellen Levitt, Licensed Midwife (CA License #7), has a strong passion for women’s health and over 30 years of experience providing loving prenatal, birth and postpartum midwifery care. Since 1987, Ellen has attended more than 1,300 births. Ellen values informed choice when supporting families in making decisions regarding their care.  She believes that healthcare is a human right and she serves ALL families.  Ellen trained as a midwife through a homebirth apprenticeship in California and clinical training in a hospital in Kingston, Jamaica and birth centers in Austin, Texas and Hollywood, Florida. Prior to that she worked as an EMT in San Francisco. Teaching and training apprentices has been an essential part of her practice with the wonderful result of passing on the midwifery model of care. Her experience, enthusiasm and dedication have led her to become an integral part of the midwifery community. Ellen has served as the regional representative on the board of the California Association of Midwives and on the California Licensing Committee. Ellen co-founded the  Bay Area Homebirth Collective which grew out of her dedication and love for maintaining a vibrant homebirth community. Ellen’s commitment to midwifey is reflected in the respect and affection of her client families. When not caring for her clients, Ellen enjoys partner dancing, juggling, and spending time with her family.",
         "counties":"Alameda, Contra Costa, Solano",
-        "img":"static/img/levitt.jpg"
+        "img":"static/img/levitt.jpg",
+        "lat":37.8671701,
+        "lng":-122.2930985
     },
     {
         "name":"Esther Healy LM CPM",
         "email": "esther@awakeningsbirthservices.com",
+        "password": "1234",
         "website":"https://awakeningsbirthservices.com",
         "address":"4547 San Carlos Ave, Oakland, CA 94601",
         "bio":"Rooted in the worlds of both modern science and ancient traditions, Esther Healey is devoted to the art and craft of midwifery and holistic healing. She finds nothing more exciting than to uncover new pockets of wisdom that she can integrate and pass on to others. Her purpose is to support people in their healing journey when they are ready to undertake that commitment. Esther strives to be present in every moment and honors her relationships through mindful listening and dialogue. This allows for exploration of deeper definitions of love, health, joy, parenting, and what it means to be a thriving person. Esther’s life’s work is dismantling oppression and dismantling systems of oppression. This primarily manifests as dismantling the Medical Industrial Complex and replacing it with health and healing, love and joy. She is, with others leading the way, focused on creating a healthcare system where, at it’s core, focuses on healing the root cause of imbalance which leads to living fulfilling, vibrant lives. She tries to not take life so seriously given the crazy world we live in, so when she’s not down in the depths with clients, she rolling around in mud with kids and plants, hiking in the Oakland redwoods with friends, eating delicious food, singing, dancing, or swimming in the warmest body of water she can find. Born and raised in Berkeley, Esther now lives in Oakland with her partner, Joshua, and her little one, Ezra-both of whom you may meet if you come to our home office.",
         "counties":"Alameda, Contra Costa",
-        "img":"static/img/healy.jpg"
+        "img":"static/img/healy.jpg",
+        "lat":37.777254,
+        "lng":-122.2083914
     },
     {
         "name":"Evaly Long LM CPM",
         "email": "evaly@islandmidwife.com",
+        "password": "1234",
         "website":"https://islandmidwife.com",
         "address":"5735 Shattuck Ave, Oakland, CA 94609",
         "bio":"Evaly discovered midwifery in 2007 while listening to a segment about midwives on the local public radio station. That was enough to set her on the path to becoming a midwife. She would also learn that homebirth had been a family affair with her mom and four siblings being born at home in Mexico con una Partera (a midwife), and her dad and two siblings born at home in South Carolina. Over three years Evaly apprenticed at Sage Femme Birth Center in San Francisco, with Tres Lunas Midwifery homebirth practice, and Pacifica Family Maternity Center in Berkeley. Along the way Evaly and her husband welcomed their twin daughters, now eleven years old, at St Luke’s Hospital, and their son, five years old, born at home. Evaly is most excited to help families build their knowledge and confidence through resources, information and building community. She believes that midwives are one bridge between marginalized communities and safe, respectful healthcare in part because of their mutual relationship built on trust. When all people can be heard and cared for together we will all be free and grow together.",
         "counties":"Alameda, Contra Costa ",
-        "img":"static/img/long.jpg"
+        "img":"static/img/long.jpg",
+        "lat" :37.8434437,
+        "lng" :-122.267339
     },
     {
         "name":"Kirstin Soares LM CPM",
         "email": "gentletoucheastbay@gmail.com",
+        "password": "1234",
         "website":"https://gentletoucheastbay.com",
         "address":"5730 Market St, Oakland, CA 94608",
         "bio":"I strongly believe that we each have special gifts which we are responsible to develop and faithfully put to the service of our community.  My life journey has helped to shape and form the midwife and craniosacral therapist that I am today.  Throughout my life I have been a dedicated listener and a compassionate friend, drawn to being with others during hard times and illness.  I have been blessed with a calm and patient demeanor.  I respect silence and in new situations I spend a great deal of time observing before acting. I have been blessed with the opportunity to be invited into the sacred birthing space in many places in the United States, Mozambique, Brazil and Mexico.  I seek to adapt my care to the unique needs and culture of each family I serve.  I am gifted with fluency in English, Portuguese and Spanish and most importantly the universal language of birth.",
         "counties":"Alameda, Contra Costa",
-        "img":"static/img/soares.jpg"
+        "img":"static/img/soares.jpg",
+        "lat" :37.8422388,
+        "lng" :-122.2765107
     },
     {
         "name":"Grace Bender LM CPM",
         "email": "grey.cie@gmail.com",
+        "password": "1234",
         "website":"https://10moonsmidwifery.com",
         "address":"1285 Gilman St, Berkeley, CA 94706",
         "bio":"My midwifery training came through both an apprenticeship model and a traditional educational path. I have been passionate about women’s healthcare and birth for over half my life. Being a midwife fills me with purpose. I hold an Associate of Science in Midwifery degree from National College of Midwifery. I received my Licensed Midwife (LM) and Certified Professional Midwife (CPM) credentials in 2017 from the Medical Board of California and the North American Registry of Midwives. I have been attending births in all settings for over 10 years. I am a member of the Bay Area Homebirth Collective and participate in regular peer review with other Licensed Midwives in the Bay Area. I have attended 200+ births.  I earned a Bachelor of Arts degree from The Evergreen State College in Women’s Studies + Creative Writing. I have been a student of yoga and ayurveda for the past 20 years. My background includes a decade of teaching yoga and over a decade of working as a perinatal and postpartum massage therapist. These things deeply inform my midwifery practice. I live in California for the food and the weather, and because I feel most at home near the ocean. My heart is spread wide across the country with roots in the forests of the Pacific Northwest, the waters and dunes of Lake Michigan, and the rocky caves and creeks of Missouri. I am more country than city but need both to thrive. Reading cookbooks, hiking, and lounging at the beach with my family are my favorite things. I love being a mother and I really love being a midwife.",
         "counties":"Alameda, Contra Costa",
-        "img":"static/img/bender.jpeg"
+        "img":"static/img/bender.jpeg",
+        "lat" :37.8816299,
+        "lng" :-122.2925739
     },
     {
         "name":"Jen Madanat LM CPM",
         "email": "jen@wholesomemidwifery.com",
+        "password": "1234",
         "website":"https://wholesomemidwifery.com",
-        "address":"",
+        "address":"2061 Turk Blvd San Francisco, CA 94115",
         "bio":"Jen is a Certified Professional Midwife under the North American Registry of Midwives, and a Licensed Midwife under the Medical Board of California. She is a graduate of the National College of Midwifery, which encompassed 3 years of Midwifery school and 3+ years of apprenticeships. Her apprenticeships involved working at a busy birth center and a full home birth practice. Her earliest midwifery studies began at an international program in a high-volume birth center in Bali,Indonesia. Jen began attending births in 2011. Her own pregnancy loss opened her eyes to the wealth of information she was lacking about her own body, wellbeing, pregnancy and options in her health care. She decided to turn that around, and dove into the beauty of maternal health, pregnancy, birth, postpartum, parenthood and the intuition that is connected through it all. After being a full time doula for 3 years, Jen knew she wanted to further her education and provide personalized medical services to women, that showed them they could have a more active role in their health care. Midwifery was the obvious next step. Halfway through her midwifery studies, she learned her grandmother was a traditional midwife in her village in the Middle East, during a time when birthing at home was the norm. What a lineage to follow! The transformational power of pregnancy to parenthood is a journey to be guided with the most nurturing and compassionate community, and by those that understand the magnitude of such a transition. It is Jen's goal to help families learn the innate power of their bodies, the grace and wisdom to which they function and connect them to the communities that will encourage and empower their growth. Midwifery care is a gateway to witnessing the level of personalized care every person has the right to receive!",
         "counties":"San Francisco, Alameda, Contra Costa",
-        "img":"static/img/madanat.jpg"
+        "img":"static/img/madanat.jpg",
+        "lat" :37.778957,
+        "lng" :-122.443037
     },
     {
         "name":"Jeannie Choe LM CPM",
         "email": "jeannie@eastbaymidwives.com",
+        "password": "1234",
         "website":"https://eastbaymidwives.com",
         "address":"902 Stannage Ave, Albany, CA 94706",
         "bio":"I am a second generation Korean-American Licensed Midwife, Board Certified Lactation Consultant, and mom to two wonderful kids, both born at home with midwives. I am licensed by the Medical Board of California and certified by the North American Registry of Midwives and the International Board of Lactation Consultant Examiners. I graduated from the National College of Midwifery under the clinical supervision of Certified Nurse-Midwife Cynthia Banks, RN, MSN, CNM. I also hold a Bachelors Degree in Industrial Design from Pratt Institute. In between catching babies, I love to read, cook and bake, play the piano, and hike in solitude. Originally from Chicago, with a decade-long stopover in Brooklyn, I now live in beautiful Berkeley with my family where I feel incredibly blessed to share the gift of midwifery with Bay Area families.",
         "counties":"Alameda, Contra Costa, San Francisco, Solano, Marin",
-        "img":"static/img/choe.jpg"
+        "img":"static/img/choe.jpg",
+        "lat" :37.8902021,
+        "lng" :-122.2993698
     },
     {
         "name":"Joan Green LM CPM",
         "email": "joan@marinmidwife.com",
+        "password": "1234",
         "website":"https://marinmidwife.com",
         "address":"Fairfax, CA 94930",
         "bio":"I have attended over a thousand births as the primary midwife and have been practicing woman-centered midwifery care since 1984. I received my training at the Maternity Center in El Paso, Texas. I had a home childbirth practice in El Paso after completing my training. I then went on to teach and attend births for many years at Maternidad La Luz, renowned midwifery school and free-standing birth center. I have been living and practicing midwifery in Marin and Sonoma Counties for the last 25 years. I was the co-founding midwife for Circle of Life Midwifery Center in Fairfax and now practice as Heart Wisdom Midwifery. I served for more than 5 years on the Board of Directors of the California Association of Midwives and also completed two terms as Vice President for the Midwives Alliance of North America. Questions about my qualifications and experiences as a midwife, as well as anything else that may help you in choosing the right attendant for your birth, are encouraged. Childbirth is a miracle, an everyday miracle but one of the most powerful events in most people's lives.  It effects how the baby relates to the world, how the mother feels about her herself and is also the birth of the father. Giving birth has a life-long impact on everyone present.   Each birth is unique and hold it’s own power and energy.  It is personal and belongs within the family circle. The mother is better able to face the challenges of birth with encouragement and respect, surrounded by those who love and care about her. When birth is truly experienced it is a glorious moment. I see my role as the midwife as the person who holds the wonder and allows the family to find it's way through this amazing process.  My midwifery care is compassionate, safe and combines ancient wisdom and modern knowledge. I focus on cherishing the beauty within the mother while guiding and protecting the process of pregnancy and birth. I advise the mother and her birth partner with love, respect and support.  It is an honor to help welcome a new and precious being into the family.",
         "counties":"San Francisco, Marin, Sonoma",
-        "img":"static/img/green.jpeg"
+        "img":"static/img/green.jpeg",
+        "lat":37.9906712,
+        "lng":-122.6160935
     },
     {
         "name":"Kelly Murphy LM CPM",
         "email": "kellymurphy@womenborn.com",
+        "password": "1234",
         "website":"https://womenborn.com",
         "address":"1300 Sanchez St, San Francisco, CA 94131",
         "bio":"Midwives who came before me, who shared the teachings with the stories of their lives and work seeded my practice. The textbooks studied nourished strong roots of knowing.  Most of this beginning was at Maternidad La Luz, a busy birth center in El Paso.  I steeped in hundreds of births there, witnessed many versions. I learned Birth by watching it and feeling it in my hands.  I learned Birth with other women, from women.  I fell in love with Birth. It was here that I devoured the architecture of midwifery, that which can be learned by study.  It was also here that I began to awaken to the expansive, limitless terrain that is the craft of midwifery, and that is the art I devote my life to. Each story, each version, each call to listen, witness, love, contain, usher and protect expands and refines my practice.  It is a resolute honing of skills, intuition, ferocity and grace.  It is artistry learned by opening, allowing, receiving, and collaborating with forces I cannot see, prove, command, or always understand. It is continuously growing my Faith in the ritual of Birth, in her penetrating potential to reveal and heal. It is wisdom informed by the personal and universal meeting of Self by walking my own life path: living my own feminine rites, needing my own midwife, being a woman.  It is the daily commitment and recommitment to doing the work of this life and my whole-hearted devotion to midwifery.",
         "counties":"San Francisco, San Mateo",
-        "img":"static/img/murphy.jpeg"
+        "img":"static/img/murphy.jpeg",
+        "lat":37.748234,
+        "lng":-122.431662
     },
     {
         "name":"Lael Stimming LM CPM",
         "email": "lael@awakeningsbirthservices.com",
+        "password": "1234",
         "website":"https://awakeningsbirthservices.com",
         "address":"4547 San Carlos Ave, Oakland, CA 94601",
         "bio":"I have been in awe of pregnancy and birth since I can remember. I was born at home in Mt Shasta, Ca in 1975. My mother was a brave pioneer in the movement back to natural, unmedicated birth, and had all three of her children at home. As a child I would tell my parents and their friends that I was going to be a baby delivery doctor, as I was at the time, unfamiliar with midwives. After the birth of my first daughter in 1999, I began serving women and families as a doula. I realized then that my passion was being a baby delivery midwife. After personally birthing my own four children at home, I attended midwifery training through the National Midwifery Institute. I have had the privilege and honor of working with and studying under several accomplished midwives and doctors, in California, Germany, and Mexico. As a mother of four children, I intimately understand the joys and challenges of parenting in the 21st century. I teach parenting and child development classes using the philosophy of Magda Gerber, Mindful Parenting and Waldorf methodology. I also teach anatomy and physiology of pregnancy to yoga teacher trainees (or anyone who will listen). I have recently begun a parent consulting practice where I focus on authentic, intuitive approaches to parenting. I have a personal relationship to and am incredibly well versed in a holistic approach to well woman and well family care and have expanded my practice to include the use of nutrition, herbs, homeopathic medicine, and Anthroposophic medicine. I am STILL awed and inspired by the beauty and power of women and birth.",
         "counties":"Alameda, Contra Costa",
-        "img":"static/img/stimming.jpg"
+        "img":"static/img/stimming.jpg",
+        "lat":37.777254,
+        "lng":-122.2083914
     },
     {
         "name":"Maria Iorillo LM CPM",
         "email": "sfmidwife@gmail.com",
+        "password": "1234",
         "website":"https://wisewomanchildbirth.com",
         "address":"206 27th St, San Francisco, CA 94131",
         "bio":"San Francisco, San Mateo, Marin | Maria Iorillo is a California Licensed Midwife (LM) as well as a Certified Professional Midwife (CPM) and Certified Emergency Medical Technician (EMT). She has been in a San Francisco home birth practice since 1986. She has served on the Board of Directors of the California Association of Midwives and the Midwives Alliance of North America. Having given birth at home herself, Maria knows the path that lies ahead. Maria feels honored to attend the birth of a child, always feeling that it is a very special invitation to a private celebration. She suspects that her highest appreciation of spirituality emerges from the repeated witnessing of miracles. Maria serves San Francisco with home birth midwifery services, as well as labor management at home midwifery services. In-office prenatal visits are 1 hour long and postpartum visits are in your home.",
         "counties":"San Francisco, San Mateo, Marin",
-        "img":"static/img/Iorillo.jpg"
+        "img":"static/img/Iorillo.jpg",
+        "lat":37.7471694,
+        "lng":-122.4273228
     },
     {
         "name":"Marea Goodman LM CPM",
         "email": "mareagoodman@gmail.com",
+        "password": "1234",
         "website":"https://restoremidwifery.com",
         "address":"5735 Shattuck Ave #1640, Oakland, CA 94609",
         "bio":"I absolutely love being a homebirth midwife, and feel especially excited to serve and support queer families. For me, midwifery care and homebirth offer one of the greatest opportunities for human connection. My practice is centered around the belief that everyone deserves a safe and empowering experience of pregnancy and birth. I have attended hundreds of births in both home and birth center settings, in multiple states in the country, and in places across the globe. I bring positive energy, a kind heart, and extensive experience to each of my clients to ensure they have the most empowered birthing experience possible. I also offer queer and trans appropriate healthcare to my clients who do not fit into the gender binary. También, hablo español.",
         "counties":"Alameda, Contra Costa, Solano",
-        "img":"static/img/goodman.jpeg"
+        "img":"static/img/goodman.jpeg",
+        "lat":37.8434437,
+        "lng":-122.267339
     },
     {
         "name":"Michelle Wellborn LM CPM",
         "email": "michelle@wellbornbaby.com",
+        "password": "1234",
         "website":"https://wellbornbaby.com",
-        "address":"",
+        "address":"39 Hopkins Ave San Francisco, CA 94131",
         "bio":"I am a Certified Professional Midwife, a California Licensed Midwife and a graduate of the National Midwifery Institute’s 3-year midwifery program. I attend homebirths in and around San Francisco, California. I am amazed and grateful to have found midwifery and I love my job! I feel so passionate about birth that it rarely feels like work. I believe that pregnancy and birth are normal life processes that have the power to transform us at the deepest levels. Witnessing this transformation and seeing women/birthing parents realize their power is both a joy and an honor. Education is a core value. I offer individualized care, professional advice, information and resources to empower my clients to make autonomous decisions about their pregnancies, births and babies. The Midwifery Model of Care builds confidence in parenting skills. No matter how many births I attend, I learn something new at each birth and find myself profoundly moved by the strength, love and wisdom I regularly witness in my clients. I can't imagine doing anything more rewarding than this work! Witnessing the births of my sister-in-law’s twins in 2002 changed my life forever and inspired me to leave the corporate world behind to pursue work in the birth arena. By 2003 I was attending births professionally as a Birth and Postpartum Doula. My journey has included teaching childbirth education, newborn care and breastfeeding classes to expecting parents and training birth doulas. I teach classes for local student midwives and often have student midwives working as apprentices in my practice. Since the birth of the twins I have attended over 700 births and taught classes to families and birth professionals all over the San Francisco Bay Area. My training is through the National Midwifery Institute, Hearts and Hands Midwifery program, and The Farm Midwifery Center. I gained my hands-on skills in apprenticeships with three busy local homebirth practices. Additionally, in the summer of 2008 I volunteered as a Hospital Midwife in Vanuatu. I am a lifetime learner and love to attend conferences, seminars and trainings. I am eternally grateful to the families I have served and to the midwives and teachers who have mentored me along my way. Thank you!",
         "counties":"San Francisco, Marin, Solano, Napa, Contra Costa, Alameda",
-        "img":"static/img/wellborn.jpeg"
+        "img":"static/img/wellborn.jpeg",
+        "lat":37.752894,
+        "lng":-122.444396
     },
     {
         "name":"Kara Engelbrecht LM CPM",
         "email": "kara@mothercraftmidwifery.com",
+        "password": "1234",
         "website":"https://mothercraftmidwifery.com",
         "address":"1300 Sanchez St, San Francisco, CA 94131",
         "bio":"Kara’s path into midwifery started with a worn-out copy of Spiritual Midwifery that she inherited in her first pregnancy. As a new mother of two young children, she continued to collect volumes of birth stories and stacks of textbooks. Kara enrolled in a doula training in 2003 and after a successful doula practice for six years she began an apprenticeship with a busy homebirth practice, Rites of Passage with Nancy Myrick, CNM and Ami Burnham, LM, and enrolled in National College of Midwifery with academic supervision with Cynthia Banks, CNM. Kara has studied at The Farm, completed Hearts and Hands, and worked in the Kafoutine Clinic in Senegal. Nine years after attending her first birth as a doula, Kara began her homebirth practice in San Francisco. In 2015 Kara opened the ROOT, home to four individual midwifery practices, where they strive to create community for women. Kara continues to collect birth stories, amounting a wealth of trust and love for women and babies, and their ability to birth.",
         "counties":"San Francisco, San Mateo",
-        "img":"static/img/engelbrecht.jpg"
+        "img":"static/img/engelbrecht.jpg",
+        "lat":37.748234,
+        "lng":-122.431662
     },
     {
         "name":"Jaime Shapiro LM CPM",
         "email": "jaime@peacefulpassagemidwifery.com",
+        "password": "1234",
         "website":"https://peacefulpassagemidwifery.com",
         "address":"1300 Sanchez St, San Francisco, CA 94131",
         "bio":"Jaime Shapiro, LM, CPM is a Licensed Midwife under the Medical Board of California and a Certified Professional Midwife under the North American Registry of Midwives (NARM). Her formal education and training consisted of the completion of a 3-year accredited Midwifery school and 3 years of apprenticeship with a busy homebirth practice. She also spent time as a student in Senegal, West Africa at a small but busy, rural maternity center.  She is a member of The Bay Area Homebirth Collective & regularly attends Peer Review.  Jaime landed in the world of women’s health after spending years self-healing through many different holistic healing traditions. After exploring the many different avenues of healing and spending time in other countries, witnessing both the beauty and challenges of different models of health care around the world, it was clear to her what kind of healer she wanted to be – one that honors the mystery and complexity of the body and trusts our inner – knowing, one that holds great reverence for the power within us all to heal and overcome great challenge. Jaime is also a practitioner of the Arvigo Techniques of Maya Abdominal Therapy™, an essential oil educator, and a level III Reiki practitioner. She works with women throughout their lives, not just during the childbearing year, supporting women in having healthy cycles, optimal fertility, strong pregnancies, empowered births, supported postpartums, healthy digestion, and nourished spirits.  She focuses on prevention and wellness through the use of many non-allopathic healing modalities - including herbal remedies, essential oils, nutritional &  lifestyle support,  the Arvigo Techniques of Maya Abdominal Therapy™, and Reiki healing.  She is passionate about empowering women to take responsibility for their health through education & informed choice. The care of a midwife honors and nurtures the whole woman - body, mind, and soul. Jaime is honored to have served hundreds of families in the Bay Area and continues to feel immense pleasure and gratitude in being “with woman”.",
         "counties":"San Francisco, San Mateo",
-        "img":"static/img/shapiro.jpg"
+        "img":"static/img/shapiro.jpg",
+        "lat":37.748234,
+        "lng":-122.431662
     },
     {
         "name":"Renee Lepreau LM CPM IBCLC",
         "email": "renee@junemoonbirth.com",
+        "password": "1234",
         "website":"https://junemoonbirth.com",
         "address":"2615 Ashby Ave, Berkeley, CA 94705",
         "bio":"Renée has attended hundreds of births over the last eleven years, and has practiced as a Licensed Midwife since 2014. She has worked in many settings, including home, high volume birth centers, and serving rural Amish and Mennonite families. Over the years Renée has had the privilege of training many wonderful midwifery students. She has a BA in Women's, Gender and Sexuality Studies and worked as a community organizer for a neighborhood for many years before becoming a midwife. Renée’s commitment to compassionate maternity care was inspired by her grandfather, a practicing doctor until his late 80s, who taught her that good medicine has to include “being there.” Renée writes and publishes poetry, and loves to backpack, dance, meditate, and bike around Berkeley.",
         "counties":"Alameda, Contra Costa, Solano",
-        "img":"static/img/lepreau.jpg"
+        "img":"static/img/lepreau.jpg",
+        "lat":37.8570619,
+        "lng":-122.2570145
     },
     {
         "name":"Shannon Staloch LM CPM IBCLC",
         "email": "lael@awakeningsbirthservices.com",
+        "password": "1234",
         "website":"https://awakeningsbirthservices.com",
         "address":"4547 San Carlos Ave, Oakland, CA 94601",
         "bio":"Shannon is a Certified Professional Midwife, Licensed Midwife,  and an International Board Certified Lactation Consultant. From Senegal to San Francisco, Shannon has provided midwifery care to a spectacular array of women in all settings from clinics to kitchens. Shannon’s three children were all born at home with midwives in attendance. She received her midwifery degree from the National Midwifery Institute and her license from the California Medical Board in 2008. She passed her lactation boards in 2010. In order to serve her families and deepen her understanding of alternative health Shannon has taken classes and trainings from the Weston A. Price Foundation, Holistic Pediatric Association, Suzanne Colson at Biological Nurturing, and is currently enrolled in Aviva Romm’s Herbal Medicine for Women Distance Training Program. Most of her training comes from raising her three kids, birthing them, cooking for them, and enjoying them!",
         "counties":"Alameda, Contra Costa Santa Clara",
-        "img":"static/img/staloch.jpg"
+        "img":"static/img/staloch.jpg",
+        "lat":37.777254,
+        "lng":-122.2083914
     },
     {
         "name":"Sue Balen LM CPM",
         "email": "sue@sacredbodymidwifery.com",
+        "password": "1234",
         "website":"https://sacredbodymidwifery.com",
-        "address":"San Francisco, CA 94114",
+        "address":"206 27th St, San Francisco, CA 94131",
         "bio":"I was just 19 years old when I discovered that there was such a thing as midwifery and homebirth. I knew right then that's what I wanted to be when I grew up. It took me many years and several adventures including moving to San Francisco and having my own homebirth before I felt 'grown up' enough to pursue my calling. I made a 10-year plan and said I was becoming a midwife from the inside out. 11 years later thanks to many wonderful teachers, an apprenticeship, and graduation from the National Midwifery Institute I achieved my goal. I've been in practice since 2005 and take 2-3 primary clients a month.",
         "counties":"San Francisco, Marin, San Mateo",
-        "img":"static/img/baelen.jpg"
+        "img":"static/img/baelen.jpg",
+        "lat":37.7475835,
+        "lng":-122.4479969
     },
     {
         "name":"Hannah Weiss LM CPM",
         "email": "info@woommidwifery.com",
+        "password": "1234",
         "website":"https://woommidwifery.com",
         "address":"5735 Shattuck Ave, Oakland, CA 94611",
         "bio":"Hannah Weiss is the founder and owner of Woom Midwifery.  She is licensed to practice midwifery under the Medical Board of California and certified under the North American Registry of Midwives (NARM) as a Certified Professional Midwife.  Her formal education consisted of three years at the National Midwifery Institute and two clinical home birth apprenticeships in California and Utah.   Prior to becoming a midwife,  Hannah ran a bustling doula practice for over 10 years in the East Bay and collaborated on Glow Massage and Birth Supports’ doula program.  Hannah is certified in Neonatal Resusitation (NRP), CPR and First Aid.  She regularly attends the Bay Area Peer Review and is an active member of the California Association of Midwives (CAM).   She is also the co-collaborator of the quarterly event, Ask the Midwives.  In 2017 Hannah and her partners opened Oakland Birth & Wellness, a midwifery clinic located in the heart of North Oakland. Hannah loves being a midwife and feels deeply called to this path.  She believes continuity of midwifery care sets the tone for better birth outcomes and a gentle transition to parenthood.  When Hannah is off call she travels home to Kaua’i where she grew up surrounded by an abundance of nature and the rhythms of the ocean.",
         "counties":"Alameda, Contra Costa",
-        "img":"static/img/weiss.jpeg"
+        "img":"static/img/weiss.jpeg",
+        "lat":37.8434437,
+        "lng":-122.267339
     },
     {
         "name":"Morgan West LM CPM",
         "email": "morgan@hummingbirdmidwifery.com",
+        "password": "1234",
         "website":"https://hummingbirdmidwifery.com",
         "address":"5735 Shattuck Ave, Oakland, CA 94609",
         "bio":"Morgan is a California licensed midwife and the founder of Hummingbird Midwifery. She believes that every family deserves skilled and compassionate support to have a healthy and empowered birth. Before becoming a midwife, she earned her B.S. in Neuroscience from Lafayette College. She has studied maternal and child healthcare in seven countries and received her early training as a midwife at a high-volume birth center in Indonesia, where she gained a reverence for women’s innate strength and resilience in birth. Upon moving to Berkeley, she practiced midwifery at a local birth center and in a group homebirth practice before founding Hummingbird Midwifery. She’s on a mission to create powerful experiences of health and wellbeing for growing families across the Bay Area, integrating her new studies of herbal medicine and birth trauma healing with her work as a midwife.",
         "counties":"Alameda, Contra Costa",
-        "img":"static/img/west.jpg"
+        "img":"static/img/west.jpg",
+        "lat" :37.8434437,
+        "lng" :-122.267339
     }
 ]  

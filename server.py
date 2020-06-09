@@ -43,7 +43,7 @@ def show_directory():
         dict_mw.append(mw)               
 
 
-    return jsonify([dict_mw])
+    return jsonify(dict_mw)
 
 
 @app.route('/register', methods=['POST'])
