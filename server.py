@@ -12,7 +12,7 @@ app.jinja_env.undefined = StrictUndefined
 
 # INSERT STUB ROUTES HERE
 
-@app.route('/directory')
+
 @app.route('/midwife')
 @app.route('/user')
 @app.route('/')
@@ -22,11 +22,6 @@ def render_app():
     return render_template('index.html')
 
 
-# @app.route('/demoapi')
-# def show_directory():
-#     """Show directory of Midwives"""
-
-#     return jsonify({"Dog":"Rumo"})
 
 @app.route('/directory')
 def show_directory():
@@ -34,13 +29,17 @@ def show_directory():
     midwives = crud.get_midwives()
     dict_mw = []
     for midwife in midwives:
-        mw = {"mw_id": midwife.mw_id,
-            "name": midwife.name,
-            "email": midwife.email,
-            "password": midwife.password,
-            "website": midwife.website,
-            "address": midwife.address,
-            "counties": midwife.counties} 
+        mw = {"mw_id" : midwife.mw_id,
+            "name" : midwife.name,
+            "email" : midwife.email,
+            "password" : midwife.password,
+            "website" : midwife.website,
+            "address" : midwife.address,
+            "counties" : midwife.counties,
+            "lat" : midwife.lat,
+            "lng" : midwife.lng,
+            "img" : midwife.img,
+            "bio" : midwife.bio} 
         dict_mw.append(mw)               
 
 

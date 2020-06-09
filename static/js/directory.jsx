@@ -1,36 +1,35 @@
 
+// import { midwives } from "./components/Midwives.jsx"
 
-function Directory() {
-  
-  const [dogName, setDogName] = React.useState("Lassie")
 
-    const fetchRumo = () => {
-        return fetch('/demoapi')
-          .then((response) => response.json())
-          .then(data => setDogName(data.Dog))
-      }  
-  
-  
-  
-  
-  
-  
-  useEffect(() => {
-    fetch('/directory').then(response => 
-      response.json().then(data => {
-        console.log(data);
+class Directory extends React.Component { 
+  constructor() {
+    super()
+    this.state = {
+      value : "?"
+    }
+  }
+  componentDidMount() {
+    this.setState({value : "?"})
+    fetch('/directory')
+    .then((response) => response.json())
+    .then(data => {
+      this.setState({
+        value : data
       })
-    );
-    }, []);
-
-
-    return (
-    
+    })
+  }
+  render() {
+    const midwives = this.state.value.data
+  
+  return (
+  
     <div>
-      <div>{viewMidwives}</div>
-      <button onClick={midwifeDirectory}>Click Me</button>
+      <h1>Directory of Midwives</h1>
+      <p>{midwives}</p>
     </div>
 
-    )
+    );
   }
+}
 
