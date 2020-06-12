@@ -31,8 +31,8 @@ class App extends React.Component {
       <Router>
         <Switch>
           <Route 
-            path="/midwife/:mw_id" 
-            render={(props) => <Midwife {...props} baby={'Waaaaaaaaaaa'}/>} 
+            path="/midwife/:mw_id"
+            render={(props) => <Midwife {...props} baby={'Waaaaaaaa'}/>} 
           />
           <Route
             path="/directory"

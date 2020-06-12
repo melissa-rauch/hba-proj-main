@@ -3,16 +3,32 @@ const Link =  window.ReactRouterDOM.Link;
 class MidwifePreview extends React.Component {
   constructor() {
     super()
+  
   }
+  
   render() {
+ 
     return (
     
     <div className="midwifePreview">
       <img src={this.props.midwife.img}/>
-      <h2>{this.props.midwife.name}</h2>
+      <h2>{this.props.name}</h2>
       <h3>Counties Served: </h3>
       <p>{this.props.midwife.counties}</p>
-      <Link to={`/midwife/${this.props.midwife.mw_id}`}>View Profile</Link>
+      <Link to={{ 
+        pathname: "midwife/profile",
+        state: {
+          img: this.props.midwife.img,
+          name: this.props.midwife.name,
+          counties: this.props.midwife.counties,
+          website: this.props.midwife.website,
+          email: this.props.midwife.website,
+          address: this.props.midwife.address,
+          bio: this.props.midwife.bio,
+          id: this.props.midwife.mw_id
+        }
+        }}>View Profile</Link>
+      {/* <Link to={`/midwife/${this.props.midwife.mw_id}`}>View Profile</Link> */}
     </div>
     )
   }
@@ -24,13 +40,13 @@ class Directory extends React.Component {
   }
   
   componentDidMount() {
-    if (!this.props.midwifeData) {
+    // if (!this.props.midwifeData) {
       fetch('/api/midwives')
       .then((response) => response.json())
       .then(data => {
         this.props.updateMidwifeData(data)
       })
-    }
+    // }
 
   }
 
@@ -43,7 +59,7 @@ class Directory extends React.Component {
       if (midwives[i]) {
 
         listMidwives.push(
-          <MidwifePreview midwife={midwives[i]} />
+          <MidwifePreview midwife={midwives[i]} key={i} />
 
         )
       }
@@ -57,13 +73,7 @@ class Directory extends React.Component {
     );
   }
 }
-// img={midwives[i]["img"]}
-// name={midwives[i]["name"]}
-// counties={midwives[i]["counties"]}
-// email={midwives[i]["email"]}
-// id={midwives[i]["mw_id"]}
-// bio={midwives[i]["bio"]}
-// address={midwives[i]["address"]} />
+
             
 
 // class MidwifeRow extends React.Component {
