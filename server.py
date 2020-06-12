@@ -12,7 +12,7 @@ app.jinja_env.undefined = StrictUndefined
 
 # INSERT STUB ROUTES HERE
 
-
+@app.route('/directory')
 @app.route('/midwife')
 @app.route('/user')
 @app.route('/')
@@ -23,7 +23,7 @@ def render_app():
 
 
 
-@app.route('/directory')
+@app.route('/api/midwives')
 def show_directory():
     """Show directory of Midwives"""
     midwives = crud.get_midwives()
@@ -42,9 +42,29 @@ def show_directory():
             "bio" : midwife.bio} 
         dict_mw.append(mw)               
 
-
     return jsonify(dict_mw)
 
+@app.route('/api/fav-midwives')
+def show_fav_midwives():
+    """Show directory of Midwives"""
+    midwives = crud.get_fav_midwives()
+    fav_mw = []
+    for midwife in midwives:
+        mw = {"mw_id" : midwife.mw_id,
+            "name" : midwife.name,
+            "email" : midwife.email,
+            "password" : midwife.password,
+            "website" : midwife.website,
+            "address" : midwife.address,
+            "counties" : midwife.counties,
+            "lat" : midwife.lat,
+            "lng" : midwife.lng,
+            "img" : midwife.img,
+            "bio" : midwife.bio} 
+        fav_mw.append(mw)               
+
+
+    return jsonify(fav_mw)
 
 @app.route('/register', methods=['POST'])
 def register_user():
@@ -77,7 +97,7 @@ def login_user():
     
     #     flash('Invalid user and password combination')
 
-        return redirect('/home') # if login correct, direct to /profile/<user_id>
+        return redirect('/') # if login correct, direct to /profile/<user_id>
 
 
 
