@@ -1,22 +1,18 @@
 
 const Link =  window.ReactRouterDOM.Link;
-class MidwifeProfile extends React.Component {
+class MidwifePreview extends React.Component {
   constructor() {
     super()
   }
   render() {
     return (
     
-    <div className="midwifeDetail">
-      <img src={this.props.img}/>
-      <h2>{this.props.name}</h2>
+    <div className="midwifePreview">
+      <img src={this.props.midwife.img}/>
+      <h2>{this.props.midwife.name}</h2>
       <h3>Counties Served: </h3>
-      <p>{this.props.counties}</p>
-      <h3>Bio: </h3>
-      <p>{this.props.bio}</p>
-      <h3>Website: </h3>
-      <p>{this.props.website}</p>
-      <Link to="/">Back to Login</Link>
+      <p>{this.props.midwife.counties}</p>
+      <Link to={`/midwife/${this.props.midwife.mw_id}`}>View Profile</Link>
     </div>
     )
   }
@@ -25,24 +21,21 @@ class MidwifeProfile extends React.Component {
 class Directory extends React.Component { 
   constructor() {
     super()
-    this.state = {
-      value : '',
-    }
   }
   
   componentDidMount() {
-    // this.setState({value : '?'})
-    fetch('/api/midwives')
-    .then((response) => response.json())
-    .then(data => {
-      this.setState({
-        value : data
+    if (!this.props.midwifeData) {
+      fetch('/api/midwives')
+      .then((response) => response.json())
+      .then(data => {
+        this.props.updateMidwifeData(data)
       })
-    })
+    }
+
   }
 
   render() {
-    const midwives = this.state.value
+    const midwives = this.props.midwifeData
     const listMidwives = []
 
     for (let i = 0; i<= midwives.length; i++) { 
@@ -50,14 +43,8 @@ class Directory extends React.Component {
       if (midwives[i]) {
 
         listMidwives.push(
-          <MidwifeProfile 
-            img={midwives[i]["img"]}
-            name={midwives[i]["name"]}
-            counties={midwives[i]["counties"]}
-            email={midwives[i]["email"]}
-            id={midwives[i]["mw_id"]}
-            bio={midwives[i]["bio"]}
-            address={midwives[i]["address"]} />
+          <MidwifePreview midwife={midwives[i]} />
+
         )
       }
     }
@@ -70,7 +57,13 @@ class Directory extends React.Component {
     );
   }
 }
-
+// img={midwives[i]["img"]}
+// name={midwives[i]["name"]}
+// counties={midwives[i]["counties"]}
+// email={midwives[i]["email"]}
+// id={midwives[i]["mw_id"]}
+// bio={midwives[i]["bio"]}
+// address={midwives[i]["address"]} />
             
 
 // class MidwifeRow extends React.Component {
