@@ -43,7 +43,7 @@ def create_midwife(name, email, password, website, address, bio, counties, img, 
 def get_user_by_email(email):
     """Return a user with given email, otherwise return None"""
 
-    return User.query.filter(User.email == email).first()
+    return User.query.filter(User.email == email).all()
 
 def get_fav_midwives():
     """Return all midwives in database"""

@@ -13,73 +13,59 @@ class Home extends React.Component {
   }
 
   handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value })
+    this.setState({
+      [event.target.name]: event.target.value
+    })
   }
-
   handleSubmit(event) {
-    event.preventDefault()
-    const formData = {
+    event.preventDefault();
+
+    const logInData = {
       email: this.state.email,
       password: this.state.password
     }
-    fetch('/login', {
-      method: 'post',
-      body: JSON.stringify(formData)
+    fetch('/api/login', {
+      method:'post',
+      body: JSON.stringify(logInData)
     })
     .then(response => response.json())
     .then(data => {
-      if (typeof data === 'number') {
-        this.props.setLoggedIn(data)
-      } else {
-        alert("Invalid")
-      }
+      this.props.setLoggedIn(data)
     })
-    this.setState({email:'', password:''})
+    this.setState({
+      email : email,
+      password : password
+    })
   }
 
   render() {
+
     return (
       <div>
         <h1><img src="/static/img/home.jpeg"></img></h1>
-        
         <h1>Welcome to Babycatcher</h1>
         <h2>Lets find you a Midwife!</h2>
-        <div id='login'>
+        <p>Please log in:</p>
           <form onSubmit={this.handleSubmit}> 
-          Please Log In
-            <p>        
-              <input 
-                  name='email'
-                  type='text'
-                  value={this.state.email}
-                  onChange={this.handleChange}
-                  placeholder='email'
-                  />         
-            </p> 
-            <p>        
-              <input 
-                name='password'
-                type='text'
-                value={this.state.password}
-                onChange={this.handleChange}
-                placeholder='password'
-                />        
-            </p> 
-            <input type='submit' />
+            <input 
+              type='text'
+              name='email'
+              placeholder='email'
+              onChange={this.handleChange}
+              />
+              <br />
+            <input
+              type='text'
+              name='password'
+              placeholder='password'
+              onChange={this.handleChange}
+              />
+              <br />
+            <input type='submit'/>
           </form>
-        </div>
-      <h3>...or preview the <Link to="/directory">directory</Link></h3> */}
 
-        {/* <Link to="/user">Login</Link> */}
-          
-          
+        <h3>...or preview the <Link to="/directory">directory</Link></h3>
       </div>
-      )
+    )
   }
-}
-
-  
-
-
-   
-
+}      

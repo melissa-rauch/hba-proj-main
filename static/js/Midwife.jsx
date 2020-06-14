@@ -1,13 +1,6 @@
 
 class Midwife extends React.Component {
 
-
-    // componentDidMount() {
-
-    //     const { mw_id } = this.props.match.params
-    //     const { name } = this.props.location.state
-        
-    // }
     render() {
         return(
             <div>
@@ -18,8 +11,8 @@ class Midwife extends React.Component {
                     <p>{this.props.location.state.counties}</p>
                     <h3>Bio:</h3>
                     <p>{this.props.location.state.bio}</p>
-                    <h3>Website:</h3>
-                    <p>{this.props.location.state.website}</p>
+                    <a href={this.props.location.state.website}>View Website</a>
+                    <br />
                     <Link to={'/directory'}>Back to Directory</Link>
                 </div>
             </div>

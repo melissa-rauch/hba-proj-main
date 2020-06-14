@@ -82,7 +82,7 @@ def register_user():
     return redirect('/') # if login correct, direct to /profile/<user_id>
 
 
-@app.route('/login', methods=['POST'])
+@app.route('/api/login', methods=['POST'])
 def login_user():
     """Login a current user"""
     email = request.form.get('email')
@@ -93,9 +93,10 @@ def login_user():
         if user.email == email and user.password == password:
             session['user_id'] = user.user_id
             flash('Logged In!')
-    # else:
+            return redirect('/user/:user_id')
+    else:
     
-    #     flash('Invalid user and password combination')
+        flash('Invalid user and password combination')
 
         return redirect('/') # if login correct, direct to /profile/<user_id>
 

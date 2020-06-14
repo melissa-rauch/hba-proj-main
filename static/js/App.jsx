@@ -15,15 +15,19 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      midwifeData : []
-      //put isLoggedIn here :
+      midwifeData : [],
+      loggedIn : false,
+      email: ''
     }
     this.updateMidwifeData = this.updateMidwifeData.bind(this)
+    this.setLoggedIn = this.setLoggedIn.bind(this)
   }
   updateMidwifeData(midwifeData) {
     this.setState({midwifeData})
   }
-  //logIn Function here
+  setLoggedIn(email) {
+    this.setState({userID: userId, loggedIn: true})
+  }
 
     render()  {
     return (
@@ -39,13 +43,13 @@ class App extends React.Component {
             render={() => <Directory midwifeData={this.state.midwifeData} updateMidwifeData={this.updateMidwifeData} />}
           />
           <Route 
-            path="/user"
-            render={() => <User />}
+            path="/user/:user_id"
+            render={(props) => <User {...props} />}
           />
           <Route 
             path="/"
-            render={() => <Home />}
-          />
+            render={() => <Home setLoggedIn={this.setLogggedIn} />}
+            />
         </Switch>
        </Router>
     
