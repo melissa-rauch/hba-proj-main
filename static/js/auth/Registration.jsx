@@ -36,9 +36,9 @@ class Registration extends React.Component {
     render() {
         return(
             <div>
-            <h3>Don't have an Account? Please Register:</h3>
                 <br />
                 <form onSubmit = {this.handleSubmit}>
+                <h3>Don't have an Account? Please Register:</h3>    
                     <input 
                         type = "email"
                         name = "email"

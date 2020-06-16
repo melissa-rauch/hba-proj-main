@@ -93,11 +93,24 @@ def login_user():
 
     user = crud.get_user_by_email(data["email"])
     print(user)
+    
 
     if user == None:
         return jsonify("Invalid")
     elif user[0].password == data["password"]:
-            return jsonify("Login")
+        user_profile = {
+                        "user_id" : user[0].user_id,
+                        "name" : user[0].name,
+                        "email" : user[0].email,
+                        "password" : user[0].password,
+                        "address" : user[0].address,
+                        "lat" : user[0].lat,
+                        "lng" : user[0].lng,
+                        "img" : user[0].img,
+                        "bio" : user[0].bio
+                    }
+        print(user_profile)
+        return jsonify(user_profile)
     else:
         return jsonify("Invalid")
 

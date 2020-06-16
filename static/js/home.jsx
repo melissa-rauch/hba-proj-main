@@ -1,8 +1,8 @@
 const Link =  window.ReactRouterDOM.Link;
 
 class Home extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)    
   }
 
   render() {
@@ -11,11 +11,13 @@ class Home extends React.Component {
         <h1><img src="/static/img/home.jpeg"></img></h1>
         <h1>Welcome to Babycatcher</h1>
         <h2>Let's find you a Midwife!</h2>
-          <Login />
-          <Registration />
+          <Login setLoggedIn={this.props.setLoggedIn} />
+          <Registration setLoggedIn={this.props.setLoggedIn}/>
 
         <h3>Preview the <Link to="/directory">directory</Link></h3>
       </div>
     )
   }
 }     
+
+

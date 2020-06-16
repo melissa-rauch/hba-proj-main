@@ -6,7 +6,7 @@ class MidwifePreview extends React.Component {
 
 	render() {
 		return (
-			<div className="midwifePreview">
+			<div>
 				<img src={this.props.midwife.img} />
 				<h2>{this.props.midwife.name}</h2>
 				<h3>Counties Served: </h3>

@@ -5,7 +5,7 @@ const NavLink = window.ReactRouterDOM.NavLink;
 // const Link =  window.ReactRouterDOM.Link;
 // const Prompt =  window.ReactRouterDOM.Prompt;
 const Switch = window.ReactRouterDOM.Switch;
-// const Redirect = window.ReactRouterDOM.Redirect;
+const Redirect = window.ReactRouterDOM.Redirect;
 
 const Registration = window.Registration;
 const Login = window.Login;
@@ -20,6 +20,7 @@ class App extends React.Component {
     this.state = {
       midwifeData : [],
       loggedIn : false,
+      userData : [],
       email: ''
     }
   }
@@ -29,20 +30,15 @@ class App extends React.Component {
   setLoggedIn = (email) => {
     this.setState({email: email, loggedIn: true})
   }
-
+  setUserData = (userData) => {
+    this.setState({userData})
+  }
+  
     render()  {
     return (
       
       <Router>
         <Switch>
-        <Route 
-            path="/Register"
-            render={(props) => <Registration {...props} />} 
-          />
-        <Route 
-            path="/login"
-            render={(props) => <Login {...props} />} 
-          />
           <Route 
             path="/midwife/:mw_id"
             render={(props) => <Midwife {...props} baby={'Waaaaaaaa'}/>} 
@@ -56,9 +52,12 @@ class App extends React.Component {
             render={(props) => <User {...props} />}
           />
           <Route 
-            path="/"
-            render={() => <Home setLoggedIn={this.setLogggedIn} />}
-            />
+            path="/">
+              {this.state.loggedIn ? 
+              <Redirect to='/user' userData={this.state.userData} setUserData={this.setUserData}/> :
+              <Home setLoggedIn={this.setLoggedIn} setUserData={this.setUserData} />
+              }
+            </Route>
         </Switch>
        </Router>
     
