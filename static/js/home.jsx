@@ -11,7 +11,7 @@ class Home extends React.Component {
         <h1><img src="/static/img/home.jpeg"></img></h1>
         <h1>Welcome to Babycatcher</h1>
         <h2>Let's find you a Midwife!</h2>
-          <Login setLoggedIn={this.props.setLoggedIn} />
+          <Login setLoggedIn={this.props.setLoggedIn} userData={this.props.userData} setUserData={this.props.setUserData} />
           <Registration setLoggedIn={this.props.setLoggedIn}/>
 
         <h3>Preview the <Link to="/directory">directory</Link></h3>

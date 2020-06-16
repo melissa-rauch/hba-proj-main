@@ -26,7 +26,7 @@ class Login extends React.Component {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data)
+            // console.log(data)
             if (data != 'Invalid') {
               this.props.setLoggedIn(this.state.email)
               this.props.setUserData(data)

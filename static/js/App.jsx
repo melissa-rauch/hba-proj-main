@@ -32,9 +32,12 @@ class App extends React.Component {
   }
   setUserData = (userData) => {
     this.setState({userData})
+    
   }
   
+
     render()  {
+ 
     return (
       
       <Router>
@@ -48,14 +51,15 @@ class App extends React.Component {
             render={() => <Directory midwifeData={this.state.midwifeData} updateMidwifeData={this.updateMidwifeData} />}
           />
           <Route 
-            path="/user/:user_id"
-            render={(props) => <User {...props} />}
-          />
+            path="/user">
+              <User userData={this.state.userData}/>        
+           
+          </Route>
           <Route 
             path="/">
               {this.state.loggedIn ? 
-              <Redirect to='/user' userData={this.state.userData} setUserData={this.setUserData}/> :
-              <Home setLoggedIn={this.setLoggedIn} setUserData={this.setUserData} />
+              <Redirect to='/user' /> :
+              <Home setLoggedIn={this.setLoggedIn} setUserData={this.setUserData} userData={this.state.userData} />
               }
             </Route>
         </Switch>
