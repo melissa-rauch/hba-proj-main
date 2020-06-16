@@ -1,11 +1,14 @@
 
 const Router = window.ReactRouterDOM.BrowserRouter;
 const Route =  window.ReactRouterDOM.Route;
+const NavLink = window.ReactRouterDOM.NavLink;
 // const Link =  window.ReactRouterDOM.Link;
 // const Prompt =  window.ReactRouterDOM.Prompt;
 const Switch = window.ReactRouterDOM.Switch;
 // const Redirect = window.ReactRouterDOM.Redirect;
 
+const Registration = window.Registration;
+const Login = window.Login;
 const Midwife = window.Midwife;
 const Directory = window.Directory;
 const User = window.User;
@@ -19,14 +22,12 @@ class App extends React.Component {
       loggedIn : false,
       email: ''
     }
-    this.updateMidwifeData = this.updateMidwifeData.bind(this)
-    this.setLoggedIn = this.setLoggedIn.bind(this)
   }
-  updateMidwifeData(midwifeData) {
+  updateMidwifeData = (midwifeData) => {
     this.setState({midwifeData})
   }
-  setLoggedIn(email) {
-    this.setState({userID: userId, loggedIn: true})
+  setLoggedIn = (email) => {
+    this.setState({email: email, loggedIn: true})
   }
 
     render()  {
@@ -34,6 +35,14 @@ class App extends React.Component {
       
       <Router>
         <Switch>
+        <Route 
+            path="/Register"
+            render={(props) => <Registration {...props} />} 
+          />
+        <Route 
+            path="/login"
+            render={(props) => <Login {...props} />} 
+          />
           <Route 
             path="/midwife/:mw_id"
             render={(props) => <Midwife {...props} baby={'Waaaaaaaa'}/>} 

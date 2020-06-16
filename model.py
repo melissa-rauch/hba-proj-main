@@ -23,7 +23,7 @@ class User(db.Model):
 
     def __repr__(self):
 
-        return f'<User user_id={self.user_id} name={self.name} email={self.email}>'
+        return f'<User user_id={self.user_id} name={self.name} email={self.email} password={self.password}>'
 
 
 class Midwife(db.Model):

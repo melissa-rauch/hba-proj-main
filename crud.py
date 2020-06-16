@@ -21,6 +21,17 @@ def create_user(name, email, password, address, bio, img, lat, lng):
 
     return user
 
+def quick_create_user(email, password):
+    """Create and return a new user"""
+
+    user = User(email=email, 
+                password=password)
+
+    db.session.add(user)
+    db.session.commit()
+
+    return user    
+
 def create_midwife(name, email, password, website, address, bio, counties, img, lat, lng):
     """Create and return a new midwife"""
 

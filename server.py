@@ -66,39 +66,41 @@ def show_fav_midwives():
 
     return jsonify(fav_mw)
 
-@app.route('/register', methods=['POST'])
+@app.route('/api/register', methods=['POST'])
 def register_user():
     """Create a new user"""
-    email = request.form.get('email')
-    password = request.form.get('password')
 
-    user = crud.get_user_by_email(email)
+    data = request.get_json(force=True)
+
+    user = crud.get_user_by_email(data["email"])
+
     if user:
-        flash('Cannot create an account with that email.  Try again.')
+        return jsonify("No")
     else:
-        crud.create_user(email, password)
-        flash('Account created! Please log in.')
+        crud.quick_create_user(data["email"], data["password"])
+        return jsonify("Yes")
+        # user_info[email] = data.email
+        # user_info[password] = data.email
 
-    return redirect('/') # if login correct, direct to /profile/<user_id>
+
 
 
 @app.route('/api/login', methods=['POST'])
 def login_user():
     """Login a current user"""
-    email = request.form.get('email')
-    password = request.form.get('password')
+    data = request.get_json(force=True)
+    print(data)
 
-    user = crud.get_user_by_email(email)
-    if user:
-        if user.email == email and user.password == password:
-            session['user_id'] = user.user_id
-            flash('Logged In!')
-            return redirect('/user/:user_id')
+    user = crud.get_user_by_email(data["email"])
+    print(user)
+
+    if user == None:
+        return jsonify("Invalid")
+    elif user[0].password == data["password"]:
+            return jsonify("Login")
     else:
-    
-        flash('Invalid user and password combination')
+        return jsonify("Invalid")
 
-        return redirect('/') # if login correct, direct to /profile/<user_id>
 
 
 
