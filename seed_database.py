@@ -51,15 +51,17 @@ users_in_db = []
 
 for user in user_data:
 
-    name, email, password, address, bio, img, lat, lng = (user['name'],
-                                                        user['email'],
-                                                        user['password'],
-                                                        user['address'],
-                                                        user['bio'],
-                                                        user['img'],
-                                                        user['lat'],
-                                                        user['lng'])
-    db_user = crud.create_user(name,
+    first_name, last_name, email, password, address, bio, img, lat, lng = (user['first_name'],
+                                                                            user['last_name'],
+                                                                            user['email'],
+                                                                            user['password'],
+                                                                            user['address'],
+                                                                            user['bio'],
+                                                                            user['img'],
+                                                                            user['lat'],
+                                                                            user['lng'])
+    db_user = crud.create_user(first_name,
+                                last_name,
                                 email,
                                 password,
                                 address,

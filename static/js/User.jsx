@@ -1,18 +1,17 @@
 class User extends React.Component {
-
-  render() {
-    console.log(this.props)
-    return (
-    
-    <div>
-      <h1>This is the User's Logged-In Page</h1>
-      <h2>{this.props.userData.name}</h2>
-      <img src={this.props.userData.img} />
-      <p>{this.props.userData.bio}</p>
-    </div>
-    
-    )
-  }
+	render() {
+		return (
+			<div>
+				<div>
+					<h1>Welcome {this.props.userData.first_name}!</h1>
+					<img src={this.props.userData.img} />
+					<h3>Bio:</h3>
+					<p>{this.props.userData.bio}</p>
+					<h3>
+						View the <Link to={'/directory'}>Midwife Directory</Link>
+					</h3>
+				</div>
+			</div>
+		);
+	}
 }
-
-

@@ -1,6 +1,7 @@
 [
     {
-        "name": "Camila Carvalho",
+        "first_name": "Camila",
+        "last_name": "Carvalho",
         "email": "CamilaBCarvalho@test.com",
         "password": "Melo",
         "address": "4316 Essex St, Emeryville, CA, 94608",
@@ -10,7 +11,8 @@
         "lng":-122.277926
     },
     {
-        "name": "Eden Elias",
+        "first_name": "Eden",
+        "last_name":"Elias",
         "email": "EdenElias@test.com",
         "password": "Melo",
         "address": "356 21st Ave, San Francisco, CA 94121",
@@ -20,17 +22,19 @@
         "lng":-122.480287
     },
     {
-        "name": "Minna Verdugo Olivo",
+        "first_name": "Minna",
+        "last_name": "Verdugo Olivo",
         "email": "MinnaOlivo@test.com",
         "password": "Melo",
         "address": "925 Bridgeway, Sausalito, CA 94965",
-        "bio": "",
+        "bio": "About me...",
         "img": "/static/img/minna.jpg",
         "lat":37.858077,
         "lng":-122.483057
     },
     {
-        "name": "Isabella Danielsen",
+        "first_name": "Isabella",
+        "last_name":"Danielsen",
         "email": "IsabellaDanielsen@test.com",
         "password": "Melo",
         "address": "15984 Gramercy Dr, San Leandro, CA 94578",
@@ -40,7 +44,8 @@
         "lng":-122.110228
     },
     {
-        "name": "Emma Pearson",
+        "first_name": "Emma",
+        "last_name":"Pearson",
         "email": "EmmaPearson@test.com",
         "password": "Melo",
         "address": "1138 Rhode Island St, San Francisco, CA 94107",
@@ -50,7 +55,8 @@
         "lng":-122.401856
     },
     {
-        "name": "Nicoletta Zito",
+        "first_name": "Nicoletta",
+        "last_name":"Zito",
         "email": "NicolettaZito@test.com",
         "password": "Melo",
         "address": "926 The Alameda, Berkeley, CA 94707",

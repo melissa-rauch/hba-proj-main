@@ -11,7 +11,8 @@ class User(db.Model):
     __tablename__ = 'users'
 
     user_id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    name = db.Column(db.String(50))
+    first_name = db.Column(db.String(50))
+    last_name = db.Column(db.String(50))
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(20))
     address = db.Column(db.String)
@@ -23,7 +24,7 @@ class User(db.Model):
 
     def __repr__(self):
 
-        return f'<User user_id={self.user_id} name={self.name} email={self.email} password={self.password}>'
+        return f'<User user_id={self.user_id} first_name={self.first_name} email={self.email} password={self.password}>'
 
 
 class Midwife(db.Model):

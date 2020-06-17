@@ -1,4 +1,8 @@
 class Midwife extends React.Component {
+	constructor() {
+		super();
+	}
+	handleChange = (event) => {};
 	render() {
 		return (
 			<div>
@@ -10,6 +14,8 @@ class Midwife extends React.Component {
 					<h3>Bio:</h3>
 					<p>{this.props.location.state.bio}</p>
 					<a href={this.props.location.state.website}>View Website</a>
+					<br />
+					<button onclick={this.handleChange}>Save to Favorites</button>
 					<br />
 					<Link to={'/directory'}>Back to Directory</Link>
 				</div>

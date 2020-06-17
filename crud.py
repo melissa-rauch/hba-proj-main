@@ -4,10 +4,11 @@ from model import db, User, Midwife, connect_to_db
 
 
 
-def create_user(name, email, password, address, bio, img, lat, lng):
+def create_user(first_name, last_name, email, password, address, bio, img, lat, lng):
     """Create and return a new user"""
 
-    user = User(name=name,
+    user = User(first_name=first_name,
+                last_name=last_name,
                 email=email, 
                 password=password,
                 address=address,

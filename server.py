@@ -100,7 +100,8 @@ def login_user():
     elif user[0].password == data["password"]:
         user_profile = {
                         "user_id" : user[0].user_id,
-                        "name" : user[0].name,
+                        "first_name" : user[0].first_name,
+                        "last_name" : user[0].last_name,
                         "email" : user[0].email,
                         "password" : user[0].password,
                         "address" : user[0].address,
