@@ -6,6 +6,7 @@ const NavLink = window.ReactRouterDOM.NavLink;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
+const CompleteProfile = window.CompleteProfile;
 const Registration = window.Registration;
 const Login = window.Login;
 const Midwife = window.Midwife;

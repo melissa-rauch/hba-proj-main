@@ -25,12 +25,12 @@ class Login extends React.Component {
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				// console.log(data)
-				if (data != 'Invalid') {
+				console.log(data['email'])
+				if (data['email'] === this.state.email && data['password'] === this.state.password) {
 					this.props.setLoggedIn(this.state.email);
 					this.props.setUserData(data);
 				} else {
-					alert('Invalid entry, please try again.');
+					alert('Invalid email or password, please try again.');
 				}
 			});
 	};

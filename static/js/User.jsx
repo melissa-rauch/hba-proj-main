@@ -7,6 +7,8 @@ class User extends React.Component {
 					<img src={this.props.userData.img} />
 					<h3>Bio:</h3>
 					<p>{this.props.userData.bio}</p>
+					<h3>Update Profile: </h3>
+					<CompleteProfile />
 					<h3>
 						View the <Link to={'/directory'}>Midwife Directory</Link>
 					</h3>

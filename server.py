@@ -10,7 +10,6 @@ app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
-# INSERT STUB ROUTES HERE
 
 @app.route('/directory')
 @app.route('/midwife')
@@ -20,8 +19,6 @@ def render_app():
     """Show App"""
 
     return render_template('index.html')
-
-
 
 @app.route('/api/midwives')
 def show_directory():
@@ -68,7 +65,7 @@ def show_fav_midwives():
 
 @app.route('/api/register', methods=['POST'])
 def register_user():
-    """Create a new user"""
+    """Register a new user"""
 
     data = request.get_json(force=True)
 
@@ -110,7 +107,7 @@ def login_user():
                         "img" : user[0].img,
                         "bio" : user[0].bio
                     }
-        print(user_profile)
+                    
         return jsonify(user_profile)
     else:
         return jsonify("Invalid")
