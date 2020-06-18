@@ -12,13 +12,18 @@ app.jinja_env.undefined = StrictUndefined
 
 
 @app.route('/directory')
-@app.route('/midwife')
 @app.route('/user')
 @app.route('/')
 def render_app():
     """Show App"""
 
     return render_template('index.html')
+
+@app.route('/midwife/<mw_id>')
+def render_midwife_profile(mw_id):
+    """direct to individual midwive's profile"""
+    return render_template('index.html')
+
 
 @app.route('/api/midwives')
 def show_directory():

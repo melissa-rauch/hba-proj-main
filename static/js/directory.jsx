@@ -5,27 +5,14 @@ class MidwifePreview extends React.Component {
 	}
 
 	render() {
+		const { mw_id, name, email, website, counties, address, bio, img} = this.props.midwife
 		return (
 			<div>
-				<img src={this.props.midwife.img} />
-				<h2>{this.props.midwife.name}</h2>
+				<img src={img} />
+				<h2>{name}</h2>
 				<h3>Counties Served: </h3>
-				<p>{this.props.midwife.counties}</p>
-				<Link
-					to={{
-						pathname: '/midwife/profile',
-						state: {
-							name: this.props.midwife.name,
-							counties: this.props.midwife.counties,
-							website: this.props.midwife.website,
-							email: this.props.midwife.website,
-							address: this.props.midwife.address,
-							bio: this.props.midwife.bio,
-							id: this.props.midwife.mw_id,
-							img: this.props.midwife.img
-						}
-					}}
-				>
+				<p>{counties}</p>
+				<Link to={{pathname: `/midwife/${mw_id}`}}>
 					View Profile
 				</Link>
 			</div>
@@ -39,22 +26,17 @@ class Directory extends React.Component {
 	}
 
 	componentDidMount() {
-		// if (!this.props.midwifeData) {
-		fetch('/api/midwives').then((response) => response.json()).then((data) => {
-			this.props.updateMidwifeData(data);
-		});
-		// }
+		if (this.props.midwifeData.length === 0) {
+			fetch('/api/midwives').then((response) => response.json()).then((data) => {
+				this.props.updateMidwifeData(data);
+			});
+		}
+		
 	}
 
 	render() {
-		const midwives = this.props.midwifeData;
-		const listMidwives = [];
-
-		for (let i = 0; i <= midwives.length; i++) {
-			if (midwives[i]) {
-				listMidwives.push(<MidwifePreview midwife={midwives[i]} key={i} />);
-			}
-		}
+		const listMidwives = this.props.midwifeData.map((midwife) => 
+			<MidwifePreview midwife={midwife} key={midwife.mw_id} />);
 
 		return (
 			<div>

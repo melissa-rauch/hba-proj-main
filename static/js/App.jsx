@@ -38,7 +38,16 @@ class App extends React.Component {
 		return (
 			<Router>
 				<Switch>
-					<Route path="/midwife/:mw_id" render={(props) => <Midwife {...props} baby={'Waaaaaaaa'} />} />
+					<Route 
+						path="/midwife/:mw_id" 
+						render={(props) => 
+							<Midwife 
+								{...props} 
+								updateMidwifeData={this.updateMidwifeData} 
+								midwifeData={this.state.midwifeData} 
+							/>
+						} 
+					/>
 					<Route
 						path="/directory"
 						render={() => (
@@ -48,10 +57,14 @@ class App extends React.Component {
 							/>
 						)}
 					/>
-					<Route path="/user">
-						<User userData={this.state.userData} />
+					<Route 
+						path="/user">
+							<User 
+								userData={this.state.userData} 
+							/>
 					</Route>
-					<Route path="/">
+					<Route 
+						path="/">
 						{this.state.loggedIn ? (
 							<Redirect to="/user" />
 						) : (
