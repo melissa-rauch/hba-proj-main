@@ -1,5 +1,8 @@
 class User extends React.Component {
-	render() {
+	constructor() {
+		super()
+	}
+	render() { 
 		return (
 			<div>
 				<div>
@@ -8,12 +11,12 @@ class User extends React.Component {
 					<h3>Bio:</h3>
 					<p>{this.props.userData.bio}</p>
 					<h3>Update Profile: </h3>
-					<CompleteProfile />
+					<UpdateProfile />
 					<h3>
 						View the <Link to={'/directory'}>Midwife Directory</Link>
 					</h3>
 				</div>
 			</div>
-		);
-	}
+		)}
+	
 }

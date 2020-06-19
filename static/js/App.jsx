@@ -6,7 +6,7 @@ const NavLink = window.ReactRouterDOM.NavLink;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
-const CompleteProfile = window.CompleteProfile;
+const UpdateProfile = window.UpdateProfile;
 const Registration = window.Registration;
 const Login = window.Login;
 const Midwife = window.Midwife;
@@ -35,6 +35,17 @@ class App extends React.Component {
 	};
 
 	render() {
+		const { 
+			user_id, 
+			first_name, 
+			last_name, 
+			email, 
+			password, 
+			address, 
+			bio, 
+			img
+		} = this.state.userData
+
 		return (
 			<Router>
 				<Switch>
@@ -58,15 +69,18 @@ class App extends React.Component {
 						)}
 					/>
 					<Route 
-						path="/user">
-							<User 
+						path="/user"
+						render={(props) => 
+							<User
+								{...props} 
 								userData={this.state.userData} 
 							/>
-					</Route>
+						}
+					/>
 					<Route 
 						path="/">
 						{this.state.loggedIn ? (
-							<Redirect to="/user" />
+							<Redirect to={{pathname: `/user/${user_id}`}} userData={this.state.userData}  />
 						) : (
 							<Home
 								setLoggedIn={this.setLoggedIn}

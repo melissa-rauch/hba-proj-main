@@ -21,7 +21,10 @@ class Midwife extends React.Component {
 		const midwife = this.getMidwife()
 
 		if (!midwife) {
-			return <div>BABIES!</div>
+			return <div>
+						<h2>Uh Oh! Looks like that page doesn't exist</h2>
+						<h3>Return to <Link to='/'>homepage</Link></h3>
+					</div>
 		}
 		
 		return (

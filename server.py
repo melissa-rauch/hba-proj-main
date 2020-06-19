@@ -12,7 +12,6 @@ app.jinja_env.undefined = StrictUndefined
 
 
 @app.route('/directory')
-@app.route('/user')
 @app.route('/')
 def render_app():
     """Show App"""
@@ -21,6 +20,11 @@ def render_app():
 
 @app.route('/midwife/<mw_id>')
 def render_midwife_profile(mw_id):
+    """direct to individual midwive's profile"""
+    return render_template('index.html')
+
+@app.route('/user/<user_id>')
+def render_user_profile(user_id):
     """direct to individual midwive's profile"""
     return render_template('index.html')
 
@@ -77,10 +81,17 @@ def register_user():
     user = crud.get_user_by_email(data["email"])
 
     if user:
-        return jsonify("No")
+        return jsonify("Invalid")
     else:
-        crud.quick_create_user(data["email"], data["password"])
-        return jsonify("Yes")
+        crud.quick_create_user(
+                                data["email"], 
+                                data["password"], 
+                                data["firstName"], 
+                                data["lastName"], 
+                                data["address"], 
+                                data["bio"], 
+                                data["img"])
+        return jsonify("Valid")
         # user_info[email] = data.email
         # user_info[password] = data.email
 
@@ -96,10 +107,7 @@ def login_user():
     user = crud.get_user_by_email(data["email"])
     print(user)
     
-
-    if user == None:
-        return jsonify("Invalid")
-    elif user[0].password == data["password"]:
+    if user[0].password == data["password"]:
         user_profile = {
                         "user_id" : user[0].user_id,
                         "first_name" : user[0].first_name,
@@ -112,7 +120,7 @@ def login_user():
                         "img" : user[0].img,
                         "bio" : user[0].bio
                     }
-                    
+        # session[user_id] = user[0].user_id          
         return jsonify(user_profile)
     else:
         return jsonify("Invalid")

@@ -21,7 +21,7 @@ class Home extends React.Component {
 				<Registration setLoggedIn={this.props.setLoggedIn} />
 
 				<h3>
-					Preview the <Link to="/directory">directory</Link>
+					...or preview the <Link to="/directory">directory</Link>
 				</h3>
 			</div>
 		);

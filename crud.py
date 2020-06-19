@@ -22,11 +22,16 @@ def create_user(first_name, last_name, email, password, address, bio, img, lat, 
 
     return user
 
-def quick_create_user(email, password):
+def quick_create_user(email, password, first_name, last_name, address, bio, img):
     """Create and return a new user"""
 
     user = User(email=email, 
-                password=password)
+                password=password,
+                first_name=first_name,
+                last_name=last_name,
+                address=address,
+                bio=bio,
+                img=img)
 
     db.session.add(user)
     db.session.commit()

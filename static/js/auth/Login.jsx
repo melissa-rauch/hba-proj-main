@@ -1,9 +1,10 @@
 class Login extends React.Component {
 	constructor(props) {
-		super(props);
+		super(props)
+		
 		this.state = {
 			email: '',
-			password: ''
+			password: '',
 		};
 	}
 	handleChange = (event) => {
@@ -17,7 +18,7 @@ class Login extends React.Component {
 		const formData = {
 			email: this.state.email,
 			password: this.state.password
-		};
+		}
 
 		fetch('/api/login', {
 			method: 'post',
@@ -25,16 +26,17 @@ class Login extends React.Component {
 		})
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data['email'])
 				if (data['email'] === this.state.email && data['password'] === this.state.password) {
 					this.props.setLoggedIn(this.state.email);
 					this.props.setUserData(data);
-				} else {
+				}else {
 					alert('Invalid email or password, please try again.');
 				}
 			});
 	};
+
 	render() {
+
 		return (
 			<div>
 				<br />
