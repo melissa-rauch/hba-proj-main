@@ -72,6 +72,10 @@ def get_midwives():
 
     return Midwife.query.all()
 
+def get_midwife_by_email():
+    """Return a Midwife by email"""
+    
+    return Midwife.query.filter(Midwife.email == email).first()
 
 if __name__ == '__main__':
     from server import app

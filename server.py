@@ -5,6 +5,9 @@ from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
 import json
+# import os
+# API_KEY = os.environ["CLOUDINARY_KEY"]
+# API_SECRET = os.environ["CLOUDINARY_SECRET"]
 
 app = Flask(__name__)
 app.secret_key = "dev"
@@ -125,6 +128,29 @@ def login_user():
     else:
         return jsonify("Invalid")
 
+@app.route('/api/midwife_login', methods=['POST'])
+def login_midwife():
+    """Login a current user"""
+    data = request.get_json(force=True)
+    print(data)
+
+    midwife = crud.get_midwife_by_email(data["email"])
+    print(midwife)
+    
+    if midwife[0].password == data["password"]:
+        midwife_profile = {
+                        "mw_id" : midwife[0].mw_id,
+                        "name" : midwife[0].name,
+                        "email" : midwife[0].email,
+                        "password": midwife[0].password,
+                        "address" : midwife[0].address,
+                        "img" : midwife[0].img,
+                        "bio" : midwife[0].bio
+                    }
+        # session[user_id] = user[0].user_id          
+        return jsonify(midwife_profile)
+    else:
+        return jsonify("Invalid")
 
 
 

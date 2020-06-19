@@ -8,13 +8,12 @@ class Registration extends React.Component {
 			lastName: '',
 			address: '',
 			bio: '',
-			imgFile: null
+			imgFile: ''
 		};
 	}
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value,
-			imgFile: event.target.file[0]
 		});
 	};
 	handleSubmit = (event) => {

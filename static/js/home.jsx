@@ -23,6 +23,8 @@ class Home extends React.Component {
 				<h3>
 					...or preview the <Link to="/directory">directory</Link>
 				</h3>
+
+				{/* <button onClick={'/midwifelogin'}>Midwife Login</button> */}
 			</div>
 		);
 	}

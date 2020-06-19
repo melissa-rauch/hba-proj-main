@@ -6,6 +6,7 @@ const NavLink = window.ReactRouterDOM.NavLink;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
+
 const UpdateProfile = window.UpdateProfile;
 const Registration = window.Registration;
 const Login = window.Login;
@@ -19,8 +20,9 @@ class App extends React.Component {
 		super();
 		this.state = {
 			midwifeData: [],
-			loggedIn: false,
+			midwifeLoggedIn: false,
 			userData: [],
+			loggedIn: false,
 			email: ''
 		};
 	}
@@ -33,6 +35,9 @@ class App extends React.Component {
 	setUserData = (userData) => {
 		this.setState({ userData });
 	};
+	setMidwifeLoggedIn = (email) => {
+		this.setState({email:email, midwifeLoggedIn: true})
+	}
 
 	render() {
 		const { 
