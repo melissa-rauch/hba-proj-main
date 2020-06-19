@@ -62,6 +62,11 @@ def get_user_by_email(email):
 
     return User.query.filter(User.email == email).all()
 
+def get_user_by_id(user_id):
+    """Return a user with given email, otherwise return None"""
+
+    return User.query.filter(User.user_id == user_id).first()    
+
 def get_fav_midwives():
     """Return all midwives in database"""
 

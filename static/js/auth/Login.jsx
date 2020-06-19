@@ -24,16 +24,20 @@ class Login extends React.Component {
 			method: 'post',
 			body: JSON.stringify(formData)
 		})
-			.then((response) => response.json())
-			.then((data) => {
-				if (data['email'] === this.state.email && data['password'] === this.state.password) {
-					this.props.setLoggedIn(this.state.email);
-					this.props.setUserData(data);
-				}else {
-					alert('Invalid email or password, please try again.');
-				}
-			});
+		.then((response) => response.json())
+		.then((data) => {
+			if (data === "Invalid") {
+				alert('Invalid email or password, please try again.');
+			
+			} else {
+				this.props.setUserData(data);
+				this.props.setLocalStorage(data.user_id);
+				this.props.setLoggedIn(data.user_id);
+				
+			}
+		});
 	};
+	
 
 	render() {
 

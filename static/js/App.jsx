@@ -23,22 +23,33 @@ class App extends React.Component {
 			midwifeLoggedIn: false,
 			userData: [],
 			loggedIn: false,
-			email: ''
+			userId: ''
 		};
 	}
 	updateMidwifeData = (midwifeData) => {
 		this.setState({ midwifeData });
 	};
-	setLoggedIn = (email) => {
-		this.setState({ email: email, loggedIn: true });
+	setLoggedIn = (userId) => {
+		this.setState({ userId: userId, loggedIn: true });
 	};
 	setUserData = (userData) => {
 		this.setState({ userData });
 	};
+	setLocalStorage(userId) {
+		localStorage.setItem('userId', JSON.stringify(userId));
+	};
+	
 	setMidwifeLoggedIn = (email) => {
 		this.setState({email:email, midwifeLoggedIn: true})
-	}
+	};
 
+	componentDidMount() {
+		const userId = localStorage.getItem('userId')
+		if (userId != null) {
+			this.setLoggedIn(userId)
+		}
+	}
+	
 	render() {
 		const { 
 			user_id, 
@@ -78,18 +89,19 @@ class App extends React.Component {
 						render={(props) => 
 							<User
 								{...props} 
-								userData={this.state.userData} 
+								userData={this.state.userData}
 							/>
 						}
 					/>
 					<Route 
 						path="/">
 						{this.state.loggedIn ? (
-							<Redirect to={{pathname: `/user/${user_id}`}} userData={this.state.userData}  />
+							<Redirect to={{pathname: '/user'}} userId={this.state.userId} userData={this.state.userData}  />
 						) : (
 							<Home
 								setLoggedIn={this.setLoggedIn}
 								setUserData={this.setUserData}
+								setLocalStorage={this.setLocalStorage}
 								userData={this.state.userData}
 							/>
 						)}
@@ -98,5 +110,6 @@ class App extends React.Component {
 			</Router>
 		);
 	}
+
 }
 ReactDOM.render(<App />, document.querySelector('#root'));

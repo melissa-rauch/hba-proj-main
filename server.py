@@ -31,6 +31,26 @@ def render_user_profile(user_id):
     """direct to individual midwive's profile"""
     return render_template('index.html')
 
+@app.route('/api/user')
+def get_user_by_id():
+    """Show directory of Midwives"""
+    data = request.args.get('userId')
+
+    user = crud.get_user_by_id(data)
+
+    user_data = {  
+            "userId" : user.user_id,
+            "firstName" : user.first_name,
+            "lastName" : user.last_name,
+            "email" : user.email,
+            "password" : user.password,
+            "address" : user.address,
+            "img" : user.img,
+            "bio" : user.bio
+        } 
+                      
+
+    return jsonify(user_data)
 
 @app.route('/api/midwives')
 def show_directory():

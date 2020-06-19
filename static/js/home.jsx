@@ -17,6 +17,7 @@ class Home extends React.Component {
 					setLoggedIn={this.props.setLoggedIn}
 					userData={this.props.userData}
 					setUserData={this.props.setUserData}
+					setLocalStorage={this.props.setLocalStorage}
 				/>
 				<Registration setLoggedIn={this.props.setLoggedIn} />
 
