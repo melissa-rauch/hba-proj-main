@@ -13,7 +13,6 @@ app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
-
 @app.route('/directory')
 @app.route('/')
 def render_app():
@@ -143,23 +142,20 @@ def login_user():
                         "img" : user[0].img,
                         "bio" : user[0].bio
                     }
-        # session[user_id] = user[0].user_id          
         return jsonify(user_profile)
     else:
         return jsonify("Invalid")
 
-@app.route('/api/midwife_login', methods=['POST'])
+@app.route('/api/midwife-login', methods=['POST'])
 def login_midwife():
     """Login a current user"""
-    data = request.get_json(force=True)
-    print(data)
+    data = request.get_json(force=true)
 
-    midwife = crud.get_midwife_by_email(data["email"])
-    print(midwife)
+    midwife = crud.get_midwife_by_email(data['email'])
     
     if midwife[0].password == data["password"]:
         midwife_profile = {
-                        "mw_id" : midwife[0].mw_id,
+                        "mwId" : midwife[0].mw_id,
                         "name" : midwife[0].name,
                         "email" : midwife[0].email,
                         "password": midwife[0].password,

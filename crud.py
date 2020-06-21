@@ -77,7 +77,7 @@ def get_midwives():
 
     return Midwife.query.all()
 
-def get_midwife_by_email():
+def get_midwife_by_email(email):
     """Return a Midwife by email"""
     
     return Midwife.query.filter(Midwife.email == email).first()
