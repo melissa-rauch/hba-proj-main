@@ -38,6 +38,16 @@ def quick_create_user(email, password, first_name, last_name, address, bio, img)
 
     return user    
 
+def get_user_by_email(email):
+    """Return a user with given email, otherwise return None"""
+
+    return User.query.filter(User.email == email).all()
+
+def get_user_by_id(user_id):
+    """Return a user with given email, otherwise return None"""
+
+    return User.query.filter(User.user_id == user_id).first()    
+
 def create_midwife(name, email, password, website, address, bio, counties, img, lat, lng):
     """Create and return a new midwife"""
 
@@ -57,21 +67,6 @@ def create_midwife(name, email, password, website, address, bio, counties, img, 
 
     return midwife
 
-def get_user_by_email(email):
-    """Return a user with given email, otherwise return None"""
-
-    return User.query.filter(User.email == email).all()
-
-def get_user_by_id(user_id):
-    """Return a user with given email, otherwise return None"""
-
-    return User.query.filter(User.user_id == user_id).first()    
-
-def get_fav_midwives():
-    """Return all midwives in database"""
-
-    # return Midwife.query.all()
-
 def get_midwives():
     """Return all midwives in database"""
 
@@ -81,6 +76,17 @@ def get_midwife_by_email(email):
     """Return a Midwife by email"""
     
     return Midwife.query.filter(Midwife.email == email).first()
+
+def get_midwife_by_id(mwId):
+    """Return a midwife with a given id"""
+
+    return Midwife.query.filter(Midwife.mw_id == mwId).first()
+
+def get_fav_midwives():
+    """Return all midwives in database"""
+
+    # return Midwife.query.all()
+
 
 if __name__ == '__main__':
     from server import app

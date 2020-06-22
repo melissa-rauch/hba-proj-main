@@ -1,23 +1,21 @@
 const Redirect = window.ReactRouterDOM.Redirect;
 
 class MidwifeLogin extends React.Component {
-	constructor() {
-		super()
+	constructor(props) {
+		super(props)
 		
 		this.state = {
 			email: '',
 			password: '',
 			midwifeData: {},
 			mwId: '',
-			loggedIn: false
+			mwLoggedIn: false
 		};
 	}
 	setLocalStorage(mwId) {
 		localStorage.setItem('mwId', JSON.stringify(mwId));
 	}		
-	setloggedIn = (mwId) => {
-		this.setState({mwId: mwId, loggedIn: true})
-	}
+	
 	handleChange = (event) => {
 		this.setState({
 			[event.target.name]: event.target.value
@@ -31,26 +29,23 @@ class MidwifeLogin extends React.Component {
 			password: this.state.password
 		}
 
-		fetch('/api/midwife-login', {
+		fetch('/api/mw-login', {
 			method: 'post',
 			body: JSON.stringify(formData)
 		})
-			.then((response) => response.json())
-			.then((data) => {
-				if (data['email'] === this.state.email && data['password'] === this.state.password) {
-					this.setState({midwifeData: data})
-					this.setLocalStorage(data.mwId)
-					this.setloggedIn(data.mwId);
-					
-					// <Redirect 
-					// 	to={{pathname: `/midwife-profile${localStorage.getItem("mwId")}`}}
-					// 	midwifeData = {this.state.midwifeData}>
-					// </Redirect>
-
-				}else {
-					alert('Invalid email or password, please try again.');
-				}
-			});
+		.then((response) => response.json())
+		.then((data) => {
+			
+			if (data === "Invalid") {
+				alert('Invalid email or password, please try again.');
+			} else {
+				this.setState({
+					midwifeData: data,
+					mwId: data.mwId});
+				this.setLocalStorage(data.mwId);
+				this.props.setMidwifeLoggedIn(data.mwId);
+			}
+		})
 	};
 
 	render() {

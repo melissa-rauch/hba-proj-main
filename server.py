@@ -13,11 +13,17 @@ app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
+@app.route('/midwife-login')
 @app.route('/directory')
 @app.route('/')
 def render_app():
     """Show App"""
 
+    return render_template('index.html')
+
+@app.route('/midwife-profile/<mwId>')
+def render_midwife_user_profile(mwId):
+    """direct a midwife's own user profile"""
     return render_template('index.html')
 
 @app.route('/midwife/<mw_id>')
@@ -50,6 +56,28 @@ def get_user_by_id():
                       
 
     return jsonify(user_data)
+
+@app.route('/api/midwife')
+def get_midwife_by_id():
+    """Show directory of Midwives"""
+    data = request.args.get('mwId')
+
+    midwife = crud.get_midwife_by_id(data)
+
+    midwife_data = {  
+            "mwId" : midwife.mw_id,
+            "name" : midwife.name,
+            "email" : midwife.email,
+            "password" : midwife.password,
+            "counties" : midwife.counties,
+            "website" : midwife.website,
+            "address" : midwife.address,
+            "img" : midwife.img,
+            "bio" : midwife.bio
+        } 
+                      
+
+    return jsonify(midwife_data)    
 
 @app.route('/api/midwives')
 def show_directory():
@@ -124,10 +152,8 @@ def register_user():
 def login_user():
     """Login a current user"""
     data = request.get_json(force=True)
-    print(data)
 
     user = crud.get_user_by_email(data["email"])
-    print(user)
     
     if user[0].password == data["password"]:
         user_profile = {
@@ -146,22 +172,22 @@ def login_user():
     else:
         return jsonify("Invalid")
 
-@app.route('/api/midwife-login', methods=['POST'])
+@app.route('/api/mw-login', methods=['POST'])
 def login_midwife():
-    """Login a current user"""
-    data = request.get_json(force=true)
+    """Login a midwife"""
+    data = request.get_json(force=True)
 
     midwife = crud.get_midwife_by_email(data['email'])
     
-    if midwife[0].password == data["password"]:
+    if midwife.password == data["password"]:
         midwife_profile = {
-                        "mwId" : midwife[0].mw_id,
-                        "name" : midwife[0].name,
-                        "email" : midwife[0].email,
-                        "password": midwife[0].password,
-                        "address" : midwife[0].address,
-                        "img" : midwife[0].img,
-                        "bio" : midwife[0].bio
+                        "mwId" : midwife.mw_id,
+                        "name" : midwife.name,
+                        "email" : midwife.email,
+                        "password": midwife.password,
+                        "address" : midwife.address,
+                        "img" : midwife.img,
+                        "bio" : midwife.bio
                     }
         # session[user_id] = user[0].user_id          
         return jsonify(midwife_profile)

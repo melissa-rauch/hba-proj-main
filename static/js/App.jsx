@@ -29,6 +29,9 @@ class App extends React.Component {
 	updateMidwifeData = (midwifeData) => {
 		this.setState({ midwifeData });
 	};
+	setMidwifeLoggedIn = (mwId) => {
+		this.setState({mwId: mwId, midwifeLoggedIn: true})
+	}
 	setLoggedIn = (userId) => {
 		this.setState({ userId: userId, loggedIn: true });
 	};
@@ -50,26 +53,32 @@ class App extends React.Component {
 		return (
 			<Router>
 				<Switch>
-					<Route 
-						path="/midwife-profile" 
-						render={() => 
-							<MidwifeProfile
-								// {...props} 
-								// updateMidwifeData={this.updateMidwifeData} 
-								// midwifeData={this.state.midwifeData} 
-							/>
-						} 
-					/>
-					<Route 
-						path="/midwife-Login" 
-						render={() => 
+				<Route 
+					path="/midwife-profile/:mwId" 
+					render={(props) => 
+						<MidwifeProfile
+							{...props} 
+							updateMidwifeData={this.updateMidwifeData} 
+							midwifeData={this.state.midwifeData} 
+						/>
+					} 
+				/>
+				<Route 
+					path="/midwife-login">
+					{this.state.midwifeLoggedIn ? (
+						<Redirect 
+							to={{pathname: `/midwife-profile/${this.state.mwId}`}}
+							midwifeData={this.state.midwifeData} 
+							mwId = {this.state.mwId} />	
+						) : (
 							<MidwifeLogin 
-								// {...props} 
-								// updateMidwifeData={this.updateMidwifeData} 
-								// midwifeData={this.state.midwifeData} 
+								setMidwifeLoggedIn={this.setMidwifeLoggedIn}
+								updateMidwifeData={this.updateMidwifeData}
+								midwifeData={this.state.midwifeData}
+								
 							/>
-						} 
-					/>
+						)}
+					</Route>
 					<Route 
 						path="/midwife/:mw_id" 
 						render={(props) => 
@@ -119,3 +128,5 @@ class App extends React.Component {
 
 }
 ReactDOM.render(<App />, document.querySelector('#root'));
+
+
