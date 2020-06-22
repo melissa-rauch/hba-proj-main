@@ -14,8 +14,8 @@ class Home extends React.Component {
 				<h1>Welcome to Babycatcher</h1>
 				<h2>Let's find you a Midwife!</h2>
 				<Login
-					setLoggedIn={this.props.setLoggedIn}
 					userData={this.props.userData}
+					setLoggedIn={this.props.setLoggedIn}
 					setUserData={this.props.setUserData}
 					setLocalStorage={this.props.setLocalStorage}
 				/>

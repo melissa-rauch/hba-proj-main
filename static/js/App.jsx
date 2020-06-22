@@ -58,8 +58,8 @@ class App extends React.Component {
 					render={(props) => 
 						<MidwifeProfile
 							{...props} 
+							midwifeData={this.state.midwifeData}
 							updateMidwifeData={this.updateMidwifeData} 
-							midwifeData={this.state.midwifeData} 
 						/>
 					} 
 				/>
@@ -72,10 +72,9 @@ class App extends React.Component {
 							mwId = {this.state.mwId} />	
 						) : (
 							<MidwifeLogin 
+								midwifeData={this.state.midwifeData}	
 								setMidwifeLoggedIn={this.setMidwifeLoggedIn}
 								updateMidwifeData={this.updateMidwifeData}
-								midwifeData={this.state.midwifeData}
-								
 							/>
 						)}
 					</Route>
@@ -84,8 +83,8 @@ class App extends React.Component {
 						render={(props) => 
 							<Midwife 
 								{...props} 
-								updateMidwifeData={this.updateMidwifeData} 
 								midwifeData={this.state.midwifeData} 
+								updateMidwifeData={this.updateMidwifeData} 
 							/>
 						} 
 					/>
@@ -103,8 +102,8 @@ class App extends React.Component {
 						render={(props) => 
 							<UserProfile
 								{...props} 
-								userId={this.state.userId}
 								userData={this.state.userData}
+								userId={this.state.userId}
 							/>
 						}
 					/>
@@ -114,10 +113,10 @@ class App extends React.Component {
 							<Redirect to={{pathname: `/user/${this.state.userId}`}} userId={this.state.userId} userData={this.state.userData}  />
 						) : (
 							<Home
+								userData={this.state.userData}
 								setLoggedIn={this.setLoggedIn}
 								setUserData={this.setUserData}
 								setLocalStorage={this.setLocalStorage}
-								userData={this.state.userData}
 							/>
 						)}
 					</Route>
