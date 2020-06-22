@@ -13,7 +13,9 @@ app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
+@app.route('/logout')
 @app.route('/midwife-login')
+@app.route('/user-login')
 @app.route('/directory')
 @app.route('/')
 def render_app():

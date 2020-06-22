@@ -15,6 +15,21 @@ const Directory = window.Directory;
 const UserProfile = window.UserProfile;
 const Home = window.Home;
 
+class Navbar extends React.Component{
+    render() {
+        return (
+            <div>
+              <ul id="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/directory">Directory of Midwives</a></li>
+				<li><a href="/user-login">Log In</a></li>
+				<li><a href="/logout">Log Out</a></li>
+              </ul>
+            </div>
+        );
+    }
+}
+
 class App extends React.Component {
 	constructor() {
 		super();
@@ -41,6 +56,9 @@ class App extends React.Component {
 	setLocalStorage(userId) {
 		localStorage.setItem('userId', JSON.stringify(userId));
 	};
+	setLoggedOut = () => {
+		this.setState({midwifeLoggedIn: false, loggedIn: false})
+	}
 	componentDidMount() {
 		const userId = localStorage.getItem('userId')
 		if (userId != null) {
@@ -52,7 +70,17 @@ class App extends React.Component {
  
 		return (
 			<Router>
+				<Navbar />
 				<Switch>
+				<Route 
+					path="/logout" 
+					render={(props) => 
+						<Logout 
+							{...props}
+							setLoggedOut={this.setLoggedOut}
+						/>
+					} 
+				/>
 				<Route 
 					path="/midwife-profile/:mwId" 
 					render={(props) => 
@@ -107,6 +135,19 @@ class App extends React.Component {
 							/>
 						}
 					/>
+					<Route 
+						path="/user-login">
+						{this.state.loggedIn ? (
+							<Redirect to={{pathname: `/user/${this.state.userId}`}} userId={this.state.userId} userData={this.state.userData}  />
+						) : (
+							<Login
+								userData={this.state.userData}
+								setLoggedIn={this.setLoggedIn}
+								setUserData={this.setUserData}
+								setLocalStorage={this.setLocalStorage}
+							/>
+						)}
+					</Route>
 					<Route 
 						path="/">
 						{this.state.loggedIn ? (

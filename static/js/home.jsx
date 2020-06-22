@@ -13,12 +13,7 @@ class Home extends React.Component {
 				</h1>
 				<h1>Welcome to Babycatcher</h1>
 				<h2>Let's find you a Midwife!</h2>
-				<Login
-					userData={this.props.userData}
-					setLoggedIn={this.props.setLoggedIn}
-					setUserData={this.props.setUserData}
-					setLocalStorage={this.props.setLocalStorage}
-				/>
+
 				<Registration setLoggedIn={this.props.setLoggedIn} />
 
 				<h3>...or preview the <Link to="/directory">directory</Link>
