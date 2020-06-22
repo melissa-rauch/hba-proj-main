@@ -124,6 +124,18 @@ def show_fav_midwives():
 
     return jsonify(fav_mw)
 
+@app.route('/api/add-fav', methods=['POST'])
+def add_fav():
+    """Register a new user"""
+
+    data = request.get_json(force=True)
+
+    if data:
+        crud.create_fav(data["userId"], data["mw_id"])
+    
+        return jsonify("Valid")
+
+
 @app.route('/api/register', methods=['POST'])
 def register_user():
     """Register a new user"""

@@ -2,8 +2,6 @@
 
 from model import db, User, Midwife, connect_to_db
 
-
-
 def create_user(first_name, last_name, email, password, address, bio, img, lat, lng):
     """Create and return a new user"""
 
@@ -81,6 +79,18 @@ def get_midwife_by_id(mwId):
     """Return a midwife with a given id"""
 
     return Midwife.query.filter(Midwife.mw_id == mwId).first()
+
+def create_fav(user_id, mw_id):
+    """Create and return a new user"""
+
+    favorite = Favorite(
+                        user_id=user_id, 
+                        mw_id=mw_id)
+
+    db.session.add(favorite)
+    db.session.commit()
+
+    return user 
 
 def get_fav_midwives():
     """Return all midwives in database"""

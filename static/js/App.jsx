@@ -21,9 +21,9 @@ class Navbar extends React.Component{
             <div>
               <ul id="nav">
                 <li><a href="/">Home</a></li>
-                <li><a href="/directory">Directory of Midwives</a></li>
-				<li><a href="/user-login">Log In</a></li>
-				<li><a href="/logout">Log Out</a></li>
+                <li><a href="/directory">View Directory</a></li>
+				<li><a href="/user-login">Login</a></li>
+				<li><a href="/logout">Log out</a></li>
               </ul>
             </div>
         );

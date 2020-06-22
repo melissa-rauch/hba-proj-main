@@ -56,7 +56,7 @@ class Registration extends React.Component {
 						value={this.state.email}
 						onChange={this.handleChange}
 						required
-					/> Email
+					/>  Email
 					<br />
 					<input
 						type="password"
@@ -65,7 +65,7 @@ class Registration extends React.Component {
 						value={this.state.password}
 						onChange={this.handleChange}
 						required
-					/> Set password
+					/>  Set password
                     <br />
 					<input
 						type="text"
@@ -74,7 +74,7 @@ class Registration extends React.Component {
 						value={this.state.firstName}
 						onChange={this.handleChange}
 						required
-					/>First Name
+					/>  First Name
                     <br /> 
 					<input
 						type="text"
@@ -83,7 +83,7 @@ class Registration extends React.Component {
 						value={this.state.lastName}
 						onChange={this.handleChange}
 						required
-					/>Last Name
+					/>  Last Name
                     <br /> 
 					<input
 						type="text"
@@ -92,7 +92,7 @@ class Registration extends React.Component {
 						value={this.state.address}
 						onChange={this.handleChange}
 						required
-					/>Address
+					/>  Address
                     <br /> 
 					<p>Say a little about yourself...</p>
                     <textarea

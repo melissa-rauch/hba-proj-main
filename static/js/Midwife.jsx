@@ -1,6 +1,7 @@
 class Midwife extends React.Component {
 	constructor(props) {
 		super(props);
+
 	}
 	getMidwife = () => {
 		for (const midwife of this.props.midwifeData) {
@@ -16,7 +17,28 @@ class Midwife extends React.Component {
 			});
 		}
 	}
-	handleChange = (event) => {};
+
+	handleChange = (event) => {
+
+		const submitData = {
+			userId: localStorage.getItem("userId"),
+			mwId: this.props.key
+		}
+
+		fetch('/api/add-fav', {
+			method: 'post',
+			body: JSON.stringify(submitData)
+		})
+			.then((response) => response.json())
+			.then((data) => {
+				if (data === 'Valid') {
+					alert("Midwife added to your favorites!");
+				} else {
+					alert('Unable to save to favorites');
+				}
+			});
+	};
+
 	render() {
 		const midwife = this.getMidwife()
 
