@@ -92,11 +92,18 @@ def create_fav(user_id, mw_id):
 
     return favorite 
 
-def get_fav_midwives():
-    """Return all midwives in database"""
+def get_fav_midwives(userId):
+    """Return a user's favorite midwives"""
+    list_midwives = []
+    user_favs = Favorite.query.filter(Favorite.user_id == userId).all()
+    
+    for fav in user_favs:
 
-    # return Midwife.query.all()
-
+        midwife = Midwife.query.filter(Midwife.mw_id == fav.mw_id).all()
+        
+        list_midwives.append(midwife)
+    
+    return list_midwives
 
 if __name__ == '__main__':
     from server import app

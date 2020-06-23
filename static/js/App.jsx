@@ -132,6 +132,7 @@ class App extends React.Component {
 								{...props} 
 								userData={this.state.userData}
 								userId={this.state.userId}
+								midwifeData={this.state.midwifeData}
 							/>
 						}
 					/>

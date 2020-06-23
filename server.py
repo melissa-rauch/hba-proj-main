@@ -104,24 +104,27 @@ def show_directory():
 
 @app.route('/api/fav-midwives')
 def show_fav_midwives():
-    """Show directory of Midwives"""
-    midwives = crud.get_fav_midwives()
+    """Show favorite midwives by userId"""
+    data = request.args.get("userId")
+
+    list_midwives = crud.get_fav_midwives(data)
+    
     fav_mw = []
-    for midwife in midwives:
-        mw = {"mw_id" : midwife.mw_id,
-            "name" : midwife.name,
-            "email" : midwife.email,
-            "password" : midwife.password,
-            "website" : midwife.website,
-            "address" : midwife.address,
-            "counties" : midwife.counties,
-            "lat" : midwife.lat,
-            "lng" : midwife.lng,
-            "img" : midwife.img,
-            "bio" : midwife.bio} 
-        fav_mw.append(mw)               
-
-
+    print(list_midwives)
+    for midwives in list_midwives:
+        for midwife in midwives:
+            mw = {
+                "mw_id" : midwife.mw_id,
+                "name" : midwife.name,
+                "email" : midwife.email,
+                "password" : midwife.password,
+                "website" : midwife.website,
+                "address" : midwife.address,
+                "counties" : midwife.counties,
+                "img" : midwife.img,
+                "bio" : midwife.bio} 
+            fav_mw.append(mw)               
+    print(fav_mw)
     return jsonify(fav_mw)
 
 @app.route('/api/add-fav', methods=['POST'])
