@@ -5,14 +5,18 @@ from model import connect_to_db
 import crud
 from jinja2 import StrictUndefined
 import json
-# import os
-# API_KEY = os.environ["CLOUDINARY_KEY"]
-# API_SECRET = os.environ["CLOUDINARY_SECRET"]
+import twilio 
+import os
+API_KEY = os.environ["API_KEY"]
+API_SECRET = os.environ["API_SECRET"]
+ACCOUNT_SID = os.environ["ACCOUNT_SID"]
+AUTH_TOKEN  = os.environ["AUTH_TOKEN"]
 
 app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
 
+@app.route('/userfavorites')
 @app.route('/logout')
 @app.route('/midwife-login')
 @app.route('/user-login')

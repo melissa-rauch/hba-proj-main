@@ -6,6 +6,8 @@ const NavLink = window.ReactRouterDOM.NavLink;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
+const UploadPhoto = window.UploadPhoto;
+const UserFavorites = window.UserFavorites;
 const MidwifeLogin = window.MidwifeLogin;
 const UpdateProfile = window.UpdateProfile;
 const Registration = window.Registration;

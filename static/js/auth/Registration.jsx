@@ -108,10 +108,12 @@ class Registration extends React.Component {
 						name="img"
 						value={this.state.imgFile}
 						onChange={this.handleChange}
-					/>Upload your photo
+					/>
                     <br /> 
+					<UploadPhoto />
 					<button type="submit">Register</button>
 				</form>
+					
 			</div>
 		);
 	}

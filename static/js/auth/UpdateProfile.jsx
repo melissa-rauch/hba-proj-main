@@ -5,7 +5,8 @@ class UpdateProfile extends React.Component {
 			first_name: '',
             last_name: '',
             address: '',
-            bio: ''
+			bio: '',
+			img: ''
 		};
     }
 	handleChange = (event) => {
@@ -59,6 +60,8 @@ render() {
 						value={this.state.bio}
 						onChange={this.handleChange}
 					/>
+                    <br />
+					<UploadPhoto />
                     <br />
                     <button onSubmit={this.handleSubmit}>Update</button>
             </form>
