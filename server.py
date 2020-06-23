@@ -133,9 +133,13 @@ def add_fav():
 
     data = request.get_json(force=True)
 
-    crud.create_fav(data["userId"], data["mwId"])
+    if data["userId"] == None:
+        return jsonify("Invalid")
+    else:
+        crud.create_fav(data["userId"], data["mwId"])
+        return jsonify("Valid")
     
-    return jsonify("Valid")
+
 
 
 @app.route('/api/register', methods=['POST'])

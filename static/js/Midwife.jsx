@@ -32,9 +32,9 @@ class Midwife extends React.Component {
 			.then((response) => response.json())
 			.then((data) => {
 				if (data === 'Valid') {
-					alert("Midwife added to your favorites!");
+					alert('Midwife added to your favorites!');
 				} else {
-					alert('Unable to save to favorites');
+					alert('Please create an account or Log in to save to favorites');
 				}
 			});
 	};
