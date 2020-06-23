@@ -130,10 +130,9 @@ def add_fav():
 
     data = request.get_json(force=True)
 
-    if data:
-        crud.create_fav(data["userId"], data["mw_id"])
+    crud.create_fav(data["userId"], data["mwId"])
     
-        return jsonify("Valid")
+    return jsonify("Valid")
 
 
 @app.route('/api/register', methods=['POST'])

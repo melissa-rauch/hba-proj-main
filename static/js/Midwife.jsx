@@ -22,7 +22,7 @@ class Midwife extends React.Component {
 
 		const submitData = {
 			userId: localStorage.getItem("userId"),
-			mwId: this.props.key
+			mwId: this.props.match.params.mw_id
 		}
 
 		fetch('/api/add-fav', {

@@ -1,6 +1,6 @@
 """CRUD Operations"""
 
-from model import db, User, Midwife, connect_to_db
+from model import db, User, Midwife, Favorite, connect_to_db
 
 def create_user(first_name, last_name, email, password, address, bio, img, lat, lng):
     """Create and return a new user"""
@@ -90,7 +90,7 @@ def create_fav(user_id, mw_id):
     db.session.add(favorite)
     db.session.commit()
 
-    return user 
+    return favorite 
 
 def get_fav_midwives():
     """Return all midwives in database"""
