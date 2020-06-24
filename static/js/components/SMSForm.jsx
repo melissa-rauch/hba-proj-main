@@ -4,7 +4,11 @@ class SMSForm extends React.Component {
     super(props);
     this.state = {
       message: {
-        to: '',
+        to: '+15102820575',
+        name:'',
+        phone: '',
+        email:'',
+        due:'',
         body: ''
       },
       submitting: false,
@@ -17,7 +21,7 @@ class SMSForm extends React.Component {
   onSubmit(event) {
     event.preventDefault();
     this.setState({ submitting: true });
-    fetch('/api/messages', {
+    fetch('/api/message', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -31,7 +35,11 @@ class SMSForm extends React.Component {
             error: false,
             submitting: false,
             message: {
-              to: '',
+              to: '+15102820575',
+              name:'',
+              phone: '',
+              email:'',
+              due:'',
               body: ''
             }
           });
@@ -57,7 +65,7 @@ class SMSForm extends React.Component {
         onSubmit={this.onSubmit}
         className={this.state.error ? 'error sms-form' : 'sms-form'}
       >
-        <div>
+        {/* <div>
           <label htmlFor="to">To:</label>
           <input
             type="tel"
@@ -66,11 +74,46 @@ class SMSForm extends React.Component {
             value={this.state.message.to}
             onChange={this.onHandleChange}
           />
-        </div>
+        </div> */}
         <div>
-          <label htmlFor="body">Body:</label>
+          <label htmlFor="body">Message:</label>
+          <br />
+          <input
+            name="name"
+            placeholder="Your Name"
+            id="name"
+            value={this.state.message.name}
+            onChange={this.onHandleChange}
+          />
+          <br />
+          <input
+            name="phone"
+            placeholder="Your phone number"
+            id="phone"
+            value={this.state.message.phone}
+            onChange={this.onHandleChange}
+          />
+          <br />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email Address"
+            id="email"
+            value={this.state.message.email}
+            onChange={this.onHandleChange}
+          />
+          <br />
+          <input
+            name="due"
+            placeholder="Due Date"
+            id="due"
+            value={this.state.message.due}
+            onChange={this.onHandleChange}
+          />
+          <br />
           <textarea
             name="body"
+            placeholder="Leave your message here"
             id="body"
             value={this.state.message.body}
             onChange={this.onHandleChange}

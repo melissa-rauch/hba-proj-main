@@ -1,3 +1,4 @@
+
 class Registration extends React.Component {
 	constructor(props) {
 		super(props);
@@ -103,18 +104,9 @@ class Registration extends React.Component {
 						onChange={this.handleChange}
 					/>
 					<br />
-					<input
-						id="image-upload"
-						type="file"
-						name="image-upload"
-						value={this.state.img}
-						onChange={this.handleChange}
-					/>
-                    <br /> 
-					<UploadPhoto />
 					<button type="submit">Register</button>
 				</form>
-					
+				{/* <UploadPhoto /> */}
 			</div>
 		);
 	}

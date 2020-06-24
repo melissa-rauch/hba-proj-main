@@ -1,33 +1,77 @@
 
 class UploadPhoto extends React.Component {
     constructor(props) {
-        super(props)
+      super(props)
+      this.state = {
+        imageUrl: null,
+        imageAlt: null,
+      }
+    }  
+    handleImageUpload = async () => {
+      const { files } = document.querySelector('input[type="file"]')
+      const formData = new FormData();
+        formData.append('file', files[0]);
+        formData.append('upload_preset', 'user_img');
 
-    }
-      render() {
-  
-        return (
-          <div>
-            Photo widget goes here
-            {/* <button id="upload_widget" class="cloudinary-button">Upload files</button>
-
-              <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
-
-              <script type="text/javascript">  
-
-                const myWidget = cloudinary.createUploadWidget({
-                  {cloudName: 'mrauch', 
-                  uploadPreset: 'user_image'}, (error, result) => { 
-                    if (!error && result && result.event === "success") { 
-                    console.log('Done! Here is the image info: ', result.info); 
-                  }
-                }
-              })
-                document.getElementById("upload_widget").addEventListener("click", function(){
-                  myWidget.open()
-                }, false);
-              </script> */}
-          </div>
-        )
+      const options = {
+        method: 'POST',
+        body: formData,
+      };
+    
+      
+      try {
+        const res = await fetch('https://api.Cloudinary.com/v1_1/:mrauch/image/upload', options);
+        const res_1 = await res.json();
+        this.setState({
+          imageUrl: res_1.secure_url,
+          imageAlt: `An image of ${res_1.original_filename}`
+        });
+      }
+      catch (err) {
+        return console.log(err);
       }
     }
+
+    openWidget = () => {
+      const widget = window.Cloudinary.createUploadWidget(
+        {
+          cloudName: 'mrauch',
+          uploadPreset: 'user_img',
+        },
+        (error, result) => {
+          if (result.event === 'success') {
+            this.setState({
+              imageUrl: result.info.secure_url,
+              imageAlt: `An image of ${result.info.original_filename}`
+            })
+          }
+        },
+      );
+      widget.open(); 
+    };
+
+    render() {
+      const { imageUrl, imageAlt } = this.state;
+  
+      return (
+        <main className="App">
+          <section className="left-side">
+            <form>
+              <div className="form-group">
+                <input type="file"/>
+              </div>
+  
+              <button type="button" className="btn" onClick={this.handleImageUpload}>Submit</button>
+              <button type="button" className="btn widget-btn" onClick={this.openWidget}>Upload Via Widget</button>
+            </form>
+          </section>
+          <section className="right-side">
+            <p>The resulting image will be displayed here</p>
+            {imageUrl && (
+              <img src={imageUrl} alt={imageAlt} className="displayed-image"/>
+            )}
+          </section>
+        </main>
+      );
+    }
+  }

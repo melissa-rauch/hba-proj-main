@@ -5,14 +5,16 @@ account_sid = os.environ["ACCOUNT_SID"]
 auth_token = os.environ["AUTH_TOKEN"]
 client = Client(account_sid, auth_token)
 
-
-def send_message():
+@app.route('/api/message')
+def send_message(message):
     """Send a SMS to a Midwife"""
+    data = request.get_json(force=True)
+
     message = client.messages \
                     .create(
-                        body="Join Earth's mightiest heroes. Like Kevin Bacon.",
+                        body=data["body"],
                         from_='+12512500805',
-                        to='+15102820575'
+                        to=data['to']
                     )
 
     return message.sid 

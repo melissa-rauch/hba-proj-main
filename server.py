@@ -11,7 +11,15 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+
 from werkzeug.utils import secure_filename
+
+from twilio.rest import Client
+import os
+
+account_sid = os.environ["ACCOUNT_SID"]
+auth_token = os.environ["AUTH_TOKEN"]
+client = Client(account_sid, auth_token)
 
 cloudinary.config(
     cloud_name = "mrauch",
@@ -53,6 +61,27 @@ def render_midwife_profile(mw_id):
 def render_user_profile(user_id):
     """direct to individual midwive's profile"""
     return render_template('index.html')
+
+
+
+@app.route('/api/message', methods=['POST'])
+def send_message():
+    """Send a SMS to a Midwife"""
+    data = request.get_json(force=True)
+
+    message = client.messages \
+                    .create(
+                        body=(
+                            "You recieved a message from The Babycatcher App: " + data["body"] + "  " +
+                            "From: " + data['name'] +  "  " +
+                            "Phone: " + data['phone'] +  "  " +
+                            "Email: " + data['email']+  "  " +
+                            "EDD: " + data['due']),
+                        from_='+12512500805',
+                        to=data['to']
+                    )
+
+    return message.sid
 
 @app.route('/api/user')
 def get_user_by_id():

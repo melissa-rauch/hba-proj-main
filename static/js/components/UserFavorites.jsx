@@ -20,7 +20,7 @@ class UserFavorites extends React.Component {
                 <div key={midwife.mw_id}>
                     <img src={midwife.img} /> 
                     <p>{midwife.name}</p>
-                    <button onClick={this.handleChange}>Contact</button> 
+                    
                     <SMSForm />
                     <br />
                 </div>
