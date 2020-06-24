@@ -7,14 +7,26 @@ from jinja2 import StrictUndefined
 import json
 import twilio 
 import os
-API_KEY = os.environ["API_KEY"]
-API_SECRET = os.environ["API_SECRET"]
+#
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
+from werkzeug.utils import secure_filename
+
+cloudinary.config(
+    cloud_name = "mrauch",
+    API_KEY = os.environ["API_KEY"],
+    API_SECRET = os.environ["API_SECRET"]
+)
+#
+
 ACCOUNT_SID = os.environ["ACCOUNT_SID"]
 AUTH_TOKEN  = os.environ["AUTH_TOKEN"]
 
 app = Flask(__name__)
 app.secret_key = "dev"
 app.jinja_env.undefined = StrictUndefined
+
 
 @app.route('/userfavorites')
 @app.route('/logout')
@@ -59,8 +71,6 @@ def get_user_by_id():
             "img" : user.img,
             "bio" : user.bio
         } 
-                      
-
     return jsonify(user_data)
 
 @app.route('/api/midwife')
@@ -143,9 +153,6 @@ def add_fav():
         crud.create_fav(data["userId"], data["mwId"])
         return jsonify("Valid")
     
-
-
-
 @app.route('/api/register', methods=['POST'])
 def register_user():
     """Register a new user"""
@@ -153,7 +160,16 @@ def register_user():
     data = request.get_json(force=True)
 
     user = crud.get_user_by_email(data["email"])
+#
+    filename = data["img"]
+    print(filename)
 
+    if filename:
+            response = cloudinary.uploader.upload(filename)
+            print('response for cloudinary'. response)
+
+    img = secure_filename(filename.filename)
+#
     if user:
         return jsonify("Invalid")
     else:
@@ -166,15 +182,15 @@ def register_user():
                                 data["bio"], 
                                 data["img"])
         return jsonify("Valid")
-        # user_info[email] = data.email
-        # user_info[password] = data.email
 
-
-
+#import user_login
 
 @app.route('/api/login', methods=['POST'])
 def login_user():
     """Login a current user"""
+
+    #data, user = user_login.get_user_data_from_db()
+    #return jsonify(user_login.verify_login_against_user(data, user))
     data = request.get_json(force=True)
 
     user = crud.get_user_by_email(data["email"])

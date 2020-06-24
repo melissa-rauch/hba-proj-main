@@ -9,7 +9,7 @@ class UploadPhoto extends React.Component {
         return (
           <div>
             Photo widget goes here
-            <button id="upload_widget" class="cloudinary-button">Upload files</button>
+            {/* <button id="upload_widget" class="cloudinary-button">Upload files</button>
 
               <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>  
 
@@ -26,7 +26,7 @@ class UploadPhoto extends React.Component {
                 document.getElementById("upload_widget").addEventListener("click", function(){
                   myWidget.open()
                 }, false);
-              </script>
+              </script> */}
           </div>
         )
       }

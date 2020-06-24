@@ -1,5 +1,23 @@
-import server
-import unittest
+from unittest import TestCase
+from server import app
+
+class FlaskTests(TestCase):
+
+  def setUp(self):
+
+      self.client = app.test_client()
+      app.config['TESTING'] = True
+
+  def test_render_midwife_user_profile(self):
+      """Docstring here"""
+
+      result = self.client.get('/midwife-profile/<mwId>')
+      self.assertEqual(result.status_code, 200)
+      self.assertIn('<h1>Test</h1>', result.data)
+
+
+
+
 
 class ServerTestCase(unittest.TestCase):
     def test_login_user(): 

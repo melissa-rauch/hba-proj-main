@@ -8,7 +8,7 @@ class Registration extends React.Component {
 			lastName: '',
 			address: '',
 			bio: '',
-			imgFile: ''
+			img: ''
 		};
 	}
 	handleChange = (event) => {
@@ -26,7 +26,7 @@ class Registration extends React.Component {
 			lastName: this.state.lastName,
 			address: this.state.address,
 			bio: this.state.bio,
-			img: this.state.imgFile
+			img: this.state.img
 
 		}
 
@@ -47,7 +47,7 @@ class Registration extends React.Component {
 		return (
 			<div>
 				<br />
-				<form onSubmit={this.handleSubmit}>
+				<form onSubmit={this.handleSubmit} encType="multipart/form-data">
 					<h3>Don't have an Account? Please Register:</h3>
 					<input
 						type="email"
@@ -104,9 +104,10 @@ class Registration extends React.Component {
 					/>
 					<br />
 					<input
+						id="image-upload"
 						type="file"
-						name="img"
-						value={this.state.imgFile}
+						name="image-upload"
+						value={this.state.img}
 						onChange={this.handleChange}
 					/>
                     <br /> 
