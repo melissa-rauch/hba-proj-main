@@ -6,6 +6,7 @@ const NavLink = window.ReactRouterDOM.NavLink;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
+const SearchBar = window.ReactRouterDOM.SearchBar;
 const SMSForm = window.SMSForm;
 const UploadPhoto = window.UploadPhoto;
 const UserFavorites = window.UserFavorites;
@@ -19,7 +20,13 @@ const UserProfile = window.UserProfile;
 const Home = window.Home;
 
 class Navbar extends React.Component{
+	constructor(props) {
+		super(props)
+		
+	}
     render() {
+		
+		
         return (
             <div>
               <ul id="nav">

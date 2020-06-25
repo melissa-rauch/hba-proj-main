@@ -44,6 +44,7 @@ class Directory extends React.Component {
 	handleSubmit = (event) => {
 		event.preventDefault()
 		alert('You selected: ' + this.state.value)
+		
 	}
 	render() {
 		const listMidwives = this.props.midwifeData.map((midwife) => 
