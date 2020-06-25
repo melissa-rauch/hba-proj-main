@@ -43,12 +43,13 @@ class Directory extends React.Component {
 	}
 	handleSubmit = (event) => {
 		event.preventDefault()
-		alert('You selected: ' + this.state.value)
-		
+		alert('You selected: ' + this.state.value)		
 	}
+
 	render() {
-		const listMidwives = this.props.midwifeData.map((midwife) => 
-			<MidwifePreview midwife={midwife} key={midwife.mw_id} />);
+		const selectedMidwives = this.props.midwifeData
+			.filter(mw => mw.counties.includes(this.state.value))
+			.map((midwife) => <MidwifePreview midwife={midwife} key={midwife.mw_id} />);
 
 		return (
 			<div>
@@ -74,7 +75,7 @@ class Directory extends React.Component {
 					</form>
 				</div>	
 				<div>
-					{listMidwives}
+					{selectedMidwives}
 				</div>
 			</div>
 		);

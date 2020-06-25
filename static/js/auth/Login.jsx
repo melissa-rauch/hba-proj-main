@@ -44,7 +44,7 @@ class Login extends React.Component {
 			<div>
 				<br />
 				<form onSubmit={this.handleSubmit}>
-					<h3>Please Log In:</h3>
+					<h2>Users Log in here:</h2>
 					<input
 						type="email"
 						name="email"

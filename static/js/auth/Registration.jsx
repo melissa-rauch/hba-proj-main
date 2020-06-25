@@ -104,6 +104,7 @@ class Registration extends React.Component {
 						onChange={this.handleChange}
 					/>
 					<br />
+					
 					<button type="submit">Register</button>
 				</form>
 				{/* <UploadPhoto /> */}

@@ -6,7 +6,7 @@ const NavLink = window.ReactRouterDOM.NavLink;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
-const SearchBar = window.ReactRouterDOM.SearchBar;
+
 const SMSForm = window.SMSForm;
 const UploadPhoto = window.UploadPhoto;
 const UserFavorites = window.UserFavorites;
@@ -45,7 +45,7 @@ class App extends React.Component {
 		super();
 		this.state = {
 			midwifeData: [],
-			midwifeLoggedIn: false,
+			mwLoggedIn: false,
 			userData: [],
 			loggedIn: false,
 			userId: ''
@@ -55,7 +55,7 @@ class App extends React.Component {
 		this.setState({ midwifeData });
 	};
 	setMidwifeLoggedIn = (mwId) => {
-		this.setState({mwId: mwId, midwifeLoggedIn: true})
+		this.setState({mwId: mwId, mwLoggedIn: true})
 	}
 	setLoggedIn = (userId) => {
 		this.setState({ userId: userId, loggedIn: true });
@@ -67,7 +67,7 @@ class App extends React.Component {
 		localStorage.setItem('userId', JSON.stringify(userId));
 	};
 	setLoggedOut = () => {
-		this.setState({midwifeLoggedIn: false, loggedIn: false})
+		this.setState({mwLoggedIn: false, loggedIn: false})
 	}
 	componentDidMount() {
 		const userId = localStorage.getItem('userId')
@@ -101,13 +101,15 @@ class App extends React.Component {
 						/>
 					} 
 				/>
+				
 				<Route 
 					path="/midwife-login">
-					{this.state.midwifeLoggedIn ? (
+					{this.state.mwLoggedIn ? (
 						<Redirect 
 							to={{pathname: `/midwife-profile/${this.state.mwId}`}}
 							midwifeData={this.state.midwifeData} 
-							mwId = {this.state.mwId} />	
+							mwId = {this.state.mwId} 
+							setMidwifeLoggedIn={this.setMidwifeLoggedIn}/>	
 						) : (
 							<MidwifeLogin 
 								midwifeData={this.state.midwifeData}	
@@ -149,7 +151,10 @@ class App extends React.Component {
 					<Route 
 						path="/user-login">
 						{this.state.loggedIn ? (
-							<Redirect to={{pathname: `/user/${this.state.userId}`}} userId={this.state.userId} userData={this.state.userData}  />
+							<Redirect 
+								to={{pathname: `/user/${this.state.userId}`}} 
+								userId={this.state.userId} 
+								userData={this.state.userData}  />
 						) : (
 							<Login
 								userData={this.state.userData}
@@ -168,7 +173,7 @@ class App extends React.Component {
 								userData={this.state.userData}
 								setLoggedIn={this.setLoggedIn}
 								setUserData={this.setUserData}
-								setLocalStorage={this.setLocalStorage}
+								setLocalStorage={this.setLocalStorage}								
 							/>
 						)}
 					</Route>

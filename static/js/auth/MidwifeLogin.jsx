@@ -52,8 +52,7 @@ class MidwifeLogin extends React.Component {
 
 		return (
 			<div>
-				<h1>Welcome!</h1>
-				<br />
+				<h2>Midwives log in here:</h2>
 				<form onSubmit={this.handleSubmit}>
 					<h3>Please log in:</h3>
 					<input

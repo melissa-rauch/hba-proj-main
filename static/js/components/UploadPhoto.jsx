@@ -12,7 +12,7 @@ class UploadPhoto extends React.Component {
       const formData = new FormData();
         formData.append('file', files[0]);
         formData.append('upload_preset', 'user_img');
-
+      console.log("heyya", formData)
       const options = {
         method: 'POST',
         body: formData,
@@ -20,7 +20,7 @@ class UploadPhoto extends React.Component {
     
       
       try {
-        const res = await fetch('https://api.Cloudinary.com/v1_1/:mrauch/image/upload', options);
+        const res = await fetch('https://api.Cloudinary.com/v1_1/mrauch/image/upload', options);
         const res_1 = await res.json();
         this.setState({
           imageUrl: res_1.secure_url,
