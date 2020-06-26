@@ -8,8 +8,8 @@ import crud
 
 
 
-os.system('dropdb ratings')
-os.system('createdb ratings')
+os.system('dropdb babycatcher')
+os.system('createdb babycatcher')
 
 model.connect_to_db(server.app)
 model.db.create_all()
@@ -21,25 +21,33 @@ midwives_in_db = []
 
 for midwife in midwife_data:
 
-    name, email, password, website, address, bio, counties, img, lat, lng = (midwife['name'],
-                                                        midwife['email'],
-                                                        midwife['password'],
-                                                        midwife['website'],
-                                                        midwife['address'],
-                                                        midwife['bio'],
-                                                        midwife['counties'],
-                                                        midwife['img'],
-                                                        midwife['lat'],
-                                                        midwife['lng'])
-    db_midwife = crud.create_midwife(name,
-                                    email,
-                                    password,
-                                    website,
-                                    address,
-                                    bio,
-                                    counties,
-                                    img,
-                                    lat,
+    name, creds, email, password, phone, address, website, bio, counties, location, services, img, lat, lng = (midwife['name'],
+                        midwife['creds'],
+                        midwife['email'],
+                        midwife['password'],
+                        midwife['phone'],
+                        midwife['address'],
+                        midwife['website'],
+                        midwife['bio'],
+                        midwife['counties'],
+                        midwife['location'],
+                        midwife['services'],
+                        midwife['img'],
+                        midwife['lat'],
+                        midwife['lng'])
+    db_midwife = crud.create_midwife(name, 
+                                    creds, 
+                                    email, 
+                                    password, 
+                                    phone, 
+                                    address, 
+                                    website, 
+                                    bio, 
+                                    counties, 
+                                    location, 
+                                    services, 
+                                    img, 
+                                    lat, 
                                     lng)
     
     midwives_in_db.append(db_midwife)

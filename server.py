@@ -112,15 +112,18 @@ def get_midwife_by_id():
     midwife_data = {  
             "mwId" : midwife.mw_id,
             "name" : midwife.name,
+            "creds": midwife.creds,
             "email" : midwife.email,
             "password" : midwife.password,
-            "counties" : midwife.counties,
-            "website" : midwife.website,
+            "phone": midwife.phone,
             "address" : midwife.address,
-            "img" : midwife.img,
-            "bio" : midwife.bio
-        } 
-                      
+            "website" : midwife.website,
+            "bio" : midwife.bio,
+            "counties" : midwife.counties,
+            "location": midwife.location,            
+            "services": midwife.services,
+            "img" : midwife.img
+        }         
 
     return jsonify(midwife_data)    
 
@@ -130,17 +133,23 @@ def show_directory():
     midwives = crud.get_midwives()
     dict_mw = []
     for midwife in midwives:
-        mw = {"mw_id" : midwife.mw_id,
+        mw = {
+            "mwId" : midwife.mw_id,
             "name" : midwife.name,
+            "creds": midwife.creds,
             "email" : midwife.email,
             "password" : midwife.password,
-            "website" : midwife.website,
+            "phone": midwife.phone,
             "address" : midwife.address,
+            "website" : midwife.website,
+            "bio" : midwife.bio,
             "counties" : midwife.counties,
-            "lat" : midwife.lat,
-            "lng" : midwife.lng,
+            "location": midwife.location,            
+            "services": midwife.services,
             "img" : midwife.img,
-            "bio" : midwife.bio} 
+            "lat" : midwife.lat,
+            "lng" : midwife.lng
+            } 
         dict_mw.append(mw)               
 
     return jsonify(dict_mw)
@@ -157,17 +166,22 @@ def show_fav_midwives():
     for midwives in list_midwives:
         for midwife in midwives:
             mw = {
-                "mw_id" : midwife.mw_id,
+                "mwId" : midwife.mw_id,
                 "name" : midwife.name,
+                "creds": midwife.creds,
                 "email" : midwife.email,
                 "password" : midwife.password,
-                "website" : midwife.website,
+                "phone": midwife.phone,
                 "address" : midwife.address,
+                "website" : midwife.website,
+                "bio" : midwife.bio,
                 "counties" : midwife.counties,
-                "img" : midwife.img,
-                "bio" : midwife.bio} 
+                "location": midwife.location,            
+                "services": midwife.services,
+                "img" : midwife.img
+            } 
             fav_mw.append(mw)               
-    print(fav_mw)
+    
     return jsonify(fav_mw)
 
 @app.route('/api/add-fav', methods=['POST'])
@@ -252,11 +266,17 @@ def login_midwife():
         midwife_profile = {
                         "mwId" : midwife.mw_id,
                         "name" : midwife.name,
+                        "creds": midwife.creds,
                         "email" : midwife.email,
-                        "password": midwife.password,
+                        "password" : midwife.password,
+                        "phone": midwife.phone,
                         "address" : midwife.address,
-                        "img" : midwife.img,
-                        "bio" : midwife.bio
+                        "website" : midwife.website,
+                        "bio" : midwife.bio,
+                        "counties" : midwife.counties,
+                        "location": midwife.location,            
+                        "services": midwife.services,
+                        "img" : midwife.img
                     }
         # session[user_id] = user[0].user_id          
         return jsonify(midwife_profile)

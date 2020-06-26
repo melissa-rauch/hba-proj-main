@@ -6,7 +6,7 @@ const NavLink = window.ReactRouterDOM.NavLink;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
-
+const AuthNav = window.AuthNav;
 const SMSForm = window.SMSForm;
 const UploadPhoto = window.UploadPhoto;
 const UserFavorites = window.UserFavorites;
@@ -24,8 +24,8 @@ class Navbar extends React.Component{
 		super(props)
 		
 	}
+
     render() {
-		
 		
         return (
             <div>
@@ -119,7 +119,7 @@ class App extends React.Component {
 						)}
 					</Route>
 					<Route 
-						path="/midwife/:mw_id" 
+						path="/midwife/:mwId" 
 						render={(props) => 
 							<Midwife 
 								{...props} 

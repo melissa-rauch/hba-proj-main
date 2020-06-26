@@ -5,14 +5,15 @@ class MidwifePreview extends React.Component {
 	}
 
 	render() {
-		const { mw_id, name, email, website, counties, address, bio, img} = this.props.midwife
+		const { mwId, name, email, website, counties, address, bio, img} = this.props.midwife
+		
 		return (
 			<div>
 				<img src={img} />
 				<h2>{name}</h2>
 				<h3>Counties Served: </h3>
 				<p>{counties}</p>
-				<Link to={{pathname: `/midwife/${mw_id}`}}>
+				<Link to={{pathname: `/midwife/${mwId}`}}>
 					View Profile
 				</Link>
 			</div>
@@ -50,6 +51,7 @@ class Directory extends React.Component {
 		const selectedMidwives = this.props.midwifeData
 			.filter(mw => mw.counties.includes(this.state.value))
 			.map((midwife) => <MidwifePreview midwife={midwife} key={midwife.mw_id} />);
+			
 
 		return (
 			<div>

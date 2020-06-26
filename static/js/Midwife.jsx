@@ -5,7 +5,7 @@ class Midwife extends React.Component {
 	}
 	getMidwife = () => {
 		for (const midwife of this.props.midwifeData) {
-			if (midwife.mw_id == this.props.match.params.mw_id) {
+			if (midwife.mwId == this.props.match.params.mwId) {
 				return midwife
 			}
 		}
@@ -22,7 +22,7 @@ class Midwife extends React.Component {
 
 		const submitData = {
 			userId: localStorage.getItem("userId"),
-			mwId: this.props.match.params.mw_id
+			mwId: this.props.match.params.mwId
 		}
 
 		fetch('/api/add-fav', {
