@@ -75,6 +75,9 @@ class MidwifeLogin extends React.Component {
 					<br />
 					<button type="submit">Log In</button>
 				</form>
+				<div>
+					<MidwifeReg props={this.state} />
+				</div>
 			</div>
 		);
 	}

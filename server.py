@@ -281,6 +281,30 @@ def login_midwife():
     else:
         return jsonify("Invalid")
 
+@app.route('/api/mwregister', methods=['POST'])
+def register_midwife():
+    """Register a new user"""
+
+    data = request.get_json(force=True)
+
+    midwife = crud.get_midwife_by_email(data["email"])
+
+    if midwife:
+        return jsonify("Invalid")
+    else:
+        crud.create_midwife(
+                                data["email"], 
+                                data["password"], 
+                                data["name"], 
+                                data["creds"], 
+                                data["address"], 
+                                data["phone"], 
+                                data["counties"],
+                                data["location"],
+                                data["services"],
+                                data["bio"],
+                                data["img"])
+        return jsonify("Valid")
 
 
 if __name__ == '__main__':

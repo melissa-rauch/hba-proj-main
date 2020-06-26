@@ -10,6 +10,7 @@ const NavBar = window.NavBar;
 const SMSForm = window.SMSForm;
 const UploadPhoto = window.UploadPhoto;
 const UserFavorites = window.UserFavorites;
+const MidwifeReg = window.MidwifeReg;
 const MidwifeLogin = window.MidwifeLogin;
 const UpdateProfile = window.UpdateProfile;
 const Registration = window.Registration;
@@ -63,40 +64,39 @@ class App extends React.Component {
 			<Router>
 				<NavBar loggedIn={this.state.loggedIn} mwLoggedIn={this.state.mwLoggedIn}/>
 				<Switch>
-				<Route 
-					path="/logout" 
-					render={(props) => 
-						<Logout 
-							{...props}
-							setLoggedOut={this.setLoggedOut}
-						/>
-					} 
-				/>
-				<Route 
-					path="/midwife-profile/:mwId" 
-					render={(props) => 
-						<MidwifeProfile
-							{...props} 
-							midwifeData={this.state.midwifeData}
-							updateMidwifeData={this.updateMidwifeData} 
-						/>
-					} 
-				/>
-				
-				<Route 
-					path="/midwife-login">
-					{this.state.mwLoggedIn ? (
-						<Redirect 
-							to={{pathname: `/midwife-profile/${this.state.mwId}`}}
-							midwifeData={this.state.midwifeData} 
-							mwId = {this.state.mwId} 
-							setMidwifeLoggedIn={this.setMidwifeLoggedIn}/>	
-						) : (
-							<MidwifeLogin 
-								midwifeData={this.state.midwifeData}	
-								setMidwifeLoggedIn={this.setMidwifeLoggedIn}
-								updateMidwifeData={this.updateMidwifeData}
+					<Route 
+						path="/logout" 
+						render={(props) => 
+							<Logout 
+								{...props}
+								setLoggedOut={this.setLoggedOut}
 							/>
+						} 
+					/>
+					<Route 
+						path="/midwife-profile/:mwId" 
+						render={(props) => 
+							<MidwifeProfile
+								{...props} 
+								midwifeData={this.state.midwifeData}
+								updateMidwifeData={this.updateMidwifeData} 
+							/>
+						} 
+					/>
+					<Route 
+						path="/midwife-login">
+						{this.state.mwLoggedIn ? (
+							<Redirect 
+								to={{pathname: `/midwife-profile/${this.state.mwId}`}}
+								midwifeData={this.state.midwifeData} 
+								mwId = {this.state.mwId} 
+								setMidwifeLoggedIn={this.setMidwifeLoggedIn}/>	
+							) : (
+								<MidwifeLogin 
+									midwifeData={this.state.midwifeData}	
+									setMidwifeLoggedIn={this.setMidwifeLoggedIn}
+									updateMidwifeData={this.updateMidwifeData}
+								/>
 						)}
 					</Route>
 					<Route 
