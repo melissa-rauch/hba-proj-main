@@ -7,26 +7,24 @@ from jinja2 import StrictUndefined
 import json
 import twilio 
 import os
-#
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
-
-from werkzeug.utils import secure_filename
-
 from twilio.rest import Client
-import os
+#
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
+
+# from werkzeug.utils import secure_filename
 
 account_sid = os.environ["ACCOUNT_SID"]
 auth_token = os.environ["AUTH_TOKEN"]
 client = Client(account_sid, auth_token)
 
-cloudinary.config(
-    cloud_name = "mrauch",
-    API_KEY = os.environ["API_KEY"],
-    API_SECRET = os.environ["API_SECRET"]
-)
-#
+# cloudinary.config(
+#     cloud_name = "mrauch",
+#     API_KEY = os.environ["API_KEY"],
+#     API_SECRET = os.environ["API_SECRET"]
+# )
+# #
 
 ACCOUNT_SID = os.environ["ACCOUNT_SID"]
 AUTH_TOKEN  = os.environ["AUTH_TOKEN"]

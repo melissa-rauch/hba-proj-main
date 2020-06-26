@@ -1,12 +1,12 @@
 const Router = window.ReactRouterDOM.BrowserRouter;
 const Route = window.ReactRouterDOM.Route;
-const NavLink = window.ReactRouterDOM.NavLink;
+
 // const Link =  window.ReactRouterDOM.Link;
 // const Prompt =  window.ReactRouterDOM.Prompt;
 const Switch = window.ReactRouterDOM.Switch;
 const Redirect = window.ReactRouterDOM.Redirect;
 
-const AuthNav = window.AuthNav;
+const NavBar = window.NavBar;
 const SMSForm = window.SMSForm;
 const UploadPhoto = window.UploadPhoto;
 const UserFavorites = window.UserFavorites;
@@ -19,26 +19,7 @@ const Directory = window.Directory;
 const UserProfile = window.UserProfile;
 const Home = window.Home;
 
-class Navbar extends React.Component{
-	constructor(props) {
-		super(props)
-		
-	}
 
-    render() {
-		
-        return (
-            <div>
-              <ul id="nav">
-                <li><a href="/">Home</a></li>
-                <li><a href="/directory">View Directory</a></li>
-				<li><a href="/user-login">Login</a></li>
-				<li><a href="/logout">Log out</a></li>
-              </ul>
-            </div>
-        );
-    }
-}
 
 class App extends React.Component {
 	constructor() {
@@ -80,7 +61,7 @@ class App extends React.Component {
  
 		return (
 			<Router>
-				<Navbar />
+				<NavBar loggedIn={this.state.loggedIn} mwLoggedIn={this.state.mwLoggedIn}/>
 				<Switch>
 				<Route 
 					path="/logout" 

@@ -34,7 +34,7 @@ class Midwife extends React.Component {
 				if (data === 'Valid') {
 					alert('Midwife added to your favorites!');
 				} else {
-					alert('Please create an account or Log in to save to favorites');
+					alert('Sorry, only registered users can to save to favorites.');
 				}
 			});
 	};
@@ -53,12 +53,16 @@ class Midwife extends React.Component {
 			<div>
 				<div>
 					<h1>{midwife.name}</h1>
+					<h3>{midwife.creds}</h3>
 					<img src={midwife.img} />
 					<h3>Counties Served:</h3>
 					<p>{midwife.counties}</p>
+					<h3>Location options (Home, Birth Center, Hospital):</h3>
+					<p>{midwife.location}</p>
+					<h3>Service features:</h3>
+					<p>{midwife.services}</p>
 					<h3>Bio:</h3>
 					<p>{midwife.bio}</p>
-					<a href={midwife.website}>View Website</a>
 					<br />
 					<button onClick={this.handleChange}>Save to Favorites</button>
 					<br />

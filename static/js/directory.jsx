@@ -5,17 +5,20 @@ class MidwifePreview extends React.Component {
 	}
 
 	render() {
-		const { mwId, name, email, website, counties, address, bio, img} = this.props.midwife
+		const { mwId, creds, name, email, phone, website, counties, location, services, address, bio, img} = this.props.midwife
 		
 		return (
 			<div>
+				<br />
 				<img src={img} />
 				<h2>{name}</h2>
-				<h3>Counties Served: </h3>
-				<p>{counties}</p>
+				<h3>{creds}</h3>
+				{/* <h3>Counties Served: </h3>
+				<p>{counties}</p> */}
 				<Link to={{pathname: `/midwife/${mwId}`}}>
 					View Profile
 				</Link>
+				<br />
 			</div>
 		);
 	}
