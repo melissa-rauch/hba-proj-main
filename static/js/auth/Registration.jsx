@@ -50,62 +50,87 @@ class Registration extends React.Component {
 				<br />
 				<form onSubmit={this.handleSubmit} encType="multipart/form-data">
 					<h3>Don't have an Account? Please Register:</h3>
-					<input
-						type="email"
-						name="email"
-						placeholder="Email"
-						value={this.state.email}
-						onChange={this.handleChange}
-						required
-					/>  Email
-					<br />
-					<input
-						type="password"
-						name="password"
-						placeholder="Password"
-						value={this.state.password}
-						onChange={this.handleChange}
-						required
-					/>  Set password
-                    <br />
-					<input
-						type="text"
-						name="firstName"
-						placeholder="First Name"
-						value={this.state.firstName}
-						onChange={this.handleChange}
-						required
-					/>  First Name
-                    <br /> 
-					<input
-						type="text"
-						name="lastName"
-						placeholder="Last Name"
-						value={this.state.lastName}
-						onChange={this.handleChange}
-						required
-					/>  Last Name
-                    <br /> 
-					<input
-						type="text"
-						name="address"
-						placeholder="address"
-						value={this.state.address}
-						onChange={this.handleChange}
-						required
-					/>  Address
-                    <br /> 
-					<p>Say a little about yourself...</p>
-                    <textarea
-						type="textarea"
-						name="bio"
-						placeholder="About me..."
-						value={this.state.bio}
-						onChange={this.handleChange}
-					/>
-					<br />
-					
-					<button type="submit">Register</button>
+					<div className="form-row">
+						<div className="form-group col-md-6">
+							<label forhtml="inputUserEmail">Email</label>
+							<input
+								type="email"
+								className="form-control"
+								id="inputUserEmail"
+								name="email"
+								value={this.state.email}
+								onChange={this.handleChange}
+								required
+							/>  
+							<small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
+						</div>
+						<div className="form-group col-md-6"> 
+							<label forhtml="inputUserPW">Set Password</label>
+							<input
+								type="password"
+								className="form-control"
+								id="inputUserPW"
+								name="password"
+								value={this.state.password}
+								onChange={this.handleChange}
+								required
+							/>  
+						</div>
+					</div>
+                    <h5>About you:</h5>
+					<div className="form-row">
+						<div className="form-group col-md-6">
+							<label forhtml="inputUserFirst">First Name</label>
+							<input
+								type="text"
+								className="form-control"
+								id="inputUserFirst"
+								name="firstName"
+								value={this.state.firstName}
+								onChange={this.handleChange}
+								required
+							/>  
+                    	</div>
+						<div className="form-group col-md-6">
+							<label forhtml="inputUserLast">Last Name</label>
+							<input
+								type="text"
+								className="form-control"
+								id="inputUserLast"
+								name="lastName"
+								value={this.state.lastName}
+								onChange={this.handleChange}
+								required
+							/>  
+                    	</div>
+					</div> 
+					<div className="form-group">
+						<label forhtml="inputAddress">Address</label>
+						<input
+							type="text"
+							className="form-control"
+							id="inputAddress"
+							name="address"
+							placeholder="1234 Clement St San Francisco, CA 94118"
+							value={this.state.address}
+							onChange={this.handleChange}
+							required
+						/>  
+                    </div> 
+					<div className="form-group">
+						<label forhtml="inputBio">Say a little about yourself</label>
+						<textarea
+							type="textarea"
+							className="form-control"
+							id="inputBio"
+							rows="3"
+							name="bio"
+							placeholder="Example: My partner and I are looking for a midwife.  We're due December 18th 2020 and live in the Inner Richmond of San Francisco.  This will be our second baby and our first was born at Kaiser Hospital without any complications."
+							value={this.state.bio}
+							onChange={this.handleChange}
+						/>
+					</div>
+					<button type="submit" className="btn btn-dark">Register</button>
 				</form>
 				{/* <UploadPhoto /> */}
 			</div>

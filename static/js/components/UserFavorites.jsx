@@ -21,7 +21,7 @@ class UserFavorites extends React.Component {
                     <img src={midwife.img} /> 
                     <p>{midwife.name}</p>
                     
-                    <SMSForm />
+                    <SMSForm midwifePhone={midwife.phone} />
                     <br />
                 </div>
             )

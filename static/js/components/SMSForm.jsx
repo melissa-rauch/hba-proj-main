@@ -4,7 +4,7 @@ class SMSForm extends React.Component {
     super(props);
     this.state = {
       message: {
-        to: '+15102820575',
+        to: '',
         name:'',
         phone: '',
         email:'',
@@ -35,7 +35,7 @@ class SMSForm extends React.Component {
             error: false,
             submitting: false,
             message: {
-              to: '+15102820575',
+              to: '+5102820575',
               name:'',
               phone: '',
               email:'',
@@ -49,9 +49,11 @@ class SMSForm extends React.Component {
             submitting: false
           });
         }
-      });
+  
+      }
+      );
   }
-
+  
   onHandleChange(event) {
     const name = event.target.getAttribute('name');
     this.setState({
@@ -60,21 +62,12 @@ class SMSForm extends React.Component {
   }
 
   render() {
+   
     return (
       <form
         onSubmit={this.onSubmit}
         className={this.state.error ? 'error sms-form' : 'sms-form'}
       >
-        {/* <div>
-          <label htmlFor="to">To:</label>
-          <input
-            type="tel"
-            name="to"
-            id="to"
-            value={this.state.message.to}
-            onChange={this.onHandleChange}
-          />
-        </div> */}
         <div>
           <label htmlFor="body">Message:</label>
           <br />
