@@ -293,17 +293,18 @@ def register_midwife():
         return jsonify("Invalid")
     else:
         crud.create_midwife(
-                                data["email"], 
-                                data["password"], 
-                                data["name"], 
-                                data["creds"], 
-                                data["address"], 
-                                data["phone"], 
-                                data["counties"],
-                                data["location"],
-                                data["services"],
-                                data["bio"],
-                                data["img"])
+                            data["name"],
+                            data["creds"], 
+                            data["email"],
+                            data["password"], 
+                            data["phone"],
+                            data["website"],
+                            data["address"], 
+                            data["counties"],
+                            data["location"],
+                            data["services"],
+                            data["bio"]
+                            )
         return jsonify("Valid")
 
 
