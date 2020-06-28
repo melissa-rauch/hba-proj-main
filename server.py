@@ -8,23 +8,12 @@ import json
 import twilio 
 import os
 from twilio.rest import Client
-#
-# import cloudinary
-# import cloudinary.uploader
-# import cloudinary.api
 
-# from werkzeug.utils import secure_filename
 
 account_sid = os.environ["ACCOUNT_SID"]
 auth_token = os.environ["AUTH_TOKEN"]
 client = Client(account_sid, auth_token)
 
-# cloudinary.config(
-#     cloud_name = "mrauch",
-#     API_KEY = os.environ["API_KEY"],
-#     API_SECRET = os.environ["API_SECRET"]
-# )
-# #
 
 ACCOUNT_SID = os.environ["ACCOUNT_SID"]
 AUTH_TOKEN  = os.environ["AUTH_TOKEN"]
@@ -201,16 +190,7 @@ def register_user():
     data = request.get_json(force=True)
 
     user = crud.get_user_by_email(data["email"])
-#
-    filename = data["img"]
-    print(filename)
 
-    if filename:
-            response = cloudinary.uploader.upload(filename)
-            print('response for cloudinary'. response)
-
-    img = secure_filename(filename.filename)
-#
     if user:
         return jsonify("Invalid")
     else:
@@ -221,7 +201,7 @@ def register_user():
                                 data["lastName"], 
                                 data["address"], 
                                 data["bio"], 
-                                data["img"])
+                                data['img'])
         return jsonify("Valid")
 
 #import user_login

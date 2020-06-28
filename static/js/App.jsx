@@ -8,7 +8,6 @@ const Redirect = window.ReactRouterDOM.Redirect;
 
 const NavBar = window.NavBar;
 const SMSForm = window.SMSForm;
-const UploadPhoto = window.UploadPhoto;
 const UserFavorites = window.UserFavorites;
 const MidwifeReg = window.MidwifeReg;
 const MidwifeLogin = window.MidwifeLogin;
@@ -16,6 +15,7 @@ const UpdateProfile = window.UpdateProfile;
 const Registration = window.Registration;
 const Login = window.Login;
 const Midwife = window.Midwife;
+const MidwifePreview = window.MidwifePreview;
 const Directory = window.Directory;
 const UserProfile = window.UserProfile;
 const Home = window.Home;

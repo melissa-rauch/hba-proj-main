@@ -68,51 +68,60 @@ class SMSForm extends React.Component {
         onSubmit={this.onSubmit}
         className={this.state.error ? 'error sms-form' : 'sms-form'}
       >
-        <div>
-          <label htmlFor="body">Message:</label>
-          <br />
+      <label htmlFor="inputSMS">Request a consult!</label>  
+        <div id="inputSMS" className="form-group">
+          <label htmlFor="inputName">Name</label>
           <input
             name="name"
-            placeholder="Your Name"
-            id="name"
+            id="inputName"
+            className="form-control"
             value={this.state.message.name}
             onChange={this.onHandleChange}
           />
-          <br />
+        </div>
+        <div className="form-group"> 
+        <label htmlFor="inputPhone">Phone</label>
           <input
             name="phone"
-            placeholder="Your phone number"
-            id="phone"
+            id="inputPhone"
+            className="form-control"
             value={this.state.message.phone}
             onChange={this.onHandleChange}
           />
-          <br />
+        </div>
+        <div className="form-group"> 
+          <label htmlFor="inputEmail">Email</label>
           <input
             type="email"
             name="email"
-            placeholder="Email Address"
-            id="email"
+            className="form-control"
+            id="inputEmail"
             value={this.state.message.email}
             onChange={this.onHandleChange}
           />
-          <br />
+        </div>
+        <div className="form-group"> 
+          <label htmlFor="inputDue">Due Date</label>
           <input
             name="due"
-            placeholder="Due Date"
-            id="due"
+            className="form-control"
+            id="inputDue"
             value={this.state.message.due}
             onChange={this.onHandleChange}
           />
-          <br />
+        </div>
+        <div className="form-group" rows="3"> 
+          <label htmlFor="inputMessage">Message</label>
           <textarea
             name="body"
             placeholder="Leave your message here"
-            id="body"
+            className="form-control"
+            id="inputMessage"
             value={this.state.message.body}
             onChange={this.onHandleChange}
           />
         </div>
-        <button type="submit" disabled={this.state.submitting}>
+        <button className="btn btn-dark btn-sm" type="submit" disabled={this.state.submitting}>
           Send message
         </button>
       </form>

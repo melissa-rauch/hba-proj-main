@@ -48,7 +48,7 @@ class Registration extends React.Component {
 		return (
 			<div>
 				<br />
-				<form onSubmit={this.handleSubmit} encType="multipart/form-data">
+				<form onSubmit={this.handleSubmit} method="post" encType="multipart/form-data">
 					<h3>Don't have an Account? Please Register:</h3>
 					<div className="form-row">
 						<div className="form-group col-md-6">
@@ -130,6 +130,17 @@ class Registration extends React.Component {
 							onChange={this.handleChange}
 						/>
 					</div>
+					{/* <div className="form-group">
+						<label forhtml="inputImg">Upload your Photo</label>
+						<input
+							type="file"
+							className="form-control"
+							id="inputImg"
+							name="Img"
+							value={this.state.img}
+							onChange={this.handleChange}
+						/>
+					</div> */}
 					<button type="submit" className="btn btn-dark">Register</button>
 				</form>
 				{/* <UploadPhoto /> */}

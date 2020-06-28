@@ -1,29 +1,3 @@
-const Link = window.ReactRouterDOM.Link;
-class MidwifePreview extends React.Component {
-	constructor() {
-		super();
-	}
-
-	render() {
-		const { mwId, creds, name, email, phone, website, counties, location, services, address, bio, img} = this.props.midwife
-		
-		return (
-			<div>
-				<br />
-				<img src={img} />
-				<h2>{name}</h2>
-				<h3>{creds}</h3>
-				{/* <h3>Counties Served: </h3>
-				<p>{counties}</p> */}
-				<Link to={{pathname: `/midwife/${mwId}`}}>
-					View Profile
-				</Link>
-				<br />
-			</div>
-		);
-	}
-}
-
 class Directory extends React.Component {
 	constructor() {
 		super();
@@ -61,12 +35,12 @@ class Directory extends React.Component {
 				<div>
 					<h1>Directory of Midwives</h1>
 				</div>
-				<div>	
+				<div className="form-group">	
 					<form onSubmit={this.handleSubmit}>
 						<label>
 							Filter by county
 							<br />
-							<select value={this.state.value} onChange={this.handleChange} >
+							<select className="form-control form-control-sm" value={this.state.value} onChange={this.handleChange} >
 								<option value='' defaultValue>select county</option>
 								<option value='Alameda' >Alameda</option>
 								<option value='Contra Costa' >Contra Costa</option>
@@ -76,7 +50,7 @@ class Directory extends React.Component {
 								<option value='Solano' >Solano</option>
 							</select>
 						</label>
-						<input type="submit" value='Select' />
+						<input className="btn btn-dark btn-sm" type="submit" value='Select' />
 					</form>
 				</div>	
 				<div>

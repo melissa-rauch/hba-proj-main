@@ -33,6 +33,9 @@ class Midwife extends React.Component {
 			.then((data) => {
 				if (data === 'Valid') {
 					alert('Midwife added to your favorites!');
+					// $('#myModal').on('shown.bs.modal', function () {
+					// 	$('#myInput').trigger('focus')
+					//   })
 				} else {
 					alert('Sorry, only registered users can to save to favorites.');
 				}
@@ -57,9 +60,9 @@ class Midwife extends React.Component {
 					<img src={midwife.img} />
 					<h3>Counties Served:</h3>
 					<p>{midwife.counties}</p>
-					<h3>Location options (Home, Birth Center, Hospital):</h3>
+					<h3>Birth Setting:</h3>
 					<p>{midwife.location}</p>
-					<h3>Service features:</h3>
+					<h3>Service Features:</h3>
 					<p>{midwife.services}</p>
 					<h3>Bio:</h3>
 					<p>{midwife.bio}</p>

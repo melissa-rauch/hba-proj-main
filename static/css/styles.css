@@ -15,3 +15,9 @@
         font-weight: bold;
         color: black;
         border-right: 1px solid rgb(255, 255, 255); }
+
+.header {
+    background-color: #f3e1e1;
+    text-align: center;
+    padding: 20px;
+    }
