@@ -52,28 +52,35 @@ class MidwifeLogin extends React.Component {
 
 		return (
 			<div>
-				<h2>Midwives log in here:</h2>
+				<h3>Midwife Log in:</h3>
 				<form onSubmit={this.handleSubmit}>
-					<h3>Please log in:</h3>
-					<input
-						type="email"
-						name="email"
-						placeholder="Email"
-						value={this.state.email}
-						onChange={this.handleChange}
-						required
-					/>
-					<br />
-					<input
-						type="password"
-						name="password"
-						placeholder="Password"
-						value={this.state.password}
-						onChange={this.handleChange}
-						required
-					/>
-					<br />
-					<button type="submit">Log In</button>
+					<div className="form-row">
+						<div className="form-group col-md-2">
+							<label forhtml="inputMWEmail">Email</label>
+							<input
+								type="email"
+								className="form-control"
+								id="inputMWEmail"
+								name="email"
+								value={this.state.email}
+								onChange={this.handleChange}
+								required
+							/>
+						</div>
+						<div className="form-group col-md-2">
+							<label forhtml="inputUserPW">Password</label>
+							<input
+								type="password"
+								className="form-control"
+								id="inputMWPW"
+								name="password"
+								value={this.state.password}
+								onChange={this.handleChange}
+								required
+							/>
+						</div>
+					</div>
+					<button type="submit" className="btn btn-dark">Log In</button>	
 				</form>
 				<div>
 					<MidwifeReg props={this.state} />
