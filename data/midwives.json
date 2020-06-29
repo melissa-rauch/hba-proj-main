@@ -1,5 +1,21 @@
 [
     {
+        "name":"Andrea Ruizquez",
+        "creds":"Licensed Midwife, Certified Professional Midwife",
+        "email": "Nea.Ruizquez@gmail.com",
+        "password": "1234",
+        "phone": "+5102820575",
+        "website":"https://oaklandpartera.com",
+        "address":"Oakland, CA 94608",
+        "bio":"I grew up knowing that both my parents were born at home with midwives. As a child I heard stories of my grandmothers birthing many babies at home and my great grandmother serving her community as a Partera. As a child I loved these stories and I heard the calling to become a midwife myself. I have been involved in birth work for over 18 years. I began my midwifery education by apprenticing with a traditional homebirth midwife in Lima, Peru in 2000. When I returned to the states I served as  a labor doula for Sudanese refugees while completing my Bachelor’s degree in Social Work in 2005. I completed my formal training in midwifery at Maternidad La Luz, a high volume birth center in El Paso, Texas, in 2007.  After becoming licensed, I became a staff midwife at Maternidad La Luz,  there I practiced and taught midwifery for 5 years, doing both birthcenter and home births. For the last 5 years I have been focussing on home birth, which is my passion. ",
+        "counties":"Alameda, Contra Costa",
+        "services": "VBAC, Waterbirth, LGBTQI Ally, Se Habla Espanol",
+        "location":"Home",
+        "img":"/static/img/ruizquez.jpg",
+        "lat" :37.8434437,
+        "lng" :-122.267339
+    },
+    {
         "name": "Amanda Kessner",
         "creds":"Licensed Midwife, Certified Professional Midwife",
         "email": "amanda@eastbaymidwives.com",
@@ -28,6 +44,22 @@
         "services": "VBAC, Waterbirth, LGBTQI Ally, Se Habla Espanol, Insurance billing",
         "location":"Home",
         "img": "/static/img/banks.jpg",
+        "lat" :37.8434437,
+        "lng" :-122.267339
+    },
+    {
+        "name":"Francine Madrid",
+        "creds":"Licensed Midwife, Certified Professional Midwife",
+        "email": "fmadridmidwife@gmail.com",
+        "password": "1234",
+        "phone": "+5102820575",
+        "website":"https://https://francinemadrid.com/",
+        "address":"Oakland, CA 94608",
+        "bio":"My path to this work began as a child in the kitchens and living rooms of my Grandmothers.   I would sit quietly and listen attentively as Elders spoke of old family stories, remedios (traditional remedies), plants, God, seemingly magical occurrences and births ---topics so mysterious and exciting to my young mind!  Even as a child, I felt an incredibly strong connection to my ancestors, these stories and traditional ways. As I grew into an adult, I searched for work that would honor my traditions while still being of service in the modern world.  During my pregnancies and births I experienced the loving and empowering care of my midwives and subsequently went on to formally study massage body work, herbalism and birth.  What I found was that all of these practices are intricately and beautifully woven together within my own Xicana cultural and ancestral knowledge. It is the work of a Partera-- A Midwife!  In my life and work I strive to practice radical love, acceptance and compassion for myself and others.  With gratitude, I thank my Teachers, Elders, Community and my beautiful Partner and Children for their support.",
+        "counties":"Alameda, Contra Costa",
+        "services": "Waterbirth, LGBTQI Ally, Se Habla Espanol",
+        "location":"Home",
+        "img":"/static/img/madrid.jpg",
         "lat" :37.8434437,
         "lng" :-122.267339
     },

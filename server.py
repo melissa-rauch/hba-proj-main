@@ -118,8 +118,7 @@ def login_user():
 def login_midwife():
     """Login a midwife"""
     
-    data, midwife = login.get_mw_data_from_db()
-    return jsonify(login.verify_mw_login(data, midwife))
+    return jsonify(login.verify_mw_login())
     
 import register
 

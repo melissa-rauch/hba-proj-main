@@ -4,15 +4,18 @@ import crud
 
 
 def verify_user_login():
-    """Validate password"""
+    """Validate user login"""
     data = request.get_json(force=True)
 
-    user = crud.get_user_by_email(data["email"])
-    print(user)
-    if user == 'None':
-        return "invalid email"
+    email = data["email"]
+    password = data["password"]
+
+    user = crud.get_user_by_email(email)
+
+    if user == None:
+        return "Invalid"
     else:
-        if user.password == data["password"]:
+        if user.password == password:
             user_profile = {
                             "user_id" : user.user_id,
                             "first_name" : user.first_name,
@@ -27,39 +30,38 @@ def verify_user_login():
                         }
             return user_profile
         else:
-            return "Invalid password"
+            return "Invalid"
   
 
-def get_mw_data_from_db():
-    """Retrieve midwife data from database"""
+def verify_mw_login():
+    """Validate mw login"""
     data = request.get_json(force=True)
 
-    midwife = crud.get_midwife_by_email(data['email'])
-    
-    return data, midwife
+    email = data["email"]
+    password = data["password"]
 
-def verify_mw_login(data, midwife):
-    """Validate password"""
-    if not midwife.email:
-        return "Invalid email"
+    midwife = crud.get_midwife_by_email(email)
 
-    if midwife.password == data["password"]:
-        midwife_profile = {
-                        "mwId" : midwife.mw_id,
-                        "name" : midwife.name,
-                        "creds": midwife.creds,
-                        "email" : midwife.email,
-                        "password" : midwife.password,
-                        "phone": midwife.phone,
-                        "address" : midwife.address,
-                        "website" : midwife.website,
-                        "bio" : midwife.bio,
-                        "counties" : midwife.counties,
-                        "location": midwife.location,            
-                        "services": midwife.services,
-                        "img" : midwife.img
-                    }        
-        return midwife_profile
+    if midwife == None:
+        return "Invalid"
     else:
-        return "Invalid Password"
+        if midwife.password == password:
+            midwife_profile = {
+                            "mwId" : midwife.mw_id,
+                            "name" : midwife.name,
+                            "creds": midwife.creds,
+                            "email" : midwife.email,
+                            "password" : midwife.password,
+                            "phone": midwife.phone,
+                            "address" : midwife.address,
+                            "website" : midwife.website,
+                            "bio" : midwife.bio,
+                            "counties" : midwife.counties,
+                            "location": midwife.location,            
+                            "services": midwife.services,
+                            "img" : midwife.img
+                        }        
+            return midwife_profile
+        else:
+            return "Invalid"
 
