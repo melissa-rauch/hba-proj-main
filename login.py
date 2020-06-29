@@ -11,18 +11,18 @@ def get_user_data_from_db():
 
 def verify_user_login(data, user):
     """Validate password"""
-    if user[0].password == data["password"]:
+    if user.password == data["password"]:
         user_profile = {
-                        "user_id" : user[0].user_id,
-                        "first_name" : user[0].first_name,
-                        "last_name" : user[0].last_name,
-                        "email" : user[0].email,
-                        "password" : user[0].password,
-                        "address" : user[0].address,
-                        "lat" : user[0].lat,
-                        "lng" : user[0].lng,
-                        "img" : user[0].img,
-                        "bio" : user[0].bio
+                        "user_id" : user.user_id,
+                        "first_name" : user.first_name,
+                        "last_name" : user.last_name,
+                        "email" : user.email,
+                        "password" : user.password,
+                        "address" : user.address,
+                        "lat" : user.lat,
+                        "lng" : user.lng,
+                        "img" : user.img,
+                        "bio" : user.bio
                     }
         return user_profile
     else:

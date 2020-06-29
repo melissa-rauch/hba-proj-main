@@ -39,7 +39,7 @@ def quick_create_user(email, password, first_name, last_name, address, bio, img)
 def get_user_by_email(email):
     """Return a user with given email, otherwise return None"""
 
-    return User.query.filter(User.email == email).all()
+    return User.query.filter(User.email == email).first()
 
 def get_user_by_id(user_id):
     """Return a user with given email, otherwise return None"""
