@@ -25,7 +25,7 @@ class UserFavorites extends React.Component {
                                 <div className="card-body">
                                     <h5>{midwife.name}</h5>
                                     <h6>{midwife.creds}</h6>
-                                    <SMSForm midwifePhone={midwife.phone} />
+                                    <SMSForm midwifePhone={midwife.phone} key={midwife.mw_id}/>
                                 </div>
                             </div>
                         </div>

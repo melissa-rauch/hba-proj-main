@@ -35,9 +35,7 @@ class UserProfile extends React.Component {
 					<h3>Email:</h3>
 					<p>{this.state.userData.email}</p>
 					<h2>Your Favorites: </h2>
-					<UserFavorites />
-					{/* <h2>Update Profile: </h2> */}
-					{/* <UpdateProfile />	 */}	
+					<UserFavorites key={this.state.userData.user_id}/>
 				</div>
 			</div>
 		)}

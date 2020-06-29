@@ -16,9 +16,11 @@ class SMSForm extends React.Component {
     };
     this.onSubmit = this.onSubmit.bind(this);
     this.onHandleChange = this.onHandleChange.bind(this);
+    console.log(this.props.midwifePhone)
   }
 
   onSubmit(event) {
+    const phone = this.props.midwifePhone
     event.preventDefault();
     this.setState({ submitting: true });
     fetch('/api/message', {
@@ -35,7 +37,7 @@ class SMSForm extends React.Component {
             error: false,
             submitting: false,
             message: {
-              to: '+5102820575',
+              to: 'phone',
               name:'',
               phone: '',
               email:'',
@@ -49,7 +51,7 @@ class SMSForm extends React.Component {
             submitting: false
           });
         }
-  
+        
       }
       );
   }
@@ -62,7 +64,7 @@ class SMSForm extends React.Component {
   }
 
   render() {
-   
+ 
     return (
       <form
         onSubmit={this.onSubmit}

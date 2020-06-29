@@ -23,7 +23,7 @@ class MidwifeLogin extends React.Component {
 	}
 	handleSubmit = (event) => {
 		event.preventDefault();
-
+		console.log(this.state.password)
 		const formData = {
 			email: this.state.email,
 			password: this.state.password
@@ -51,7 +51,7 @@ class MidwifeLogin extends React.Component {
 	render() {
 
 		return (
-			<div>
+			<div className="container">
 				<h3>Midwife Log in:</h3>
 				<form onSubmit={this.handleSubmit}>
 					<div className="form-row">
@@ -82,6 +82,7 @@ class MidwifeLogin extends React.Component {
 					</div>
 					<button type="submit" className="btn btn-dark">Log In</button>	
 				</form>
+				<br />
 				<div>
 					<MidwifeReg props={this.state} />
 				</div>

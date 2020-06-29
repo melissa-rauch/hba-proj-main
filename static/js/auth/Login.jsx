@@ -41,9 +41,10 @@ class Login extends React.Component {
 	render() {
 
 		return (
-			<div>
-				<br />
+			
+			<div className="container">
 				<form onSubmit={this.handleSubmit}>
+					<br />
 					<h2>Users Log in here:</h2>
 					<div className="form-row">
 						<div className="form-group col-md-2">
@@ -71,7 +72,8 @@ class Login extends React.Component {
 							/>
 						</div>
 					</div>
-					<button type="submit" className="btn btn-dark">Log In</button>				</form>
+					<button type="submit" className="btn btn-dark">Log In</button>
+				</form>
 			</div>
 		);
 	}

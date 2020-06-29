@@ -94,6 +94,7 @@ class MidwifeReg extends React.Component {
 							<label forhtml="inputUserName">Full Name</label>
 							<input
 								type="text"
+								name="name"
 								className="form-control"
 								id="inputUserName"
 								value={this.state.name}
@@ -120,9 +121,9 @@ class MidwifeReg extends React.Component {
 							<label forhtml="inputAddress">Address</label>
 							<input
 								type="text"
+								name="address"
 								className="form-control"
 								id="inputAddress"
-								name="address"
 								placeholder="1234 Clement St San Francisco, CA 94118"
 								value={this.state.address}
 								onChange={this.handleChange}
