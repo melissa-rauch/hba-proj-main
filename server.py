@@ -70,24 +70,13 @@ def send_message():
 
     return message.sid
 
+import users
+
 @app.route('/api/user')
 def get_user_by_id():
-    """Show directory of Midwives"""
-    data = request.args.get('userId')
-
-    user = crud.get_user_by_id(data)
-
-    user_data = {  
-            "userId" : user.user_id,
-            "firstName" : user.first_name,
-            "lastName" : user.last_name,
-            "email" : user.email,
-            "password" : user.password,
-            "address" : user.address,
-            "img" : user.img,
-            "bio" : user.bio
-        } 
-    return jsonify(user_data)
+    """Return user data"""
+    
+    return jsonify(users.get_user_from_db())
 
 import midwives
 
@@ -95,57 +84,13 @@ import midwives
 def get_midwife_by_id():
     """Get individual Midwife by Id"""
 
-    return jsonify(midwives.get_midwife_from_db())
-    # data = request.args.get('mwId')
-
-    # midwife = crud.get_midwife_by_id(data)
-
-    # midwife_data = {  
-    #         "mwId" : midwife.mw_id,
-    #         "name" : midwife.name,
-    #         "creds": midwife.creds,
-    #         "email" : midwife.email,
-    #         "password" : midwife.password,
-    #         "phone": midwife.phone,
-    #         "address" : midwife.address,
-    #         "website" : midwife.website,
-    #         "bio" : midwife.bio,
-    #         "counties" : midwife.counties,
-    #         "location": midwife.location,            
-    #         "services": midwife.services,
-    #         "img" : midwife.img
-    #     }         
-
-    # return jsonify(midwife_data)    
+    return jsonify(midwives.get_midwife_from_db()) 
 
 @app.route('/api/midwives')
 def show_directory():
     """Show directory of Midwives"""
 
     return jsonify(midwives.get_midwives_from_db())
-    # midwives = crud.get_midwives()
-    # dict_mw = []
-    # for midwife in midwives:
-    #     mw = {
-    #         "mwId" : midwife.mw_id,
-    #         "name" : midwife.name,
-    #         "creds": midwife.creds,
-    #         "email" : midwife.email,
-    #         "password" : midwife.password,
-    #         "phone": midwife.phone,
-    #         "address" : midwife.address,
-    #         "website" : midwife.website,
-    #         "bio" : midwife.bio,
-    #         "counties" : midwife.counties,
-    #         "location": midwife.location,            
-    #         "services": midwife.services,
-    #         "img" : midwife.img,
-    #         "lat" : midwife.lat,
-    #         "lng" : midwife.lng
-    #         } 
-    #     dict_mw.append(mw)               
-
-    # return jsonify(dict_mw)
 
 import favorites
 @app.route('/api/fav-midwives')
