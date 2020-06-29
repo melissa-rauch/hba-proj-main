@@ -16,8 +16,26 @@
         color: black;
         border-right: 1px solid rgb(255, 255, 255); }
 
-.header {
-    background-color: #f3e1e1;
-    text-align: center;
-    padding: 20px;
+.sms-form {
+    text-align: left;
+    padding: 1em;
     }
+.sms-form label {
+display: block;
+}
+.sms-form input,
+.sms-form textarea {
+font-size: 1em;
+width: 100%;
+box-sizing: border-box;
+}
+.sms-form div {
+margin-bottom: 0.5em;
+}
+.sms-form button {
+font-size: 1em;
+width: 100%;
+}
+.sms-form.error {
+outline: 2px solid #f00;
+}

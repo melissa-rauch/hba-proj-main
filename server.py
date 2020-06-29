@@ -111,8 +111,8 @@ import login
 def login_user():
     """Login a current user"""
 
-    data, user = login.get_user_data_from_db()
-    return jsonify(login.verify_user_login(data, user))
+    
+    return jsonify(login.verify_user_login())
 
 @app.route('/api/mw-login', methods=['POST'])
 def login_midwife():
