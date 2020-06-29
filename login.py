@@ -2,6 +2,7 @@ from flask import (Flask, request)
 import crud
 
 def get_user_data_from_db():
+    """Retrieve user data from database"""
     data = request.get_json(force=True)
 
     user = crud.get_user_by_email(data["email"])
@@ -9,6 +10,7 @@ def get_user_data_from_db():
     return data, user
 
 def verify_user_login(data, user):
+    """Validate password"""
     if user[0].password == data["password"]:
         user_profile = {
                         "user_id" : user[0].user_id,
@@ -27,15 +29,15 @@ def verify_user_login(data, user):
         return "Invalid"
 
 def get_mw_data_from_db():
+    """Retrieve midwife data from database"""
     data = request.get_json(force=True)
 
     midwife = crud.get_midwife_by_email(data['email'])
-    print(midwife)
     
     return data, midwife
 
 def verify_mw_login(data, midwife):
-    
+    """Validate password"""
     if not midwife.email:
         return "Invalid email"
 

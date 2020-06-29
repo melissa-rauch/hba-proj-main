@@ -89,99 +89,76 @@ def get_user_by_id():
         } 
     return jsonify(user_data)
 
+import midwives
+
 @app.route('/api/midwife')
 def get_midwife_by_id():
-    """Show directory of Midwives"""
-    data = request.args.get('mwId')
+    """Get individual Midwife by Id"""
 
-    midwife = crud.get_midwife_by_id(data)
+    return jsonify(midwives.get_midwife_from_db())
+    # data = request.args.get('mwId')
 
-    midwife_data = {  
-            "mwId" : midwife.mw_id,
-            "name" : midwife.name,
-            "creds": midwife.creds,
-            "email" : midwife.email,
-            "password" : midwife.password,
-            "phone": midwife.phone,
-            "address" : midwife.address,
-            "website" : midwife.website,
-            "bio" : midwife.bio,
-            "counties" : midwife.counties,
-            "location": midwife.location,            
-            "services": midwife.services,
-            "img" : midwife.img
-        }         
+    # midwife = crud.get_midwife_by_id(data)
 
-    return jsonify(midwife_data)    
+    # midwife_data = {  
+    #         "mwId" : midwife.mw_id,
+    #         "name" : midwife.name,
+    #         "creds": midwife.creds,
+    #         "email" : midwife.email,
+    #         "password" : midwife.password,
+    #         "phone": midwife.phone,
+    #         "address" : midwife.address,
+    #         "website" : midwife.website,
+    #         "bio" : midwife.bio,
+    #         "counties" : midwife.counties,
+    #         "location": midwife.location,            
+    #         "services": midwife.services,
+    #         "img" : midwife.img
+    #     }         
+
+    # return jsonify(midwife_data)    
 
 @app.route('/api/midwives')
 def show_directory():
     """Show directory of Midwives"""
-    midwives = crud.get_midwives()
-    dict_mw = []
-    for midwife in midwives:
-        mw = {
-            "mwId" : midwife.mw_id,
-            "name" : midwife.name,
-            "creds": midwife.creds,
-            "email" : midwife.email,
-            "password" : midwife.password,
-            "phone": midwife.phone,
-            "address" : midwife.address,
-            "website" : midwife.website,
-            "bio" : midwife.bio,
-            "counties" : midwife.counties,
-            "location": midwife.location,            
-            "services": midwife.services,
-            "img" : midwife.img,
-            "lat" : midwife.lat,
-            "lng" : midwife.lng
-            } 
-        dict_mw.append(mw)               
 
-    return jsonify(dict_mw)
+    return jsonify(midwives.get_midwives_from_db())
+    # midwives = crud.get_midwives()
+    # dict_mw = []
+    # for midwife in midwives:
+    #     mw = {
+    #         "mwId" : midwife.mw_id,
+    #         "name" : midwife.name,
+    #         "creds": midwife.creds,
+    #         "email" : midwife.email,
+    #         "password" : midwife.password,
+    #         "phone": midwife.phone,
+    #         "address" : midwife.address,
+    #         "website" : midwife.website,
+    #         "bio" : midwife.bio,
+    #         "counties" : midwife.counties,
+    #         "location": midwife.location,            
+    #         "services": midwife.services,
+    #         "img" : midwife.img,
+    #         "lat" : midwife.lat,
+    #         "lng" : midwife.lng
+    #         } 
+    #     dict_mw.append(mw)               
 
+    # return jsonify(dict_mw)
+
+import favorites
 @app.route('/api/fav-midwives')
 def show_fav_midwives():
     """Show favorite midwives by userId"""
-    data = request.args.get("userId")
-
-    list_midwives = crud.get_fav_midwives(data)
-    
-    fav_mw = []
-    print(list_midwives)
-    for midwives in list_midwives:
-        for midwife in midwives:
-            mw = {
-                "mwId" : midwife.mw_id,
-                "name" : midwife.name,
-                "creds": midwife.creds,
-                "email" : midwife.email,
-                "password" : midwife.password,
-                "phone": midwife.phone,
-                "address" : midwife.address,
-                "website" : midwife.website,
-                "bio" : midwife.bio,
-                "counties" : midwife.counties,
-                "location": midwife.location,            
-                "services": midwife.services,
-                "img" : midwife.img
-            } 
-            fav_mw.append(mw)               
-    
-    return jsonify(fav_mw)
+              
+    return jsonify(favorites.get_user_favs_from_db())
 
 @app.route('/api/add-fav', methods=['POST'])
 def add_fav():
     """Register a new user"""
 
-    data = request.get_json(force=True)
-
-    if data["userId"] == None:
-        return jsonify("Invalid")
-    else:
-        crud.create_fav(data["userId"], data["mwId"])
-        return jsonify("Valid")
+    return jsonify(favorites.add_user_fav())
     
 import login
 
