@@ -111,7 +111,6 @@ import login
 def login_user():
     """Login a current user"""
 
-    
     return jsonify(login.verify_user_login())
 
 @app.route('/api/mw-login', methods=['POST'])

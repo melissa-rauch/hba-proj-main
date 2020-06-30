@@ -6,17 +6,16 @@ class Home extends React.Component {
 	}
 
 	render() {
+		
 		return (
-			
-			<div>	
-				<h1>
-					<img  src="/static/img/home.jpeg" />
-				</h1>
-				<h1>Welcome to Babycatcher</h1>
-				<h2>Let's find you a Midwife!</h2>
+			<div >
+				<img id="center-img" src="/static/img/home.jpeg" />
+				<div className="container">
+					<h1 id="home-header">Welcome to Babycatcher</h1>
+					<h2 id="home-header">Let's find you a Midwife!</h2>
+				</div>
 				<UserReg setLoggedIn={this.props.setLoggedIn} />
 			</div>
-			
 		);
 	}
 }

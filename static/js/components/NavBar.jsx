@@ -8,7 +8,7 @@ class NavBar extends React.Component{
         if (this.props.loggedIn || this.props.mwLoggedIn)  {
             return(
                 <div>
-                    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
                         <a className="navbar-brand" href="/">Babycatcher</a>
                     <div className="navbar-nav" id="#navbarSupportedContent">
                         <ul className="navbar-nav">
@@ -29,7 +29,7 @@ class NavBar extends React.Component{
         } else {
         return (
             <div> 
-                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
                     <a className="navbar-brand" href="/">Babycatcher</a>
                    
                 <div className="navbar-nav" id="#navbarSupportedContent">

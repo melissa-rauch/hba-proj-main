@@ -32,29 +32,33 @@ class Directory extends React.Component {
 
 		return (
 			<div>
-				<div>
-					<h1>Directory of Midwives</h1>
+				<div className="container">
+					<h1 id="center-text">Directory of Midwives</h1>
 				</div>
-				<div className="form-group">	
-					<form onSubmit={this.handleSubmit}>
-						<label>
-							Filter by county
-							<br />
-							<select className="form-control form-control-sm" value={this.state.value} onChange={this.handleChange} >
-								<option value='' defaultValue>select county</option>
-								<option value='Alameda' >Alameda</option>
-								<option value='Contra Costa' >Contra Costa</option>
-								<option value='Marin' >Marin</option>
-								<option value='San Francisco' >San Francisco</option>
-								<option value='San Mateo' >San Mateo</option>
-								<option value='Solano' >Solano</option>
-							</select>
-						</label>
-						<input className="btn btn-dark btn-sm" type="submit" value='Select' />
-					</form>
+				<div className="container">
+					<div id="center-form" className="form-group">	
+						<form onSubmit={this.handleSubmit}>
+							<label>
+								Filter by county
+								<br />
+								<select className="form-control form-control-sm" value={this.state.value} onChange={this.handleChange} >
+									<option value='' defaultValue>select county</option>
+									<option value='Alameda' >Alameda</option>
+									<option value='Contra Costa' >Contra Costa</option>
+									<option value='Marin' >Marin</option>
+									<option value='San Francisco' >San Francisco</option>
+									<option value='San Mateo' >San Mateo</option>
+									<option value='Solano' >Solano</option>
+								</select>
+							</label>
+							<input className="btn btn-dark btn-sm" type="submit" value='Select' />
+						</form>
+					</div>
 				</div>	
-				<div>
+				<div  className="container">
+					<div id="grid" classname="row">
 					{selectedMidwives}
+					</div>
 				</div>
 			</div>
 		);

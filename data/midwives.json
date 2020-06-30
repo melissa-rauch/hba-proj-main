@@ -80,6 +80,22 @@
         "lng" :-122.5807783
     },
     {
+        "name":"Kiki Jordan",
+        "creds":"Licensed Midwife, Certified Professional Midwife",
+        "email": "goldenbellymidwifery@gmail.com",
+        "password": "1234",
+        "phone": "+5102820575",
+        "website":"https://birthlandmidwifery.com",
+        "address":"Oakland, CA 94608",
+        "bio":"Kiki is a Bay Area native. She is trained in home and birth center settings. She is passionate about creating ways for midwifery care to be accessible to women of color, specifically Black. Kiki is the former Director of the Marin Family Birth Center a Federally Qualified Health Center that prioritized services for families with MediCal.  She is a mother of one son, a homebirther.  ",
+        "counties":"Alameda, Contra Costa",
+        "services": "VBAC, Waterbirth, LGBTQI Ally",
+        "location":"Home",
+        "img":"/static/img/jordan.jpg",
+        "lat" :37.8434437,
+        "lng" :-122.267339
+    },
+    {
         "name": "El Tarver",
         "creds":"Licensed Midwife, Certified Professional Midwife",
         "email": "midwife@emunahmidwifery.com",

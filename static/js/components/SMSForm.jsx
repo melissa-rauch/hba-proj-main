@@ -123,7 +123,7 @@ class SMSForm extends React.Component {
             onChange={this.onHandleChange}
           />
         </div>
-        <button className="sms-form button" type="submit" disabled={this.state.submitting}>
+        <button className="btn btn-dark" type="submit" disabled={this.state.submitting}>
           Send message
         </button>
       </form>

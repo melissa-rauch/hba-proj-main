@@ -1,10 +1,11 @@
+
 #nav {
     width: 100%;
     float: left;
     margin: 0 0 0 0;
     padding: 0;
     list-style: none;
-    background-color: #f3e1e1;
+    background-color: #eee5e9;
     border-bottom: 1px solid rgb(255, 255, 255); 
     border-top: 1px solid rgb(255, 255, 255); }
 
@@ -39,3 +40,61 @@ width: 100%;
 .sms-form.error {
 outline: 2px solid #f00;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Domine';
+    color: #383d3b;
+}
+a {
+    font-family: 'Domine';
+    color: #383d3b
+}
+p {
+    font-family: 'Roboto';
+    color: #383d3b;
+}
+.navbar {
+    background-color: #eee5e9;
+    width: 100%
+}
+.btn-dark {
+    background-color: #7c7c7c;
+    border-color: #7c7c7c;
+}
+.center {
+    margin: auto;
+}
+#center-img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    opacity: 0.75;
+}
+#center-text {
+    text-align: center;
+    width: 100%;
+}
+#center-form {
+    text-align: center;
+    width: 100%;
+}
+
+#home-header {
+    text-align: center;
+}
+#card-sm {
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+}
+.card {
+    margin-bottom: 10px;
+}
+#grid {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}
+
+

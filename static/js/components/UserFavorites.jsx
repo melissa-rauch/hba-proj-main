@@ -19,8 +19,8 @@ class UserFavorites extends React.Component {
             return( 
                 <div className="container">
                     <div className="row">
-                        <div className="col-sm">
-                            <div className="card" style={{ width: '28rem' }} key={midwife.mw_id} >
+                        <div className="col-6">
+                            <div className="card-sm" style={{ width: '28rem' }} key={midwife.mw_id} >
                                 <img src={midwife.img} className="card-img-top"/> 
                                 <div className="card-body">
                                     <h5>{midwife.name}</h5>

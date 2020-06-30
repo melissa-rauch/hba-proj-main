@@ -40,13 +40,15 @@ class Midwife(db.Model):
     phone = db.Column(db.String)
     website = db.Column(db.String)
     address = db.Column(db.String())
+    bio = db.Column(db.Text)
     counties = db.Column(db.String)
     location = db.Column(db.String)
     services = db.Column(db.String)
+    img = db.Column(db.String)
     lat = db.Column(db.Integer)
     lng = db.Column(db.Integer)
-    bio = db.Column(db.Text)
-    img = db.Column(db.String)
+    
+    
 
     def __repr__(self):
         return f'<Midwife mw_id={self.mw_id} name={self.name} email={self.email}>'

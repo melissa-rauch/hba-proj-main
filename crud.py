@@ -46,7 +46,7 @@ def get_user_by_id(user_id):
 
     return User.query.filter(User.user_id == user_id).first()    
 
-def create_midwife(name, creds, email, password, phone, website, address, counties, location, services, bio):
+def create_midwife(name, creds, email, password, phone, website, address, bio, counties, location, services, img, lat, lng):
     """Create and return a new midwife"""
 
     midwife = Midwife(name = name, 
@@ -56,10 +56,13 @@ def create_midwife(name, creds, email, password, phone, website, address, counti
                     phone = phone, 
                     website = website,
                     address = address,
+                    bio = bio,
                     counties = counties,
                     location = location,
                     services = services,
-                    bio = bio
+                    img = img,
+                    lat = lat,
+                    lng = lng
                     )
 
     db.session.add(midwife)
