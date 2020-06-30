@@ -70,54 +70,55 @@ class SMSForm extends React.Component {
         onSubmit={this.onSubmit}
         className={this.state.error ? 'error sms-form' : 'sms-form'}
       >
+      
       <label htmlFor="inputSMS">Request a consult!</label>  
-        <div id="inputSMS" className="sms-form div">
-          <label className="sms-form label" htmlFor="inputName">Your Name</label>
+        <div id="inputSMS" className="form-group">
+          <label htmlFor="inputName">Your Name</label>
           <input
             name="name"
             id="inputName"
-            className="sms-form input"
+            className="form-control"
             value={this.state.message.name}
             onChange={this.onHandleChange}
           />
         </div>
-        <div className="sms-form div"> 
-        <label className="sms-form label" htmlFor="inputPhone">Phone</label>
+        <div className="form-group"> 
+        <label htmlFor="inputPhone">Phone</label>
           <input
             name="phone"
             id="inputPhone"
-            className="sms-form input"
+            className="form-control"
             value={this.state.message.phone}
             onChange={this.onHandleChange}
           />
         </div>
-        <div className="sms-form div"> 
-          <label className="sms-form label" htmlFor="inputEmail">Email</label>
+        <div className="form-group"> 
+          <label htmlFor="inputEmail">Email</label>
           <input
             type="email"
             name="email"
-            className="sms-form input"
+            className="form-control"
             id="inputEmail"
             value={this.state.message.email}
             onChange={this.onHandleChange}
           />
         </div>
-        <div className="sms-form div"> 
-          <label className="sms-form label" htmlFor="inputDue">Due Date</label>
+        <div className="form-group"> 
+          <label htmlFor="inputDue">Due Date</label>
           <input
             name="due"
-            className="sms-form input"
+            className="form-control"
             id="inputDue"
             value={this.state.message.due}
             onChange={this.onHandleChange}
           />
         </div>
-        <div className="sms-form div" rows="3"> 
-          <label className="sms-form label" htmlFor="inputMessage">Message</label>
+        <div className="form-group" rows="3"> 
+          <label htmlFor="inputMessage">Message</label>
           <textarea
             name="body"
             placeholder="Leave your message here"
-            className="sms-form textarea"
+            className="form-control"
             id="inputMessage"
             value={this.state.message.body}
             onChange={this.onHandleChange}

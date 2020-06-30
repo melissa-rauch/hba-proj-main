@@ -56,7 +56,7 @@ class Directory extends React.Component {
 					</div>
 				</div>	
 				<div  className="container">
-					<div id="grid" classname="row">
+					<div id="grid" className="row">
 					{selectedMidwives}
 					</div>
 				</div>

@@ -17,27 +17,26 @@ class UserFavorites extends React.Component {
        
         const listMidwives = this.state.favMidwives.map((midwife) => {
             return( 
-                <div className="container">
-                    <div className="row">
-                        <div className="col-6">
-                            <div className="card-sm" style={{ width: '28rem' }} key={midwife.mw_id} >
-                                <img src={midwife.img} className="card-img-top"/> 
-                                <div className="card-body">
-                                    <h5>{midwife.name}</h5>
-                                    <h6>{midwife.creds}</h6>
-                                    <SMSForm midwifePhone={midwife.phone} key={midwife.mw_id}/>
-                                </div>
-                            </div>
-                        </div>
+                
+                <div className="card" style={{ width: '28rem' }} key={midwife.mw_id} >
+                    <img src={midwife.img} className="card-img-top"/> 
+                    <div className="card-body">
+                        <h5>{midwife.name}</h5>
+                        <h6>{midwife.creds}</h6>
+                        <SMSForm midwifePhone={midwife.phone} key={midwife.mw_id}/>
                     </div>
-                    <br />
-                </div>
+                </div> 
+                      
+                
             )
         })   
 
         return(
             <div>
-                {listMidwives}
+                <h1 id="center-text">Your Favorites</h1>
+                <div id="grid-2" classname="row">
+                    {listMidwives}
+                </div>
                 <p>Visit the <Link to='/directory'>midwife directory</Link> to select some favorites!</p>
             </div>
         )

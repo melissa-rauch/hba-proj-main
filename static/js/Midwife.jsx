@@ -55,21 +55,39 @@ class Midwife extends React.Component {
 		return (
 			<div>
 				<div>
-					<h1>{midwife.name}</h1>
-					<h3>{midwife.creds}</h3>
-					<img src={midwife.img} />
-					<h3>Counties Served:</h3>
-					<p>{midwife.counties}</p>
-					<h3>Birth Setting:</h3>
-					<p>{midwife.location}</p>
-					<h3>Service Features:</h3>
-					<p>{midwife.services}</p>
-					<h3>Bio:</h3>
-					<p>{midwife.bio}</p>
-					<br />
-					<button onClick={this.handleChange}>Save to Favorites</button>
-					<br />
-					<Link to={'/directory'}>Back to Directory</Link>
+					<div className="jumbotron">
+						<h1 className="display-4">{midwife.name}</h1>
+						<p className="lead">{midwife.creds}</p>
+						<hr className="my-4"/>
+						<p>Service features include: {midwife.services}</p>
+						<button className="btn btn-primary btn-md btn-black" onClick={this.handleChange}>Save to Favorites</button>
+					</div>
+				</div>
+				<div className="container">
+					<div className="row" id="grid-2">
+						<img src={midwife.img} className="rounded"/>
+						<div className="col">
+						<h3>{midwife.name}</h3>
+						<h6>{midwife.creds}</h6>
+						<br />
+						<h4>Counties Served:</h4>
+						<p>{midwife.counties}</p>
+						<h4>Birth Setting:</h4>
+						<p>{midwife.location}</p>
+						<h4>Service Features:</h4>
+						<p>{midwife.services}</p>
+					</div>
+				</div>
+				<div className="container">
+					<div className="row">
+					<hr className="my-4"/>
+						<p>{midwife.bio}</p>
+					</div>
+				</div>
+				<br />
+				<button className="btn btn-primary btn-md btn-black" onClick={this.handleChange}>Save to Favorites</button>
+				<br />
+				<Link to={'/directory'}>Back to Directory</Link>
 				</div>
 			</div>
 		);
