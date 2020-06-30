@@ -54,16 +54,27 @@ p {
     color: #383d3b;
 }
 .navbar {
-    background-color: #eee5e9;
+    background-color: #383d3b;
+    color: whitesmoke;
     width: 100%
 }
-.btn-dark {
-    background-color: #7c7c7c;
-    border-color: #7c7c7c;
+#navbarDropdown {
+    background-color: #383d3b;
+    color: whitesmoke;
 }
-.btn-black {
+#navbar-text {
+    color: whitesmoke;
+}
+
+.btn-dark {
     background-color: #383d3b;
     border-color: #383d3b;
+    color: whitesmoke;
+}
+.btn-primary {
+    background-color: #383d3b;
+    border-color: #383d3b;
+    color: whitesmoke;
 }
 .center {
     margin: auto;
@@ -73,7 +84,7 @@ p {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-    opacity: 0.75;
+    opacity: 1.0;
 }
 #left-text {
     text-align: left;
@@ -109,8 +120,15 @@ p {
     grid-template-columns: repeat(2,auto);
 }
 #mw-info {
-    align-items: baseline;
+    padding-top: 100px;
 }
-
+#tron {
+    background-color: #eee5e9;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+#right-text {
+    text-align: right;
+}
 
 

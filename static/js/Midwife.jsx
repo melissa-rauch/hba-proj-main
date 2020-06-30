@@ -55,27 +55,32 @@ class Midwife extends React.Component {
 		return (
 			<div>
 				<div>
-					<div className="jumbotron">
+					<div id="tron" className="jumbotron">
 						<h1 className="display-4">{midwife.name}</h1>
 						<p className="lead">{midwife.creds}</p>
 						<hr className="my-4"/>
-						<p>Service features include: {midwife.services}</p>
-						<button className="btn btn-primary btn-md btn-black" onClick={this.handleChange}>Save to Favorites</button>
+						<p>Home birth, {midwife.services}</p>
+						<button className="btn-lg btn-dark fas fa-heart" onClick={this.handleChange}></button>
 					</div>
 				</div>
 				<div className="container">
 					<div className="row" id="grid-2">
 						<img src={midwife.img} className="rounded"/>
-						<div className="col">
-						<h3>{midwife.name}</h3>
-						<h6>{midwife.creds}</h6>
-						<br />
-						<h4>Counties Served:</h4>
-						<p>{midwife.counties}</p>
-						<h4>Birth Setting:</h4>
-						<p>{midwife.location}</p>
-						<h4>Service Features:</h4>
-						<p>{midwife.services}</p>
+						<div id="mw-info" className="card">
+							<div className="col">
+								<div id="mw-info" className="container">
+								<h3 id="right-text" style={{fontWeight: "bold"}}>{midwife.name}</h3>
+								<h6 id="right-text">{midwife.creds}</h6>
+								<br />
+								<h5 id="right-text" style={{fontWeight: "bold"}}>Counties Served</h5>
+								<p id="right-text">{midwife.counties}</p>
+								<h5 id="right-text" style={{fontWeight: "bold"}}>Birth Setting</h5>
+								<p id="right-text">{midwife.location}</p>
+								<h5 id="right-text" style={{fontWeight: "bold"}}>Service Features</h5>
+								<p id="right-text">{midwife.services}</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				<div className="container">
@@ -83,13 +88,13 @@ class Midwife extends React.Component {
 					<hr className="my-4"/>
 						<p>{midwife.bio}</p>
 					</div>
-				</div>
+					<br />
+				<button className="btn-lg btn-dark fas fa-heart" onClick={this.handleChange}> to Favorite</button>
 				<br />
-				<button className="btn btn-primary btn-md btn-black" onClick={this.handleChange}>Save to Favorites</button>
-				<br />
-				<Link to={'/directory'}>Back to Directory</Link>
 				</div>
+				
 			</div>
+			
 		);
 	}
 }

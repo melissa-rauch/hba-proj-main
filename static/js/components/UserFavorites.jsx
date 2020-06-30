@@ -34,7 +34,7 @@ class UserFavorites extends React.Component {
         return(
             <div>
                 <h1 id="center-text">Your Favorites</h1>
-                <div id="grid-2" classname="row">
+                <div id="grid-2" className="row">
                     {listMidwives}
                 </div>
                 <p>Visit the <Link to='/directory'>midwife directory</Link> to select some favorites!</p>
