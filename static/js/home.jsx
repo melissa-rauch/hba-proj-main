@@ -10,7 +10,6 @@ class Home extends React.Component {
 		return (
 			
 			<div >
-				<h1 id="site-title" className="animate__animated animate__bounceInUp">babycatcher</h1>
 				<img id="center-img" src="/static/img/home.jpeg" />
 				 
 			</div>

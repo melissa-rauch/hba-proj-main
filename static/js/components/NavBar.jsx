@@ -9,7 +9,7 @@ class NavBar extends React.Component{
             return(
                 <div>
                     <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
-                        {/* <a id="navbar-text" className="navbar-brand" href="/">Babycatcher</a> */}
+                        <a id="navbar-text" className="navbar-brand" href="/">Babycatcher</a>
                     <div className="navbar-nav" id="#navbarSupportedContent">
                         <ul className="navbar-nav">
                             <li className="nav-item active">
@@ -29,23 +29,23 @@ class NavBar extends React.Component{
         } else {
         return (
             <div> 
-                <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
-                    {/* <a id="navbar-text" className="navbar-brand" href="/">Babycatcher</a> */}
+                <nav className="navbar navbar-expand-lg navbar-light">
+                    <a id="navbar-b-text" className="navbar-brand" href="/">Babycatcher</a>
                    
                 <div className="navbar-nav" id="#navbarSupportedContent">
-                    <ul className="navbar-nav  mr-auto">
+                    <ul className="navbar-nav">
                         
                         <li id="navbar-text" className="nav-item">
                             <a id="navbar-text" className="nav-link" href="/directory">View Directory</a>
                         </li>
                         <li id="navbar-text" className="nav-item dropdown">
-                            <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a id="navbar-text" className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                             </a>
                             <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a className="dropdown-item" href="/user-login">Baby Maker</a>
+                                <a className="dropdown-item" href="/user-login">Babymaker</a>
                                 <div className="dropdown-divider"></div>
-                                <a className="dropdown-item" href="/midwife-login">Baby Catcher</a>
+                                <a className="dropdown-item" href="/midwife-login">Babycatcher</a>
                             </div>
                         </li>
                     </ul>

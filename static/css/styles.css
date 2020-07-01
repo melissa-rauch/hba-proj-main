@@ -1,17 +1,19 @@
 
 #site-title {
-    position: center;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
     font-family: "Domine", Arial, sans-serif;
     font-size: calc(40px + 4vw);
-    font-weight: 700;
-    color: #7c7c7c;
+    font-weight: 500;
+    text-shadow: 1px 1px 1px #7c7c7c;
+    color: whitesmoke;
     pointer-events: none;
     user-select: none;
     white-space: nowrap;
+    
 }
 #nav {
     width: 100%;
@@ -74,17 +76,30 @@ p {
     background-color: #383d3b;
     color: whitesmoke;
     width: 100%;
-    line-height: 2.0;
+    line-height: 1.5;
 }
 .navbar-nav {
     margin-left: auto;
+    padding-right: 5%;
+}
+.navbar-brand {
+    font-family: "Domine", Arial, sans-serif;
+    font-size: 30pt;
+    font-weight: 500;
+    color: whitesmoke;
 }
 #navbarDropdown {
     background-color: #383d3b;
     color: whitesmoke;
 }
 #navbar-text {
-    font-size: large;
+    font-family: "Domine";
+    font-size: 16pt;
+    color: whitesmoke;
+}
+#navbar-b-text {
+    font-family: "Domine";
+    font-size: 32pt;
     color: whitesmoke;
 }
 
