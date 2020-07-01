@@ -44,7 +44,9 @@ outline: 2px solid #f00;
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Domine';
     color: #383d3b;
+    font-weight: bold;
 }
+
 a {
     font-family: 'Domine';
     color: #383d3b
@@ -52,11 +54,13 @@ a {
 p {
     font-family: 'Roboto';
     color: #383d3b;
+    font-size: 14pt;
 }
 .navbar {
     background-color: #383d3b;
     color: whitesmoke;
-    width: 100%
+    width: 100%;
+    line-height: 3.0;
 }
 #navbarDropdown {
     background-color: #383d3b;
@@ -70,10 +74,25 @@ p {
     background-color: #383d3b;
     border-color: #383d3b;
     color: whitesmoke;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.btn-lg {
+    font-size: 16px;
+}
+btn-md {
+    font-weight: 14px;
+}
+.btn-light {
+    background-color: #7c7c7c;
+    border-color: #7c7c7c;
+    color: whitesmoke;
+    border-radius: 4px;
+    font-size: 14px;
 }
 .btn-primary {
-    background-color: #383d3b;
-    border-color: #383d3b;
+    background-color: #7c7c7c;
+    border-color: #7c7c7c;
     color: whitesmoke;
 }
 .center {
@@ -130,5 +149,9 @@ p {
 #right-text {
     text-align: right;
 }
-
-
+#user-image {
+    border-radius: 5px;
+}
+.card-header {
+    background-color: #eee5e9;
+}

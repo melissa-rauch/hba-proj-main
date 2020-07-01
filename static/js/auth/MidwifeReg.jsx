@@ -53,6 +53,16 @@ class MidwifeReg extends React.Component {
 					alert('Invalid entry, please try again.');
 				}
 			});
+		this.setState({
+			email: '',
+			password: '',
+			name: '',
+            address: '',
+            counties: '',
+            phone: '',
+			bio: '',
+			img: ''
+		})
 	};
 	render() {
 		return (

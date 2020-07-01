@@ -70,6 +70,27 @@ def create_midwife(name, creds, email, password, phone, website, address, bio, c
 
     return midwife
 
+def add_midwife(name, creds, email, password, phone, website, address, bio, counties, location, services):
+    """Create and return a new midwife"""
+
+    midwife = Midwife(name = name, 
+                    creds = creds,
+                    email = email,
+                    password = password, 
+                    phone = phone, 
+                    website = website,
+                    address = address,
+                    bio = bio,
+                    counties = counties,
+                    location = location,
+                    services = services
+                    )
+
+    db.session.add(midwife)
+    db.session.commit()
+
+    return midwife
+
 def get_midwives():
     """Return all midwives in database"""
 

@@ -26,7 +26,7 @@ def create_new_mw():
     if midwife:
         return "Invalid"
     else:
-        crud.create_midwife(
+        crud.add_midwife(
                             data["name"],
                             data["creds"], 
                             data["email"],

@@ -23,7 +23,7 @@ class UserFavorites extends React.Component {
                     <div className="card-body">
                         <h5>{midwife.name}</h5>
                         <h6>{midwife.creds}</h6>
-                        <SMSForm midwifePhone={midwife.phone} key={midwife.mw_id}/>
+                        <SMSForm name={midwife.name} midwifePhone={midwife.phone} key={midwife.mw_id}/>
                     </div>
                 </div> 
                       
@@ -33,7 +33,8 @@ class UserFavorites extends React.Component {
 
         return(
             <div>
-                <h1 id="center-text">Your Favorites</h1>
+                <h2 id="center-text">Your Favorites</h2>
+                <br />
                 <div id="grid-2" className="row">
                     {listMidwives}
                 </div>

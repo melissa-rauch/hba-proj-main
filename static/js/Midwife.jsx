@@ -69,14 +69,14 @@ class Midwife extends React.Component {
 						<div id="mw-info" className="card">
 							<div className="col">
 								<div id="mw-info" className="container">
-								<h3 id="right-text" style={{fontWeight: "bold"}}>{midwife.name}</h3>
+								<h3 id="right-text">{midwife.name}</h3>
 								<h6 id="right-text">{midwife.creds}</h6>
 								<br />
-								<h5 id="right-text" style={{fontWeight: "bold"}}>Counties Served</h5>
+								<h5 id="right-text">Counties Served</h5>
 								<p id="right-text">{midwife.counties}</p>
-								<h5 id="right-text" style={{fontWeight: "bold"}}>Birth Setting</h5>
+								<h5 id="right-text">Birth Setting</h5>
 								<p id="right-text">{midwife.location}</p>
-								<h5 id="right-text" style={{fontWeight: "bold"}}>Service Features</h5>
+								<h5 id="right-text">Service Features</h5>
 								<p id="right-text">{midwife.services}</p>
 								</div>
 							</div>

@@ -20,33 +20,54 @@ class MidwifeProfile extends React.Component {
 		return (
 			<div>
 				<div>
-					<div className="jumbotron">
+					<div id="tron" className="jumbotron">
 						<h1 className="display-4">Welcome {this.state.midwifeData.name}!</h1>
 						<p className="lead">{this.state.midwifeData.creds}</p>
 						<hr className="my-4"/>
 						<p>Everyday you make an incredible contribution to the world, you are appreciated! Let us know how we can better support your work!</p>
-						<a className="btn btn-primary btn-md btn-black" href="#" role="button">Click here!</a>
+						<a className="btn-lg btn-dark" href="#" role="button">Click here!</a>
 					</div>
 				</div>
-				<div>
-				{/* <h1>Welcome {this.state.midwifeData.name}!</h1>
-				<p>{this.state.midwifeData.creds}</p> */}
-				<img src={this.state.midwifeData.img} />
-				<h3>Bio:</h3>
-				<p>{this.state.midwifeData.bio}</p>
-				<h3>Counties served:</h3>
-				<p>{this.state.midwifeData.counties}</p>
-				<h3>Birth setting:</h3>
-				<p>{this.state.midwifeData.location}</p>
-				<h3>Special services:</h3>
-				<p>{this.state.midwifeData.services}</p>
-				<h3>Contact Info</h3>
-				<p>Phone:{this.state.midwifeData.phone}</p>
-				<p>Email:{this.state.midwifeData.email}</p>
-				<p>Website:{this.state.midwifeData.website}</p>
-				{/* <h3>
-					View the <Link to={'/directory'}>Midwife Directory</Link>
-				</h3> */}
+				<div className="container">
+						<div className="card mb-3" >
+							<div className="row no-gutters">
+								<div className="col-md-4">
+									<img id="user-image" className="card-img" src={this.state.midwifeData.img} />
+								</div>
+								<div className="col-md-8">
+									<div className="card-body">
+										<h2 className="card-title" >Profile Info</h2>
+										<br />
+										<h5 className="card-text">Counties you serve</h5>
+										<p className="card-text">{this.state.midwifeData.counties}</p>
+										<h5 className="card-text">Birth Setting</h5>
+										<p className="card-text">{this.state.midwifeData.location}</p>
+										<h5 className="card-text">Service Features</h5>
+										<p className="card-text">{this.state.midwifeData.services}</p>
+										<h5 className="card-text" >Your Contact Info</h5>
+										<p className="card-text">{this.state.midwifeData.phone}</p>
+										<p className="card-text">{this.state.midwifeData.website}</p>
+										<p className="card-text">{this.state.midwifeData.address}</p>
+									</div>
+								</div>
+							</div>
+								<div className="card-body">
+									<h5 className="card-text" >Your Bio</h5>
+									<p className="card-text">{this.state.midwifeData.bio}</p>
+									<button className="btn-dark btn-md ">Update Bio</button>
+								</div>
+						</div>
+						<div className="card text-center">
+							<div className="card-header">
+							We keep your information safe!
+							</div>
+								<div className="card-body">
+									<h5 className="card-title">We will never share your contact information with the public.</h5>
+									<p className="card-text">  To view your public profile </p>
+									<Link to={{pathname: `/midwife/${this.state.midwifeData.mwId}`}} className="btn-dark btn-lg" >Click here
+								</Link>
+								</div>
+							</div>
 				</div>
 			</div>
 		)}
