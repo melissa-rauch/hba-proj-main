@@ -1,4 +1,18 @@
 
+#site-title {
+    position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-family: "Domine", Arial, sans-serif;
+    font-size: calc(40px + 4vw);
+    font-weight: 700;
+    color: #7c7c7c;
+    pointer-events: none;
+    user-select: none;
+    white-space: nowrap;
+}
 #nav {
     width: 100%;
     float: left;
@@ -38,7 +52,7 @@ font-size: 1em;
 width: 100%;
 }
 .sms-form.error {
-outline: 2px solid #f00;
+outline: 2px solid rgb(142, 218, 212);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -60,13 +74,17 @@ p {
     background-color: #383d3b;
     color: whitesmoke;
     width: 100%;
-    line-height: 3.0;
+    line-height: 2.0;
+}
+.navbar-nav {
+    margin-left: auto;
 }
 #navbarDropdown {
     background-color: #383d3b;
     color: whitesmoke;
 }
 #navbar-text {
+    font-size: large;
     color: whitesmoke;
 }
 
@@ -163,3 +181,21 @@ btn-md {
 .card-header {
     background-color: #eee5e9;
 }
+
+/* body {
+    background-image: image("static/img/home.jpeg") no-repeat center;
+    background-size: cover;
+    height: 100vh;
+    cursor: none;
+}
+
+.spotlight {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: radial-gradient(
+        circle,
+        transparent 160px,
+        rgba(0, 0, 0, 0.85) 200px
+    );
+} */

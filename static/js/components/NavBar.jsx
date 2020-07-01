@@ -9,7 +9,7 @@ class NavBar extends React.Component{
             return(
                 <div>
                     <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
-                        <a id="navbar-text" className="navbar-brand" href="/">Babycatcher</a>
+                        {/* <a id="navbar-text" className="navbar-brand" href="/">Babycatcher</a> */}
                     <div className="navbar-nav" id="#navbarSupportedContent">
                         <ul className="navbar-nav">
                             <li className="nav-item active">
@@ -30,15 +30,15 @@ class NavBar extends React.Component{
         return (
             <div> 
                 <nav id="navbar" className="navbar navbar-expand-lg navbar-light">
-                    <a id="navbar-text" className="navbar-brand" href="/">Babycatcher</a>
+                    {/* <a id="navbar-text" className="navbar-brand" href="/">Babycatcher</a> */}
                    
                 <div className="navbar-nav" id="#navbarSupportedContent">
-                    <ul className="navbar-nav">
+                    <ul className="navbar-nav  mr-auto">
                         
                         <li id="navbar-text" className="nav-item">
                             <a id="navbar-text" className="nav-link" href="/directory">View Directory</a>
                         </li>
-                        <li className="nav-item dropdown">
+                        <li id="navbar-text" className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Login
                             </a>

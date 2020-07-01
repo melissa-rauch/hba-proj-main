@@ -36,12 +36,16 @@ class Login extends React.Component {
 				
 			}
 		});
+		this.setState({
+			email: '',
+			password: ''
+		})
 	};
 
 	render() {
 
 		return (
-			
+		<div>	
 			<div className="container">
 				<form onSubmit={this.handleSubmit}>
 					<br />
@@ -75,6 +79,10 @@ class Login extends React.Component {
 					<button type="submit" className="btn btn-dark">Log In</button>
 				</form>
 			</div>
+			<div>
+				<UserReg setLoggedIn={this.props.setLoggedIn}/>
+			</div>
+		</div>
 		);
 	}
 }
