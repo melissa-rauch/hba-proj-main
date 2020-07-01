@@ -29,34 +29,41 @@ class MidwifeProfile extends React.Component {
 					</div>
 				</div>
 				<div className="container">
-						<div className="card mb-3" >
-							<div className="row no-gutters">
-								<div className="col-md-4">
-									<img id="user-image" className="card-img" src={this.state.midwifeData.img} />
-								</div>
-								<div className="col-md-8">
-									<div className="card-body">
-										<h2 className="card-title" >Profile Info</h2>
-										<br />
-										<h5 className="card-text">Counties you serve</h5>
-										<p className="card-text">{this.state.midwifeData.counties}</p>
-										<h5 className="card-text">Birth Setting</h5>
-										<p className="card-text">{this.state.midwifeData.location}</p>
-										<h5 className="card-text">Service Features</h5>
-										<p className="card-text">{this.state.midwifeData.services}</p>
-										<h5 className="card-text" >Your Contact Info</h5>
-										<p className="card-text">{this.state.midwifeData.phone}</p>
-										<p className="card-text">{this.state.midwifeData.website}</p>
-										<p className="card-text">{this.state.midwifeData.address}</p>
-									</div>
+					
+				</div>
+				<div className="container">
+					<div className="row" id="grid-2">
+						<img src={this.state.midwifeData.img} className="rounded"/>
+						<div id="mw-info" className="card">
+							<div className="col">
+								<div id="mw-info" className="container">
+									<h2 className="card-title" >Profile Info</h2>
+									<br />
+									<h5 className="card-text">Counties you serve</h5>
+									<p className="card-text">{this.state.midwifeData.counties}</p>
+									<h5 className="card-text">Birth Setting</h5>
+									<p className="card-text">{this.state.midwifeData.location}</p>
+									<h5 className="card-text">Service Features</h5>
+									<p className="card-text">{this.state.midwifeData.services}</p>
+									<h5 className="card-text" >Your Contact Info</h5>
+									<p className="card-text">{this.state.midwifeData.phone}</p>
+									<p className="card-text">{this.state.midwifeData.website}</p>
+									<p className="card-text">{this.state.midwifeData.address}</p>
 								</div>
 							</div>
-								<div className="card-body">
-									<h5 className="card-text" >Your Bio</h5>
-									<p className="card-text">{this.state.midwifeData.bio}</p>
-									<button className="btn-dark btn-md ">Update Bio</button>
-								</div>
 						</div>
+					</div>
+				</div>
+				<div className="container">
+					<div className="row">
+						<h5 className="card-text" id="left-text">Your Bio</h5>
+						<p className="card-text">{this.state.midwifeData.bio}</p>
+						<br />
+						<button className="btn-dark btn-md ">Update Bio</button>
+						<br />
+					</div>
+				</div>
+				<div id="mw-footer" className="container">
 						<div className="card text-center">
 							<div className="card-header">
 							We keep your information safe!

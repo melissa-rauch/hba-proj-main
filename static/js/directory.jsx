@@ -32,9 +32,12 @@ class Directory extends React.Component {
 
 		return (
 			<div>
-				<div className="container">
-					<h1 id="center-text">Directory of Midwives</h1>
-				</div>
+				<div id="tron" className="jumbotron jumbotron-fluid">
+					<div className="container">
+						<h1 id="center-text" className="display-4">Directory of Midwives</h1>
+						<p id="center-text" className="lead">Our directory currently features SF/Bay Area midwives, but we do plan to expand our reach.</p>
+					</div>
+		  		</div>
 				<div className="container">
 					<div id="center-form" className="form-group">	
 						<form onSubmit={this.handleSubmit}>

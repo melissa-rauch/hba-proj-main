@@ -116,10 +116,18 @@ btn-md {
     text-align: center;
     width: 100%;
 }
+#mw-footer {
+    padding-top: 20px;
+}
 
 #home-header {
     text-align: center;
 }
+#directory-header{
+    width: 100%;
+    padding: 50px;
+}
+
 .card-sm {
     margin-bottom: 10px;
     display: grid;
@@ -127,8 +135,8 @@ btn-md {
     grid-gap: 20px;
 }
 .card {
-    margin-bottom: 10px;
-    margin-left: 10px;
+    margin-bottom: 15px;
+    margin-left: 15px;
 }
 #grid {
     display: grid;
