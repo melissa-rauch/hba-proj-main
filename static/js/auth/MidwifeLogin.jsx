@@ -52,10 +52,10 @@ class MidwifeLogin extends React.Component {
 
 		return (
 			<div>
-				<div id="tron" class="jumbotron">
-					<h1 class="display-4">Welcome!</h1>
-					<p class="lead">So glad you're here, please log in or register below.</p>
-					<hr class="my-4"/>
+				<div id="tron" className="jumbotron">
+					<h1 className="display-4">Welcome!</h1>
+					<p id="tron-sub-text"className="lead">So glad you're here, please log in or register below.</p>
+					<hr className="my-4"/>
 					<form onSubmit={this.handleSubmit}>
 						<h2>Midwife Log in:</h2>
 						<div className="form-row">

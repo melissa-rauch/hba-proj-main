@@ -26,7 +26,7 @@ class UserProfile extends React.Component {
 				<div id="tron" className="jumbotron">
 						<h1 className="display-4">Welcome {this.state.userData.firstName}!</h1>
 						<hr className="my-4"/>
-						<p>Congratulations on this incredible adventure you're embarking on!  We believe there is a midwife for every person, let us help you find yours!</p>
+						<p id="tron-sub-text">Congratulations on this incredible adventure you're embarking on!  We believe there is a midwife for every person, let us help you find yours!</p>
 				</div>
 				<div className="container">
 					<div className="card">

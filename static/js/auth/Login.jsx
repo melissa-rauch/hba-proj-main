@@ -46,9 +46,9 @@ class Login extends React.Component {
 
 		return (
 			<div>	
-				<div id="tron" class="jumbotron">
-					<h1 class="display-4">Welcome!</h1>
-					<p class="lead">One more step to finding your midwife, please log in or register below.</p>
+				<div id="tron" className="jumbotron">
+					<h1 className="display-4">Welcome!</h1>
+					<p id="tron-sub-text" className="lead">One more step to finding your midwife, please log in or register below.</p>
 					<hr class="my-4"/>
 					<form onSubmit={this.handleSubmit}>
 								<h2>Log in:</h2>

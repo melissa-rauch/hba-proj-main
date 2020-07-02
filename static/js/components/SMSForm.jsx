@@ -21,7 +21,6 @@ class SMSForm extends React.Component {
 
   onSubmit(event) {
     const phone = this.props.midwifePhone
-    console.log(phone)
     event.preventDefault();
     this.setState({ submitting: true });
     fetch('/api/message', {
@@ -46,7 +45,6 @@ class SMSForm extends React.Component {
               body: ''
             }
           });
-          alert("Message sent!");
         } else {
           this.setState({
             error: true,
@@ -155,9 +153,11 @@ class SMSForm extends React.Component {
                       onChange={this.onHandleChange}
                     />
                   </div>
-                  <button className="btn-dark btn-md" type="submit" disabled={this.state.submitting}>
+                  <button className="btn-dark btn-md" type="submit" disabled={this.state.submitting} aria-labelledby="exampleModalLabel" aria-hidden="true"
+                    aria-label="Close" >
                     Send message
                   </button>
+                    
                 </form>
                 <div className="modal-footer">
                 <button type="button" className="btn-light btn-md" data-dismiss="modal">Close</button>

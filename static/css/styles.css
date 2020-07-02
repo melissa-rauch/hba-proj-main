@@ -78,10 +78,10 @@ p {
     width: 100%;
     line-height: 1.5;
 }
-/* .navbar-nav {
+.navbar-nav {
     margin-left: auto;
     
-} */
+}
 .navbar-brand {
     font-family: "Domine", Arial, sans-serif;
     font-size: 30pt;
@@ -130,6 +130,9 @@ btn-md {
 }
 .center {
     margin: auto;
+}
+.dropdown-item {
+    font-size: 16pt;
 }
 #center-img {
     display: block;
@@ -186,6 +189,9 @@ btn-md {
     background-color: #eee5e9;
     padding-left: 10%;
     padding-right: 10%;
+}
+#tron-sub-text {
+    font-size: 20px;
 }
 #right-text {
     text-align: right;

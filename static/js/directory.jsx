@@ -34,14 +34,15 @@ class Directory extends React.Component {
 			<div>
 				<div id="tron" className="jumbotron jumbotron-fluid">
 					<div className="container">
-						<h1 id="center-text" className="display-4">Directory of Midwives</h1>
-						<p id="center-text" className="lead">Our directory currently features SF/Bay Area midwives, but we do plan to expand our reach.</p>
+						<h1 className="display-4">Directory of Midwives</h1>
+						<br />
+						<p id="tron-sub-text" className="lead">Our directory currently features SF/Bay Area midwives, but we do plan to expand our reach.</p>
 					</div>
 		  		</div>
 				<div className="container">
 					<div id="center-form" className="form-group">	
 						<form onSubmit={this.handleSubmit}>
-							<label>
+							<label id="tron-sub-text">
 								Filter by county
 								<br />
 								<select className="form-control form-control-sm" value={this.state.value} onChange={this.handleChange} >

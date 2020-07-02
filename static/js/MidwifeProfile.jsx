@@ -22,9 +22,9 @@ class MidwifeProfile extends React.Component {
 				<div>
 					<div id="tron" className="jumbotron">
 						<h1 className="display-4">Welcome {this.state.midwifeData.name}!</h1>
-						<p className="lead">{this.state.midwifeData.creds}</p>
+						<p id="tron-sub-text" className="lead">{this.state.midwifeData.creds}</p>
 						<hr className="my-4"/>
-						<p>Everyday you make an incredible contribution to the world, you are appreciated!</p>
+						<p id="tron-sub-text">Everyday you make an incredible contribution to the world, you are appreciated!</p>
 						{/* <a className="btn-lg btn-dark" href="#" role="button">Click here!</a> */}
 					</div>
 				</div>
