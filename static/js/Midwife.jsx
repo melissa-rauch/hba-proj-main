@@ -64,13 +64,16 @@ class Midwife extends React.Component {
 					</div>
 				</div>
 				<div className="container">
+					<br />
+					<br />
+					<br />
 					<div className="row" id="grid-2">
 						<img src={midwife.img} className="rounded"/>
 						<div id="mw-info" className="card">
 							<div className="col">
 								<div id="mw-info" className="container">
 								<h3 id="right-text">{midwife.name}</h3>
-								<h6 id="right-text">{midwife.creds}</h6>
+								<p id="right-text">{midwife.creds}</p>
 								<br />
 								<h5 id="right-text">Counties Served</h5>
 								<p id="right-text">{midwife.counties}</p>
@@ -85,11 +88,14 @@ class Midwife extends React.Component {
 				</div>
 				<div className="container">
 					<div className="row">
-					<hr className="my-4"/>
+						<h5>About {midwife.name}</h5>
 						<p>{midwife.bio}</p>
 					</div>
 					<br />
 				<button className="btn-lg btn-dark fas fa-heart" onClick={this.handleChange}> to Favorite</button>
+				<br />
+				<br />
+				<br />
 				<br />
 				</div>
 				

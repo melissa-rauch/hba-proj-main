@@ -46,11 +46,13 @@ class SMSForm extends React.Component {
               body: ''
             }
           });
+          alert("Message sent!");
         } else {
           this.setState({
             error: true,
             submitting: false
           });
+          alert("Unable to send message, please try again.");
         }
         
       }
@@ -65,6 +67,7 @@ class SMSForm extends React.Component {
           body: ''
         },
       })
+      
   }
   
   onHandleChange(event) {
@@ -96,7 +99,7 @@ class SMSForm extends React.Component {
               </div>
               <div className="modal-body"></div>
                 <form
-                  onSubmit={this.onSubmit}
+                  onSubmit={this.onSubmit} 
                   className={this.state.error ? 'error sms-form' : 'sms-form'}>
                 
                 <label htmlFor="inputSMS">Request a consult!</label>  

@@ -45,13 +45,15 @@ class Login extends React.Component {
 	render() {
 
 		return (
-		<div>	
+		<div id="login-background">	
 			<div className="container">
+				<br />
+				<br />
 				<form onSubmit={this.handleSubmit}>
 					<br />
-					<h2>Users Log in here:</h2>
+					<h2>Log in here:</h2>
 					<div className="form-row">
-						<div className="form-group col-md-2">
+						<div className="form-group col-md-4">
 							<label forhtml="inputUserEmail">Email</label>
 							<input
 								type="email"
@@ -63,7 +65,7 @@ class Login extends React.Component {
 								required
 							/>
 						</div>
-						<div className="form-group col-md-2">
+						<div className="form-group col-md-4">
 							<label forhtml="inputUserPW">Password</label>
 							<input
 								type="password"

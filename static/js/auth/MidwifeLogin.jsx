@@ -51,40 +51,45 @@ class MidwifeLogin extends React.Component {
 	render() {
 
 		return (
-			<div className="container">
-				<h3>Midwife Log in:</h3>
-				<form onSubmit={this.handleSubmit}>
-					<div className="form-row">
-						<div className="form-group col-md-2">
-							<label forhtml="inputMWEmail">Email</label>
-							<input
-								type="email"
-								className="form-control"
-								id="inputMWEmail"
-								name="email"
-								value={this.state.email}
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div className="form-group col-md-2">
-							<label forhtml="inputUserPW">Password</label>
-							<input
-								type="password"
-								className="form-control"
-								id="inputMWPW"
-								name="password"
-								value={this.state.password}
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-					</div>
-					<button type="submit" className="btn btn-dark">Log In</button>	
-				</form>
+			<div id="login-background">
 				<br />
-				<div>
-					<MidwifeReg props={this.state} />
+				<br />
+				<br />
+				<div className="container">
+					<h2>Midwife Log in:</h2>
+					<form onSubmit={this.handleSubmit}>
+						<div className="form-row">
+							<div className="form-group col-md-4">
+								<label forhtml="inputMWEmail">Email</label>
+								<input
+									type="email"
+									className="form-control"
+									id="inputMWEmail"
+									name="email"
+									value={this.state.email}
+									onChange={this.handleChange}
+									required
+								/>
+							</div>
+							<div className="form-group col-md-4">
+								<label forhtml="inputUserPW">Password</label>
+								<input
+									type="password"
+									className="form-control"
+									id="inputMWPW"
+									name="password"
+									value={this.state.password}
+									onChange={this.handleChange}
+									required
+								/>
+							</div>
+						</div>
+						<button type="submit" className="btn btn-dark">Log In</button>	
+					</form>
+					<br />
+					<div>
+						<MidwifeReg props={this.state} />
+					</div>
 				</div>
 			</div>
 		);

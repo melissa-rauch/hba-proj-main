@@ -8,11 +8,15 @@ class Home extends React.Component {
 	render() {
 
 		return (
-			
 			<div >
-				<img id="center-img" src="/static/img/home.jpeg" />
 				 
+				
+				<img id="center-img" src="/static/img/home.jpeg" />
+				
+				
 			</div>
+					 
+			
 			
 		);
 	}

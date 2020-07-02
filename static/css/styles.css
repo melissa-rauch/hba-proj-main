@@ -1,12 +1,12 @@
 
 #site-title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    
+    top: 20%;
+    left: 80%;
     transform: translate(-50%, -50%);
     z-index: 1;
     font-family: "Domine", Arial, sans-serif;
-    font-size: calc(40px + 4vw);
+    font-size: calc(30px + 4vw);
     font-weight: 500;
     text-shadow: 1px 1px 1px #7c7c7c;
     color: whitesmoke;
@@ -78,10 +78,10 @@ p {
     width: 100%;
     line-height: 1.5;
 }
-.navbar-nav {
+/* .navbar-nav {
     margin-left: auto;
-    padding-right: 5%;
-}
+    
+} */
 .navbar-brand {
     font-family: "Domine", Arial, sans-serif;
     font-size: 30pt;
@@ -196,7 +196,20 @@ btn-md {
 .card-header {
     background-color: #eee5e9;
 }
-
+#login-background {
+    background-color: #eee5e9;
+}
+.home-cover {
+    background-image: url("/static/img/home.jpeg");
+    height: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    opacity: 1.0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 /* body {
     background-image: image("static/img/home.jpeg") no-repeat center;
     background-size: cover;

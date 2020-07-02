@@ -68,6 +68,9 @@ class MidwifeReg extends React.Component {
 		return (
 			<div>
 				<br />
+				<br />
+				<br />
+				<br />
 				<form onSubmit={this.handleSubmit} encType="multipart/form-data">
 					<h4>Don't have an account yet?</h4>
 					<h5>No worries, you can register here:</h5>
@@ -100,7 +103,7 @@ class MidwifeReg extends React.Component {
 					</div>	
 					<h5>About you:</h5>
 					<div className="form-row">
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputUserName">Full Name</label>
 							<input
 								type="text"
@@ -112,7 +115,7 @@ class MidwifeReg extends React.Component {
 								required
 							/>  
                     	</div>
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputCreds">Credentials</label>
 							<input
 								type="text"
@@ -127,7 +130,7 @@ class MidwifeReg extends React.Component {
                     	</div>
 					</div>
 					<div className="form-row">
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputAddress">Address</label>
 							<input
 								type="text"
@@ -140,7 +143,7 @@ class MidwifeReg extends React.Component {
 								required
 							/> 
 						</div>
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputPhone">Phone Number</label>
 							<input
 								type="text"
@@ -154,7 +157,7 @@ class MidwifeReg extends React.Component {
 						</div>
 					</div>
                     <div className="form-row">
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputWebsite">Website</label>
 							<input
 								type="text"
@@ -167,7 +170,7 @@ class MidwifeReg extends React.Component {
 								required
 							/>  
                     	</div>
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputCounties">Counties you serve</label>
 							<input
 								type="text"
@@ -181,7 +184,7 @@ class MidwifeReg extends React.Component {
 						</div>
 					</div>
 					<div className="form-row">
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputLocation">Birth Setting</label>	 
 							<input
 								type="text"
@@ -193,7 +196,7 @@ class MidwifeReg extends React.Component {
 								onChange={this.handleChange}
 							/> 
 						</div>
-						<div className="form-group col-md-4">
+						<div className="form-group col-md-6">
 							<label forhtml="inputServices">Special Services</label>
 							<input
 								type="text"
@@ -207,7 +210,7 @@ class MidwifeReg extends React.Component {
 						</div>
 					</div>
 					<div className="form-row">
-						<div className="form-group col-md-8">
+						<div className="form-group col-md-12">
 							<label forhtml="inputBio">Your Bio</label>
 							<textarea
 								type="textarea"
@@ -223,7 +226,10 @@ class MidwifeReg extends React.Component {
 					<button type="submit" className="btn btn-dark">Register</button>				
 				
 				</form>
-				{/* <UploadPhoto /> */}
+				<br />
+				<br />
+				<br />
+				<br />
 			</div>
 		);
 	}

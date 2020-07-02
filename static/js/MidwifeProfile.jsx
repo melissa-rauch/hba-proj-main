@@ -24,8 +24,8 @@ class MidwifeProfile extends React.Component {
 						<h1 className="display-4">Welcome {this.state.midwifeData.name}!</h1>
 						<p className="lead">{this.state.midwifeData.creds}</p>
 						<hr className="my-4"/>
-						<p>Everyday you make an incredible contribution to the world, you are appreciated! Let us know how we can better support your work!</p>
-						<a className="btn-lg btn-dark" href="#" role="button">Click here!</a>
+						<p>Everyday you make an incredible contribution to the world, you are appreciated!</p>
+						{/* <a className="btn-lg btn-dark" href="#" role="button">Click here!</a> */}
 					</div>
 				</div>
 				<div className="container">

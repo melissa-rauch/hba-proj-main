@@ -14,7 +14,7 @@ class MidwifePreview extends React.Component {
 							<img src={img} className="card-img" />
 							<div className="card-body">
 								<h5>{name}</h5>
-								<h6>{creds}</h6>
+								<p>{creds}</p>
 								<Link to={{pathname: `/midwife/${mwId}`}} className="btn btn-dark btn-sm" >View Profile
 								</Link>	
 							</div>
