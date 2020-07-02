@@ -39,8 +39,10 @@ class UserFavorites extends React.Component {
                     <div id="grid-2" className="row">
                         {listMidwives}
                     </div>
-                <p>Visit the <Link to='/directory'>midwife directory</Link> to select some favorites!</p>
+                <p>Visit the Midwife Directory to add to your favorites!</p>
+                    <Link className="btn-dark btn-lg" to={{pathname: `/directory`}}>Directory</Link>
                 </div>
+                <br />
             </div>
         )
     }

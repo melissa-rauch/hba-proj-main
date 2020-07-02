@@ -40,12 +40,13 @@ class UserProfile extends React.Component {
 									<br />
 									<h5 className="card-text" >Name</h5>
 									<p className="card-text">{this.state.userData.firstName} {this.state.userData.lastName}</p>
-									<h5 className="card-text" >Bio</h5>
-									<p className="card-text">{this.state.userData.bio}</p>
 									<h5 className="card-text">Address</h5>
 									<p className="card-text">{this.state.userData.address}</p>
 									<h5 className="card-text" className="card-text">Email</h5>
 									<p className="card-text">{this.state.userData.email}</p>
+									<h5 className="card-text" >Bio</h5>
+									<p className="card-text">{this.state.userData.bio}</p>
+									
 								</div>
 							</div>
 						</div>
