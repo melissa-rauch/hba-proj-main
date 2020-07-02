@@ -47,8 +47,8 @@ class Login extends React.Component {
 		return (
 			<div>	
 				<div id="tron" class="jumbotron">
-					<h1 class="display-4">Welcome</h1>
-					<p class="lead">One more step to finding your midwife, please log in or register below!</p>
+					<h1 class="display-4">Welcome!</h1>
+					<p class="lead">One more step to finding your midwife, please log in or register below.</p>
 					<hr class="my-4"/>
 					<form onSubmit={this.handleSubmit}>
 								<h2>Log in:</h2>
@@ -82,7 +82,11 @@ class Login extends React.Component {
 								
 							</form>
 				</div>
+				<div className="container" style={{paddingTop:"50px"}}>
 
+				</div>
+					
+				
 				<div>
 					<UserReg setLoggedIn={this.props.setLoggedIn}/>
 				</div>
