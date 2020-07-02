@@ -54,7 +54,6 @@ class Directory extends React.Component {
 									<option value='Solano' >Solano</option>
 								</select>
 							</label>
-							<input className="btn btn-dark btn-sm" type="submit" value='Select' />
 						</form>
 					</div>
 				</div>	

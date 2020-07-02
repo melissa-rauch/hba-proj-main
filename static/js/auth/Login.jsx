@@ -45,46 +45,48 @@ class Login extends React.Component {
 	render() {
 
 		return (
-		<div id="login-background">	
-			<div className="container">
-				<br />
-				<br />
-				<form onSubmit={this.handleSubmit}>
-					<br />
-					<h2>Log in here:</h2>
-					<div className="form-row">
-						<div className="form-group col-md-4">
-							<label forhtml="inputUserEmail">Email</label>
-							<input
-								type="email"
-								className="form-control"
-								id="inputUserEmail"
-								name="email"
-								value={this.state.email}
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-						<div className="form-group col-md-4">
-							<label forhtml="inputUserPW">Password</label>
-							<input
-								type="password"
-								className="form-control"
-								id="inputUserPW"
-								name="password"
-								value={this.state.password}
-								onChange={this.handleChange}
-								required
-							/>
-						</div>
-					</div>
-					<button type="submit" className="btn btn-dark">Log In</button>
-				</form>
+			<div>	
+				<div id="tron" class="jumbotron">
+					<h1 class="display-4">Welcome</h1>
+					<p class="lead">One more step to finding your midwife, please log in or register below!</p>
+					<hr class="my-4"/>
+					<form onSubmit={this.handleSubmit}>
+								<h2>Log in:</h2>
+								<div className="form-row">
+									<div className="form-group col-sm">
+										<input
+											type="email"
+											className="form-control"
+											id="inputUserEmail"
+											name="email"
+											placeholder="Email"
+											value={this.state.email}
+											onChange={this.handleChange}
+											required
+										/>
+									</div>
+									<div className="form-group col-sm">
+										<input
+											type="password"
+											className="form-control"
+											id="inputUserPW"
+											name="password"
+											placeholder="Password"
+											value={this.state.password}
+											onChange={this.handleChange}
+											required
+										/>
+									</div>
+									<button type="submit" className="btn btn-dark" style={{height:"40px"}}>  Log In  </button>
+								</div>
+								
+							</form>
+				</div>
+
+				<div>
+					<UserReg setLoggedIn={this.props.setLoggedIn}/>
+				</div>
 			</div>
-			<div>
-				<UserReg setLoggedIn={this.props.setLoggedIn}/>
-			</div>
-		</div>
 		);
 	}
 }
