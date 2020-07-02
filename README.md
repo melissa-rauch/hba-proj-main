@@ -1,5 +1,7 @@
 # Babycatcher
-Finding a midwife can be a tricky process if you don't know where to look or who to ask.  Babycatcher is the first-ever app, specifically designed to connect pregnant people with Midwives who provide home birth services in their county.  Individuals are able to register, create a profile, and log in to their own profile page.  Logging in enables the user to view the directory, filter by county, view midwives and save individual Midwives to their collection of favorites.  Once a Midwife is save in a User's collection, the user is able to send a SMS message to the Midwife to request a phone consult. Midwives are also able register, create a profile and log in to their own profile page, from there they can view their public profile as well as view or search the directory.
+Finding the right midwife can be a tricky process if you don't know where to look or who to ask.  Babycatcher is the first-ever app, specifically designed to connect pregnant people with Midwives who provide home birth services in their county.  
+
+Individuals are able to register, create a profile, and log in to their own profile page.  Logging in enables the user to view the directory, filter by county, view Midwives and save individual Midwives to their collection of favorites.  Once a Midwife is saved in a User's collection, the user is able to send an SMS message to the Midwife to request a phone consult. Midwives are also able to register, create a profile and log in to their own profile page, from there they can view their public profile as well as view or search the directory.
 
 ## Contents
 ---
