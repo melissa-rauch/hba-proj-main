@@ -36,7 +36,7 @@ class Directory extends React.Component {
 					<div className="container">
 						<h1 className="display-4">Directory of Midwives</h1>
 						<br />
-						<p id="tron-sub-text" className="lead">Our directory currently features SF/Bay Area midwives, but we do plan to expand our reach.</p>
+						<p id="tron-sub-text" className="lead">Our directory currently features SF/Bay Area midwives, but we plan to expand our reach soon.</p>
 					</div>
 		  		</div>
 				<div className="container">

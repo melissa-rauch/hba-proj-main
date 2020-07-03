@@ -22,7 +22,7 @@ class UserFavorites extends React.Component {
                     <img src={midwife.img} className="card-img-top"/> 
                     <div className="card-body">
                         <h3>{midwife.name}</h3>
-                        <h6>{midwife.creds}</h6>
+                        <p>{midwife.creds}</p>
                         <SMSForm name={midwife.name} midwifePhone={midwife.phone} key={midwife.mw_id}/>
                     </div>
                 </div> 

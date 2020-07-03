@@ -1,5 +1,5 @@
 # Babycatcher
-Finding the right midwife can be a tricky process if you don't know where to look or who to ask.  Babycatcher is the first-ever app specifically designed to connect pregnant people with Midwives who provide home birth services in their county. 
+Finding the right midwife can be a tricky process if you don't know where to look or who to ask for a referral.  Babycatcher is the first-ever app specifically designed to connect pregnant people with Midwives who provide home birth services in their county. 
 
 Individuals can register, create a profile, and log in to their own profile page.  Logging in enables the user to view the directory, filter by county, view Midwife profiles and save Midwives to their collection of favorites.  Once a Midwife is saved in a User's collection, the user can send an SMS directly to the Midwife.  Midwives are also able to register, create a profile and log in to their own profile page, from there they can view their public profile as well as view or search the directory.
 
@@ -18,9 +18,9 @@ Python Flask, PostgreSQL, SQLAlchemy <br />
 Twilio <br />
 
 ## Features
-**Directory** <br />
-Filter by county <br />
-View full Midwife profile <br />
+**Landing Page and Directory** <br />
+Arrival at the landing page offers the individual to either view the Directory of Midwives, filter by county and view individual Midwife Profiles.  Login/Register allows the user to interact with the full functionality of the app.
+![]((Directory.gif))
     
 **User Features** <br />
 Login/Register <br />

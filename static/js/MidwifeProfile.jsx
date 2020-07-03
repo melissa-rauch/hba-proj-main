@@ -33,7 +33,9 @@ class MidwifeProfile extends React.Component {
 				</div>
 				<div className="container">
 					<div className="row" id="grid-2">
-						<img src={this.state.midwifeData.img} className="rounded"/>
+						<div className="col">
+							<img src={this.state.midwifeData.img} className="img"/>
+						</div>
 						<div id="mw-info" className="card">
 							<div className="col">
 								<div id="mw-info" className="container">
