@@ -36,6 +36,21 @@ Midwives are also able to Login/Register to create a profile on the app.  The di
 ![Midwife Login Demo](/static/gifs/MidwifeLogin.gif)
 
 ## Installation
+To run Babycatcher on your local machine, you can follow the easy steps below:<br  />
+1. Install PostgreSQL (MacOSX)
+2. Clone or fork this repo:
+`https://github.com/melissa-rauch/hba-proj-main.git`
+3. Create and activate a virtual environment hba-proj-main directory:
+`virtualenv env`
+`source env/bin/activate`
+4. Install the dependencies:
+`pip3 install -r requirements.txt`
+5. Set up the database:
+`createdb babycatcher`
+`python3 seed-database.py`
+6. Run the app!
+`python3 server.py`
+7. Navigate to 'localhost:5000' in your browser to access Babycatcher!
 
 
 ## About the Developer
