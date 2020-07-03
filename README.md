@@ -27,7 +27,7 @@ Arrival at the landing page offers the individual to either view the Directory o
 **User Features** <br />
 With Login/Register, the user is also able to select a midwife, save her to their collection of favorites and send an SMS to Midwife. <br />
 <br  />
-![User Login Demo] (/static/gifs/UserLogin.gif)
+![User Login Demo](/static/gifs/UserLogin.gif)
 <br  />
 
 **Midwife Login** <br />
