@@ -20,7 +20,7 @@ Twilio <br />
 ## Features
 **Landing Page and Directory** <br />
 Arrival at the landing page offers the individual to either view the Directory of Midwives, filter by county and view individual Midwife Profiles.  Login/Register allows the user to interact with the full functionality of the app.
-![](Directory.gif)
+![Directory Demo](/static/gifs/Directory.gif)
     
 **User Features** <br />
 Login/Register <br />
