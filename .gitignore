@@ -3,3 +3,5 @@ __pycache__
 practice/
 secrets.sh
 .env
+midwives.json
+users.json
