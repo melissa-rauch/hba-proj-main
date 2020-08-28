@@ -74,16 +74,16 @@ def example_data():
     Favorite.query.delete()
 
     # Add sample user, midwife and favorite data
-    Jane = User(
-                user_id=50
+    jane = User(
+                user_id=50,
                 first_name="Jane", 
                 last_name="Austin", 
                 email="janeaustin@test.com", 
                 password="Jane123", 
                 address = "Oakland, CA", 
                 bio="about me..,")
-    Emily = User(
-                user_id=75
+    emily = User(
+                user_id=75,
                 first_name="Emily", 
                 last_name="Dickenson", 
                 email="emilydickenson@test.com", 
@@ -91,8 +91,8 @@ def example_data():
                 address = "San Francisco, CA", 
                 bio="about me..,")
 
-    Liz = Midwife(
-                mw_id=100
+    liz = Midwife(
+                mw_id=100,
                 name="Liz Clary", 
                 creds="Licensed Midwife", 
                 email="lizclary@test.com", 
@@ -104,8 +104,8 @@ def example_data():
                 counties="Alameda, Contra Costa", 
                 services= "VBAC, Waterbirth, LGBTQI Ally", 
                 location="home")
-    Sharon = Midwife(
-                mw_id=125
+    sharon = Midwife(
+                mw_id=125,
                 name="Sharon Evans",
                 creds="Licensed Midwife", 
                 email="lizclary@test.com", 
