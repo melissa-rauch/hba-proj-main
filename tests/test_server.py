@@ -3,7 +3,7 @@ from server import app
 from model import connect_to_db, db, example_data
 from flask import session
 
-class FlaskTests(TestCase):
+class FlaskTestsDatabase(TestCase):
     
     def setUp(self):
         # Get the Flask test client
@@ -22,7 +22,7 @@ class FlaskTests(TestCase):
         db.session.remove()
         db.drop_all()
         db.engine.dispose()
-        
+
     def test_login_user(self):
         """Test user Log-in"""
 
