@@ -105,7 +105,7 @@ def example_data():
                 services= "VBAC, Waterbirth, LGBTQI Ally", 
                 location="home")
     sharon = Midwife(
-                mw_id=125,
+                mw_id=150,
                 name="Sharon Evans",
                 creds="Licensed Midwife", 
                 email="lizclary@test.com", 
@@ -118,7 +118,14 @@ def example_data():
                 services= "VBAC, Se Habla Espanol", 
                 location="home")
     
-
+    fav_1 = Favorite(
+                fav_id=1,
+                user_id=50,
+                md_id=100)
+    fav_2 = Favorite(
+                fav_id=2,
+                user_id=75,
+                mw_id=150)
     # Add all to the session and commit
 
 def connect_to_db(flask_app, db_uri='postgresql:///babycatcher', echo=False):
