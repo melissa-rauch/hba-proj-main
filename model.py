@@ -121,7 +121,7 @@ def example_data():
     fav_1 = Favorite(
                 fav_id=1,
                 user_id=50,
-                md_id=100)
+                mw_id=100)
     fav_2 = Favorite(
                 fav_id=2,
                 user_id=75,
