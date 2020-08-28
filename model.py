@@ -110,7 +110,7 @@ def example_data():
                 services= "VBAC, Se Habla Espanol", 
                 location="home")
     
-
+    
     # Add all to the session and commit
 
 def connect_to_db(flask_app, db_uri='postgresql:///babycatcher', echo=False):
