@@ -1,5 +1,7 @@
 from unittest import TestCase
 from server import app
+from model import connect_to_db, db, example_data
+from flask import session
 
 class FlaskTests(TestCase):
 
