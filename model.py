@@ -74,20 +74,26 @@ def example_data():
     Favorite.query.delete()
 
     # Add sample user, midwife and favorite data
-    Jane = User(first_name="Jane", 
+    Jane = User(
+                user_id=50
+                first_name="Jane", 
                 last_name="Austin", 
                 email="janeaustin@test.com", 
                 password="Jane123", 
                 address = "Oakland, CA", 
                 bio="about me..,")
-    Emily = User(first_name="Emily", 
+    Emily = User(
+                user_id=75
+                first_name="Emily", 
                 last_name="Dickenson", 
                 email="emilydickenson@test.com", 
                 password="Emily123", 
                 address = "San Francisco, CA", 
                 bio="about me..,")
 
-    Liz = Midwife(name="Liz Clary", 
+    Liz = Midwife(
+                mw_id=100
+                name="Liz Clary", 
                 creds="Licensed Midwife", 
                 email="lizclary@test.com", 
                 password="Liz123", 
@@ -98,7 +104,9 @@ def example_data():
                 counties="Alameda, Contra Costa", 
                 services= "VBAC, Waterbirth, LGBTQI Ally", 
                 location="home")
-    Sharon = Midwife(name="Sharon Evans",
+    Sharon = Midwife(
+                mw_id=125
+                name="Sharon Evans",
                 creds="Licensed Midwife", 
                 email="lizclary@test.com", 
                 password="Liz123", 
@@ -110,7 +118,7 @@ def example_data():
                 services= "VBAC, Se Habla Espanol", 
                 location="home")
     
-    
+
     # Add all to the session and commit
 
 def connect_to_db(flask_app, db_uri='postgresql:///babycatcher', echo=False):
