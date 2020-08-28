@@ -66,7 +66,52 @@ class Favorite(db.Model):
     def __repr__(self):
         return f'<Favorite fav_id={self.fav_id} mw_id={self.mw_id} user_id={self.user_id}>'
 
+def example_data():
 
+    # In the case this is run more than once, empty the existing data
+    User.query.delete()
+    Midwife.query.delete()
+    Favorite.query.delete()
+
+    # Add sample user, midwife and favorite data
+    Jane = User(first_name="Jane", 
+                last_name="Austin", 
+                email="janeaustin@test.com", 
+                password="Jane123", 
+                address = "Oakland, CA", 
+                bio="about me..,")
+    Emily = User(first_name="Emily", 
+                last_name="Dickenson", 
+                email="emilydickenson@test.com", 
+                password="Emily123", 
+                address = "San Francisco, CA", 
+                bio="about me..,")
+
+    Liz = Midwife(name="Liz Clary", 
+                creds="Licensed Midwife", 
+                email="lizclary@test.com", 
+                password="Liz123", 
+                phone="510-282-0575", 
+                website="https://rosecitymidwifery.com", 
+                address="Oakland, CA", 
+                bio="my bio", 
+                counties="Alameda, Contra Costa", 
+                services= "VBAC, Waterbirth, LGBTQI Ally", 
+                location="home")
+    Sharon = Midwife(name="Sharon Evans",
+                creds="Licensed Midwife", 
+                email="lizclary@test.com", 
+                password="Liz123", 
+                phone="510-282-0575", 
+                website="https://vivantemidwifery.com", 
+                address="Sausalito, CA", 
+                bio="my bio", 
+                counties="San Francisco, Marin", 
+                services= "VBAC, Se Habla Espanol", 
+                location="home")
+    
+
+    # Add all to the session and commit
 
 def connect_to_db(flask_app, db_uri='postgresql:///babycatcher', echo=False):
     flask_app.config['SQLALCHEMY_DATABASE_URI'] = db_uri

@@ -10,13 +10,13 @@ import os
 from twilio.rest import Client
 
 
-account_sid = os.environ["ACCOUNT_SID"]
-auth_token = os.environ["AUTH_TOKEN"]
-client = Client(account_sid, auth_token)
+# account_sid = os.environ["ACCOUNT_SID"]
+# auth_token = os.environ["AUTH_TOKEN"]
+# client = Client(account_sid, auth_token)
 
 
-ACCOUNT_SID = os.environ["ACCOUNT_SID"]
-AUTH_TOKEN  = os.environ["AUTH_TOKEN"]
+# ACCOUNT_SID = os.environ["ACCOUNT_SID"]
+# AUTH_TOKEN  = os.environ["AUTH_TOKEN"]
 
 app = Flask(__name__)
 app.secret_key = "dev"
